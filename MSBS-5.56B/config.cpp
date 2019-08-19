@@ -35,8 +35,8 @@ class CfgMagazines
 	{
 		ammo = "B_545x39_Ball_Green_F";
 		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56mm 30Rnd MSBS";
-		displayNameShort = "5.56mm MSBS";
+		displayName = "5.56 mm 30Rnd Mag";
+		displayNameShort = "5.56mm";
 		descriptionShort = "Caliber: 5.56x45mm NATO<br />Rounds: 30<br />Used in: MSBS";
 		initSpeed=920;
 		lastRoundsTracer=4;
@@ -46,8 +46,8 @@ class CfgMagazines
 	{
 		ammo = "B_556x45_Ball_Tracer_Green";
 		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56mm 30Rnd MSBS Green Tracer";
-		displayNameShort = "5.56mm MSBS (Green)";
+		displayName = "5.56 mm 30Rnd Tracer (Green) Mag";
+		displayNameShort = "5.56mm Tracer";
 		descriptionShort = "Caliber: 5.56x45mm NATO green tracer<br />Rounds: 30<br />Used in: MSBS";
 		tracersEvery = 1;
 	};
@@ -56,8 +56,8 @@ class CfgMagazines
 	{
 		ammo = "B_556x45_Ball_Tracer_Red";
 		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56mm 30Rnd MSBS Red Tracer";
-		displayNameShort = "5.56mm MSBS (Red)";
+		displayName = "5.56 mm 30Rnd Tracer (Red) Mag";
+		displayNameShort = "5.56mm Tracer";
 		descriptionShort = "Caliber: 5.56x45mm NATO red tracer<br />Rounds: 30<br />Used in: MSBS";
 		tracersEvery = 1;
 	};
@@ -66,8 +66,8 @@ class CfgMagazines
 	{
 		ammo = "B_556x45_Ball_Tracer_Yellow";
 		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56mm 30Rnd MSBS Yellow Tracer";
-		displayNameShort = "5.56mm MSBS (Yellow)";
+		displayName = "5.56 mm 30Rnd Tracer (Yellow) Mag";
+		displayNameShort = "5.56mm Tracer";
 		descriptionShort = "Caliber: 5.56x45mm NATO yellow tracer<br />Rounds: 30<br />Used in: MSBS";
 		tracersEvery = 1;
 	};
@@ -76,8 +76,8 @@ class CfgMagazines
 	{
 		ammo = "ACE_556x45_Ball_M995_AP";
 		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.56mm 30Rnd M995 AP";
-		displayNameShort = "5.56mm MSBS AP";
+		displayName = "5.5 6mm 30Rnd M995 AP";
+		displayNameShort = "5.56mm M995";
 		descriptionShort = "Caliber: 5.56x45mm NATO M995 AP<br />Rounds: 30<br />Used in: MSBS";
 		initSpeed = 875;
 		lastRoundsTracer=4;
@@ -87,8 +87,8 @@ class CfgMagazines
 	{
 		ammo = "ACE_556x45_Ball_Mk262";
 		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.56mm 30Rnd MSBS Mk262";
-		displayNameShort = "5.56mm MSBS Mk262";
+		displayName = "5.56 mm 30Rnd Mk262";
+		displayNameShort = "5.56mm Mk262";
 		descriptionShort = "Caliber: 5.56x45mm NATO Mk262 high-accuracy rounds<br />Rounds: 30<br />Used in: MSBS";
 		initSpeed = 832;
 		lastRoundsTracer=4;
@@ -98,8 +98,8 @@ class CfgMagazines
 	{
 		ammo = "ACE_556x45_Ball_Mk318";
 		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.56mm 30Rnd MSBS Mk318 SOST";
-		displayNameShort = "5.56mm MSBS Mk318";
+		displayName = "5.56 mm 30Rnd Mk318 SOST";
+		displayNameShort = "5.56mm Mk318";
 		descriptionShort = "Caliber: 5.56x45mm NATO Mk318 SOST<br />Rounds: 30<br />Used in: MSBS";
 		initSpeed = 923;
 		lastRoundsTracer=4;
@@ -109,8 +109,8 @@ class CfgMagazines
 	{
 		ammo = "ACE_B_556x45_Ball_Tracer_Dim";
 		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.56mm 30Rnd MSBS IR-DIM";
-		displayNameShort = "5.56mm MSBS IR-DIM";
+		displayName = "5.56 mm 30Rnd IR-DIM";
+		displayNameShort = "5.56mm IR-DIM";
 		descriptionShort = "Caliber: 5.56x45mm NATO Tracer IR-DIM<br />Rounds: 30<br />Used in: MSBS";
 		initSpeed = 869;
 		tracersEvery = 1;
@@ -1020,87 +1020,87 @@ class cfgWeapons
 	//Base MSBS
 	class arifle_MSBS65_F: arifle_MSBS65_base_F
 	{
-		displayName="MSBS-5.56";
+		displayName="MSBS-5.56B";
 	};
 
 
 	class arifle_MSBS65_black_F: arifle_MSBS65_base_black_F
 	{
-		displayName="MSBS-5.56 (Black)";
+		displayName="MSBS-5.56B (Black)";
 	};
 
 
 	class arifle_MSBS65_camo_F: arifle_MSBS65_base_camo_F
 	{
-		displayName="MSBS-5.56 (Camo)";
+		displayName="MSBS-5.56B (Camo)";
 	};
 
 
 	class arifle_MSBS65_sand_F: arifle_MSBS65_base_sand_F
 	{
-		displayName="MSBS-5.56 (Sand)";
+		displayName="MSBS-5.56B (Sand)";
 	};
 
 	//MSBS GL
 	class arifle_MSBS65_GL_F: arifle_MSBS65_GL_base_F
 	{
-		displayName="MSBS-5.56GL";
+		displayName="MSBS-5.56B UGL";
 	};
 
 	class arifle_MSBS65_GL_black_F: arifle_MSBS65_GL_base_black_F
 	{
-		displayName="MSBS-5.56GL (Black)";
+		displayName="MSBS-5.56B UGL (Black)";
 	};
 
 	class arifle_MSBS65_GL_camo_F: arifle_MSBS65_GL_base_camo_F
 	{
-		displayName="MSBS-5.56GL (Camo)";
+		displayName="MSBS-5.56B UGL (Camo)";
 	};
 
 	class arifle_MSBS65_GL_sand_F: arifle_MSBS65_GL_base_sand_F
 	{
-		displayName="MSBS-5.56GL (Sand)";
+		displayName="MSBS-5.56B UGL (Sand)";
 	};
 
 	//MSBS Marksman
 	class arifle_MSBS65_Mark_F: arifle_MSBS65_Mark_base_F
 	{
-		displayName="MSBS-762N";
+		displayName="MSBS-7.62N";
 	};
 
 	class arifle_MSBS65_Mark_black_F: arifle_MSBS65_Mark_base_black_F
 	{
-		displayName="MSBS-762N (Black)";
+		displayName="MSBS-7.62N (Black)";
 	};
 
 	class arifle_MSBS65_Mark_camo_F: arifle_MSBS65_Mark_base_camo_F
 	{
-		displayName="MSBS-762N (Camo)";
+		displayName="MSBS-7.62N (Camo)";
 	};
 
 	class arifle_MSBS65_Mark_sand_F: arifle_MSBS65_Mark_base_sand_F
 	{
-		displayName="MSBS-762N (Sand)";
+		displayName="MSBS-7.62N (Sand)";
 	};
 
 	//MSBS Uderbarrel Shotgun
 	class arifle_MSBS65_UBS_F: arifle_MSBS65_UBS_base_F
 	{
-		displayName="MSBS-5.56UBS ";
+		displayName="MSBS-5.56B SIX12";
 	};
 
 	class arifle_MSBS65_UBS_black_F: arifle_MSBS65_UBS_base_black_F
 	{
-		displayName="MSBS-5.56UBS (Black)";
+		displayName="MSBS-5.56B SIX12 (Black)";
 	};
 
 	class arifle_MSBS65_UBS_camo_F: arifle_MSBS65_UBS_base_camo_F
 	{
-		displayName="MSBS-5.56UBS (Camo)";
+		displayName="MSBS-5.56B SIX12 (Camo)";
 	};
 
 	class arifle_MSBS65_UBS_sand_F: arifle_MSBS65_UBS_base_sand_F
 	{
-		displayName="MSBS-5.56UBS (Sand)";
+		displayName="MSBS-5.56B SIX12 (Sand)";
 	};
 };
