@@ -50,6 +50,10 @@ class DMR_07_base_F;
 		"10Rnd_580x42_Mag_Tracer_F",
 		};
         magazineWell[] = {""};
+		ACE_barrelTwist = 229;
+		ACE_barrelLength = 640;
+		ACE_twistDirection = 1;
+		mass = 90.3895;
 		
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
