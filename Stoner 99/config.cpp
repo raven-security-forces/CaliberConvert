@@ -51,7 +51,9 @@ class CfgWeapons
 		""
 		};
         magazineWell[] = {"M249_556x45"};
-		
+		ACE_barrelTwist = 178;
+		ACE_barrelLength = 318;
+		ACE_twistDirection = 1;
 	
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
