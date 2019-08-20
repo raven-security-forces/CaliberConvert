@@ -1,4 +1,4 @@
-class cfgPatches 
+class CfgPatches 
 {
     class RSF_MG5_Conversion 
     {
@@ -56,6 +56,10 @@ class MMG_01_base_F;
 		"120Rnd_762x51_Mag_M82_F",
 		};
         magazineWell[] = {};
+		ACE_barrelTwist = 360;
+		ACE_barrelLength = 550;
+		ACE_twistDirection = 1;
+		mass = 246.9177;
 		
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -67,6 +71,7 @@ class MMG_01_base_F;
 				"ace_muzzle_mzls_b",
 				"muzzle_snds_h_mg_blk_f",
 				"muzzle_snds_h_mg",
+				"muzzle_snds_h_mg_khk_f"
 				};
 			};
 		};		
@@ -75,17 +80,6 @@ class MMG_01_base_F;
  class MMG_01_tan_F: MMG_01_hex_F
     {
         displayName="MG5 (Tan)";
-		descriptionShort = "Medium Machine Gun<br />Caliber: 7.62x51 mm";
-		magazines[] = 
-		{
-		"120Rnd_762x51_Mag_M61_F",
-		"120Rnd_762x51_Mag_M62_F",
-		"120Rnd_762x51_Mag_M80_F",
-		"120Rnd_762x51_Mag_M80A1_F",
-		"120Rnd_762x51_Mag_M993_AP_F",
-		"120Rnd_762x51_Mag_M82_F",
-		};
-        magazineWell[] = {};
 		
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -97,6 +91,7 @@ class MMG_01_base_F;
 				"ace_muzzle_mzls_b",
 				"muzzle_snds_h_mg_blk_f",
 				"muzzle_snds_h_mg",
+				"muzzle_snds_h_mg_khk_f"
 				};
 			};
 		};		
