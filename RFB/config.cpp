@@ -80,6 +80,10 @@ class SDAR_base_F;
 		{
 			"Single",
 		};	
+		ACE_barrelTwist = 286;
+		ACE_barrelLength = 460;
+		ACE_twistDirection = 1;
+		mass = 81.571;
 		
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{	
