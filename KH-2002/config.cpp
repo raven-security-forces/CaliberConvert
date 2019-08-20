@@ -1,4 +1,4 @@
-class cfgPatches
+class CfgPatches
 {
   class RSF_KH2002_Conversion
   {
@@ -204,11 +204,14 @@ class CfgWeapons
 		linkProxy="\A3\data_f\proxies\weapon_slots\MAGAZINESLOT";
 		magazines[] ={};
 		magazineWell[] = {"nth_556x45_katiba"};
-
+		ACE_barrelTwist = 203;
+		ACE_barrelLength = 508;
+		ACE_twistDirection = 1;
+		
     modes[]=
   	{
   		"Single",
-      "Burst",
+		"Burst",
   		"FullAuto",
   		"single_medium_optics1",
   		"single_far_optics2",
@@ -491,6 +494,7 @@ class CfgWeapons
 class arifle_Katiba_C_F: arifle_Katiba_F
 	{
     displayName="KH-2002C";
+	ACE_barrelLength = 394;
 	
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
