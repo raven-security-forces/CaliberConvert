@@ -1,6 +1,6 @@
-set mg5 mass to 1 as test     11.20kg
-qbu 88 mass to 2 as test      4.1 kg (9.0 lb)
-rfb mass to 10 as test        8.1 lb (3.7 kg)
+set mg5 mass to 1 as test     11.20kg = to 24,69177 lb
+qbu 88 mass to 2 as test      4.1 kg (9.0 lb) = to 9,03895 lb
+rfb mass to 10 as test        8.1 lb (3.7 kg) = 8,1571 lb
 stoner 99 is ok
 
 1 mass = 0.05 kg or 0.10 lb
@@ -8,3 +8,5 @@ stoner 99 is ok
 10 mass = 0.45kg
 
 IF GIVEN KG VALUE CONVERT TO LB FIRST, THEN TO ARMA 3 MASS (its easier seeing as kg and lb are not 1:1)
+
+
