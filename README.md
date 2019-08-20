@@ -14,12 +14,15 @@ Makes changes to various weapons in terms of weight and caliber to fall in line 
   
 ## Have an bug to report?
 Submit an [issue by clicking on this link](https://github.com/SpartanD39/CaliberConvert/issues/new)
-###### What we need:
+#### What we need:
 Copy/screencap of error message, you can use a service like [Lightshot](https://prnt.sc/) to upload images and get a link to it.
 Replication steps (if any beyond just starting the game)
 
 ## Have a feature request?
 Submit an [issue by clicking on this link](https://github.com/SpartanD39/CaliberConvert/issues/new)
-###### What we need:
+#### What we need:
 Description of what you're looking for.
 Examples of what you're looking for already implemented (if available)
+
+## Want to contribute?
+[Fork the repository](https://help.github.com/en/articles/fork-a-repo), make your changes, test them in-game, and then submit a [pull request](https://help.github.com/en/articles/creating-a-pull-request) to have the changes merged into the main repo. 
