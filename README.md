@@ -21,5 +21,5 @@ Replication steps (if any beyond just starting the game)
 ## Have a feature request?
 Submit an [issue by clicking on this link](https://github.com/SpartanD39/CaliberConvert/issues/new)
 ###### What we need:
-Description of what you're looking for
+Description of what you're looking for.
 Examples of what you're looking for already implemented (if available)
