@@ -12,7 +12,7 @@ Makes changes to various weapons in terms of weight and caliber to fall in line 
 	RFB
 	Stoner 99
   
-## Have an bug to report?
+## Have a bug to report?
 Submit an [issue by clicking on this link](https://github.com/SpartanD39/CaliberConvert/issues/new)
 #### What we need:
 Copy/screencap of error message, you can use a service like [Lightshot](https://prnt.sc/) to upload images and get a link to it.
