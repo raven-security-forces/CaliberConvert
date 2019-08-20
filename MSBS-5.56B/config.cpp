@@ -35,7 +35,7 @@ class CfgMagazines
 	{
 		ammo = "B_545x39_Ball_Green_F";
 		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56 mm 30Rnd Mag";
+		displayName = "5.56 mm 30Rnd MSBS Mag";
 		displayNameShort = "5.56mm";
 		descriptionShort = "Caliber: 5.56x45mm NATO<br />Rounds: 30<br />Used in: MSBS";
 		initSpeed=920;
@@ -46,7 +46,7 @@ class CfgMagazines
 	{
 		ammo = "B_556x45_Ball_Tracer_Green";
 		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56 mm 30Rnd Tracer (Green) Mag";
+		displayName = "5.56 mm 30Rnd MSBS Tracer (Green) Mag";
 		displayNameShort = "5.56mm Tracer";
 		descriptionShort = "Caliber: 5.56x45mm NATO green tracer<br />Rounds: 30<br />Used in: MSBS";
 		tracersEvery = 1;
@@ -56,7 +56,7 @@ class CfgMagazines
 	{
 		ammo = "B_556x45_Ball_Tracer_Red";
 		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56 mm 30Rnd Tracer (Red) Mag";
+		displayName = "5.56 mm 30Rnd MSBS Tracer (Red) Mag";
 		displayNameShort = "5.56mm Tracer";
 		descriptionShort = "Caliber: 5.56x45mm NATO red tracer<br />Rounds: 30<br />Used in: MSBS";
 		tracersEvery = 1;
@@ -66,7 +66,7 @@ class CfgMagazines
 	{
 		ammo = "B_556x45_Ball_Tracer_Yellow";
 		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56 mm 30Rnd Tracer (Yellow) Mag";
+		displayName = "5.56 mm 30Rnd MSBS Tracer (Yellow) Mag";
 		displayNameShort = "5.56mm Tracer";
 		descriptionShort = "Caliber: 5.56x45mm NATO yellow tracer<br />Rounds: 30<br />Used in: MSBS";
 		tracersEvery = 1;
@@ -76,7 +76,7 @@ class CfgMagazines
 	{
 		ammo = "ACE_556x45_Ball_M995_AP";
 		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.5 6mm 30Rnd M995 AP";
+		displayName = "5.5 6mm 30Rnd MSBS M995 AP";
 		displayNameShort = "5.56mm M995";
 		descriptionShort = "Caliber: 5.56x45mm NATO M995 AP<br />Rounds: 30<br />Used in: MSBS";
 		initSpeed = 875;
@@ -87,7 +87,7 @@ class CfgMagazines
 	{
 		ammo = "ACE_556x45_Ball_Mk262";
 		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.56 mm 30Rnd Mk262";
+		displayName = "5.56 mm 30Rnd MSBS Mk262";
 		displayNameShort = "5.56mm Mk262";
 		descriptionShort = "Caliber: 5.56x45mm NATO Mk262 high-accuracy rounds<br />Rounds: 30<br />Used in: MSBS";
 		initSpeed = 832;
@@ -98,7 +98,7 @@ class CfgMagazines
 	{
 		ammo = "ACE_556x45_Ball_Mk318";
 		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.56 mm 30Rnd Mk318 SOST";
+		displayName = "5.56 mm 30Rnd MSBS Mk318 SOST";
 		displayNameShort = "5.56mm Mk318";
 		descriptionShort = "Caliber: 5.56x45mm NATO Mk318 SOST<br />Rounds: 30<br />Used in: MSBS";
 		initSpeed = 923;
@@ -109,7 +109,7 @@ class CfgMagazines
 	{
 		ammo = "ACE_B_556x45_Ball_Tracer_Dim";
 		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.56 mm 30Rnd IR-DIM";
+		displayName = "5.56 mm 30Rnd MSBS IR-DIM";
 		displayNameShort = "5.56mm IR-DIM";
 		descriptionShort = "Caliber: 5.56x45mm NATO Tracer IR-DIM<br />Rounds: 30<br />Used in: MSBS";
 		initSpeed = 869;
