@@ -1,7 +1,10 @@
-# CaliberConvert
+# RSF Configuration Files
+Custom configs for Raven Security Forces
+
+## CaliberConvert
 A collection of alternative configurations for the Arma 3 unit Raven Security Forces
 
-## What it does
+### What it does
 Makes changes to various weapons in terms of weight and caliber to fall in line with RSF standards. 
 
 ## Current Weapons
@@ -11,7 +14,11 @@ Makes changes to various weapons in terms of weight and caliber to fall in line 
 	QBU-88
 	RFB
 	Stoner 99
-  
+
+## cTab Fix
+### What it does
+Adds the Bamse cTab fix from Steam to the configuration files.
+
 ## Have a bug to report?
 Submit an [issue by clicking on this link](https://github.com/SpartanD39/CaliberConvert/issues/new)
 #### What we need:
