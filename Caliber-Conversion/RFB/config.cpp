@@ -7,7 +7,7 @@ class cfgPatches
         url = "";
         version="0.0.1";
         versionStr="0.0.1";
-        requiredAddons[] = {"A3_Weapons_F","ace_advanced_ballistics","ace_advanced_fatigue","ace_advanced_throwing",
+		requiredAddons[] = {"A3_Data_F","A3_Weapons_F","ace_advanced_ballistics","ace_advanced_fatigue","ace_advanced_throwing",
 		"ace_ai","ace_aircraft","ace_apl","ace_arsenal","ace_atragmx","ace_attach","ace_backpacks","ace_ballistics",
 		"ace_captives","ace_cargo","ace_chemlights","ace_common","ace_concertina_wire","ace_cookoff","ace_dagr",
 		"ace_disarming","ace_disposable","ace_dogtags","ace_dragging","ace_explosives","ace_fastroping","ace_fcs",
@@ -41,7 +41,38 @@ class Mode_SemiAuto;
 class CfgWeapons 
 {
 	
-class SDAR_base_F;	
+	class Rifle;
+	class Rifle_Base_F : Rifle
+	{
+		class WeaponSlotsInfo;
+		class GunParticles;
+	};
+	
+	class SDAR_base_F : Rifle_Base_F 
+	{
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			class MuzzleSlot : MuzzleSlot //Suppressors and flashiders.
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE"; //This is needed to be able to display models.
+				compatibleItems[] = //our actual list of items, all classnames from in-game.
+				{
+					"muzzle_snds_b",
+					"muzzle_snds_B_khk_F",
+					"muzzle_snds_B_snd_F",
+					"rhsusf_acc_sr25S",
+					"rhsusf_acc_SR25S_wd",
+					"rhsusf_acc_SR25S_d"
+				};
+			};
+			class CowsSlot
+			{
+			};
+			class PointerSlot
+			{
+			};
+		};
+	};
 
 	 class arifle_SDAR_F: SDAR_base_F
     {
@@ -87,7 +118,7 @@ class SDAR_base_F;
 		
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{	
-				
+			
 			class CowsSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
