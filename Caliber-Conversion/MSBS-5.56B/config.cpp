@@ -11,6 +11,7 @@ class CfgPatches
 		{
 			"A3_Weapons_F",
 			"A3_Weapons_F_Enoch",
+			"A3_characters_f_enoch",
 			"A3_Anims_F_Config_Sdr",
 			"A3_Data_F",
 			"A3_Ui_F",
@@ -26,6 +27,8 @@ class CfgPatches
 		weapons[] = {"s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag_TracerG","s39_30Rnd_556x45_msbs_mag_TracerR","s39_30Rnd_556x45_msbs_mag_TracerY","s39_30Rnd_556x45_msbs_mag_m995_ap","s39_30Rnd_556x45_msbs_mag_mk262","s39_30Rnd_556x45_msbs_mag_mk318","s39_30Rnd_556x45_msbs_mag_ir_dim"};
 	};
 };
+
+#include "ldfconfig.cpp"
 
 class CfgMagazines
 {
