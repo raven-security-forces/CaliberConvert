@@ -31,6 +31,8 @@ class cfgPatches
     };
 };
 
+#include "RFB-Units-Config.cpp"
+
 class WeaponSlotsInfo;
 class MuzzleSlot;
 class SlotInfo;

@@ -31,6 +31,8 @@ class cfgPatches
     };
 };
 
+#include "FIA-AAF-FactionConfigs.cpp"
+
 class WeaponSlotsInfo;
 class MuzzleSlot;
 class SlotInfo;
