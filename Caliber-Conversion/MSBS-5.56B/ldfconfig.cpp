@@ -48,17 +48,17 @@ class cfgVehicles
 	
 	class I_E_Soldier_AT_F : I_E_Soldier_base_F {
 
-		magazines[] = {"s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","Titan_AT","SmokeShell","SmokeShellBlue","Chemlight_Blue","Chemlight_Blue"};
+		magazines[] = {"s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","Titan_AT","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","Titan_AT","SmokeShell","SmokeShellBlue","Chemlight_Blue","Chemlight_Blue"};
 
-		respawnMagazines[] = {"s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","Titan_AT","SmokeShell","SmokeShellBlue","Chemlight_Blue","Chemlight_Blue"};
+		respawnMagazines[] = {"s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","Titan_AA","s39_30Rnd_556x45_msbs_mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","Titan_AT","SmokeShell","SmokeShellBlue","Chemlight_Blue","Chemlight_Blue"};
 
 	};
 	
 	class I_E_Soldier_AA_F : I_E_Soldier_base_F {
 
-		magazines[] = {"s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","Titan_AA","SmokeShell","SmokeShellBlue","Chemlight_Blue","Chemlight_Blue"};
+		magazines[] = {"s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","Titan_AT","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","Titan_AA","SmokeShell","SmokeShellBlue","Chemlight_Blue","Chemlight_Blue"};
 
-		respawnMagazines[] = {"s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","Titan_AA","SmokeShell","SmokeShellBlue","Chemlight_Blue","Chemlight_Blue"};
+		respawnMagazines[] = {"s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","Titan_AA","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","Titan_AA","SmokeShell","SmokeShellBlue","Chemlight_Blue","Chemlight_Blue"};
 
 	};
 	
