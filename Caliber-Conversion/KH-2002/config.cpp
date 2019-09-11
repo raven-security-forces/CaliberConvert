@@ -135,6 +135,8 @@ class CfgPatches
 
 };
 
+#include "csatconfig.cpp"
+
 class CfgMagazineWells
 {
 	class nth_556x45_katiba
