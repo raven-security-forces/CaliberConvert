@@ -1,13 +1,13 @@
-class cfgPatches 
+class cfgPatches
 {
-    class RSF_Stoner_99_Conversion 
+    class RSF_Stoner_99_Conversion
     {
         name = "RSF Stoner 99 Conversion Mod";
         author ="Nero";
         url = "";
         version="0.0.1";
         versionStr="0.0.1";
-        requiredAddons[] = {"A3_Weapons_F","ace_advanced_ballistics","ace_advanced_fatigue","ace_advanced_throwing",
+        requiredAddons[] = {"A3_Weapons_F","A3_Characters_F","A3_Data_F_Tank_Loadorder","ace_advanced_ballistics","ace_advanced_fatigue","ace_advanced_throwing",
 		"ace_ai","ace_aircraft","ace_apl","ace_arsenal","ace_atragmx","ace_attach","ace_backpacks","ace_ballistics",
 		"ace_captives","ace_cargo","ace_chemlights","ace_common","ace_concertina_wire","ace_cookoff","ace_dagr",
 		"ace_disarming","ace_disposable","ace_dogtags","ace_dragging","ace_explosives","ace_fastroping","ace_fcs",
@@ -39,16 +39,16 @@ class SlotInfo;
 class CowsSlot;
 class PointerSlot;
 
-class CfgWeapons 
+class CfgWeapons
 {
 	class Rifle_Long_Base_F;
-	
+
 	class LMG_Mk200_F: Rifle_Long_Base_F
     {
         displayName="Stoner 99";
 		descriptionShort = "Light Machine Gun<br />Caliber: 5.56x45 mm";
 		linkProxy="\A3\data_f\proxies\weapon_slots\MAGAZINESLOT";
-		magazines[] = 
+		magazines[] =
 		{
 		""
 		};
@@ -56,13 +56,13 @@ class CfgWeapons
 		ACE_barrelTwist = 178;
 		ACE_barrelLength = 318;
 		ACE_twistDirection = 1;
-	
+
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class MuzzleSlot: MuzzleSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[]= 
+				compatibleItems[]=
 				{
 				"ace_muzzle_mzls_l",
 				"ffaa_snds_gt_556",
@@ -73,31 +73,31 @@ class CfgWeapons
 				"muzzle_snds_m_snd_f",
 				"muzzle_snds_m_khk_f",
 				"muzzle_snds_m"
-				
+
 				};
 			};
-		};		
-	
+		};
+
     };
-	
+
     class LMG_Mk200_black_F: LMG_Mk200_F
     {
         displayName="Stoner 99 (Black)";
 		descriptionShort = "Light Machine Gun<br />Caliber: 5.56x45 mm";
 		linkProxy="\A3\data_f\proxies\weapon_slots\MAGAZINESLOT";
-		magazines[] = 
+		magazines[] =
 		{
 		""
 		};
         magazineWell[] = {"M249_556x45"};
-		
-	
+
+
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class MuzzleSlot: MuzzleSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[]= 
+				compatibleItems[]=
 				{
 				"ace_muzzle_mzls_l",
 				"ffaa_snds_gt_556",
@@ -108,10 +108,10 @@ class CfgWeapons
 				"muzzle_snds_m_snd_f",
 				"muzzle_snds_m_khk_f",
 				"muzzle_snds_m"
-				
+
 				};
 			};
-		};		
-	
+		};
+
     };
 };
