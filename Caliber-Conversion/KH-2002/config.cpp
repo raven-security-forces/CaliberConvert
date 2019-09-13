@@ -498,7 +498,8 @@ class CfgWeapons
 class arifle_Katiba_C_F: arifle_Katiba_F
 	{
     displayName="KH-2002C";
-	ACE_barrelLength = 394;
+  	ACE_barrelLength = 394;
+    magazines[] = {"30Rnd_556x45_Stanag_green"};
 
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -525,7 +526,7 @@ class arifle_Katiba_C_F: arifle_Katiba_F
 	class arifle_Katiba_GL_F: arifle_Katiba_F
 	{
 		displayName="KH-2002 UGL";
-
+    magazines[] = {"30Rnd_556x45_Stanag_green"};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class MuzzleSlot: MuzzleSlot
