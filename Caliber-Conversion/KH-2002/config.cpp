@@ -11,6 +11,8 @@ class CfgPatches
     {
       "A3_Weapons_F",
       "A3_Weapons_F_Mark",
+      "A3_Characters_F",
+      "A3_Data_F_Tank_Loadorder",
       "A3_Sounds_F",
       "ace_advanced_ballistics",
       "ace_advanced_fatigue",
@@ -181,7 +183,7 @@ class CfgMagazineWells
   		"rhs_mag_30Rnd_556x45_Mk262_PMAG_Tan"
 		};
 	};
-	
+
 };
 
 class Mode_FullAuto;
@@ -209,7 +211,7 @@ class CfgWeapons
 		ACE_barrelTwist = 203;
 		ACE_barrelLength = 508;
 		ACE_twistDirection = 1;
-		
+
     modes[]=
   	{
   		"Single",
@@ -497,13 +499,13 @@ class arifle_Katiba_C_F: arifle_Katiba_F
 	{
     displayName="KH-2002C";
 	ACE_barrelLength = 394;
-	
+
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class MuzzleSlot: MuzzleSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[]= 
+				compatibleItems[]=
 				{
 				"ace_muzzle_mzls_l",
 				"ffaa_snds_gt_556",
@@ -515,21 +517,21 @@ class arifle_Katiba_C_F: arifle_Katiba_F
 				"muzzle_snds_m_khk_f",
 				"muzzle_snds_m"
 				};
-			};		
-	
+			};
+
 		};
 	};
 
 	class arifle_Katiba_GL_F: arifle_Katiba_F
 	{
 		displayName="KH-2002 UGL";
-		
+
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class MuzzleSlot: MuzzleSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[]= 
+				compatibleItems[]=
 				{
 				"ace_muzzle_mzls_l",
 				"ffaa_snds_gt_556",
@@ -541,9 +543,9 @@ class arifle_Katiba_C_F: arifle_Katiba_F
 				"muzzle_snds_m_khk_f",
 				"muzzle_snds_m"
 				};
-				
-			};		
-	
+
+			};
+
 		};
 	};
 
