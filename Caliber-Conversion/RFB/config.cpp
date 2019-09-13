@@ -1,13 +1,13 @@
-class cfgPatches 
+class cfgPatches
 {
-    class RSF_RFB_Conversion 
+    class RSF_RFB_Conversion
     {
         name = "RSF RFB Conversion Mod";
         author = "Nero";
         url = "";
         version="0.0.1";
         versionStr="0.0.1";
-		requiredAddons[] = {"A3_Data_F","A3_Weapons_F","ace_advanced_ballistics","ace_advanced_fatigue","ace_advanced_throwing",
+		requiredAddons[] = {"A3_Data_F","A3_Weapons_F","A3_characters_f","ace_advanced_ballistics","ace_advanced_fatigue","ace_advanced_throwing",
 		"ace_ai","ace_aircraft","ace_apl","ace_arsenal","ace_atragmx","ace_attach","ace_backpacks","ace_ballistics",
 		"ace_captives","ace_cargo","ace_chemlights","ace_common","ace_concertina_wire","ace_cookoff","ace_dagr",
 		"ace_disarming","ace_disposable","ace_dogtags","ace_dragging","ace_explosives","ace_fastroping","ace_fcs",
@@ -40,17 +40,17 @@ class CowsSlot;
 class PointerSlot;
 class Mode_SemiAuto;
 
-class CfgWeapons 
+class CfgWeapons
 {
-	
+
 	class Rifle;
 	class Rifle_Base_F : Rifle
 	{
 		class WeaponSlotsInfo;
 		class GunParticles;
 	};
-	
-	class SDAR_base_F : Rifle_Base_F 
+
+	class SDAR_base_F : Rifle_Base_F
 	{
 		class WeaponSlotsInfo : WeaponSlotsInfo
 		{
@@ -80,7 +80,7 @@ class CfgWeapons
     {
         displayName="RFB";
 		descriptionShort = "Assault Rifle Gun<br />Caliber: 7.62x51 mm";
-		magazines[] = 
+		magazines[] =
 		{
 		"ACE_20Rnd_762x51_Mag_Tracer",
 		"ACE_20Rnd_762x51_Mag_Tracer_Dim",
@@ -112,19 +112,19 @@ class CfgWeapons
 		modes[]=
 		{
 			"Single",
-		};	
+		};
 		ACE_barrelTwist = 286;
 		ACE_barrelLength = 460;
 		ACE_twistDirection = 1;
 		mass = 81.571;
-		
+
 		class WeaponSlotsInfo: WeaponSlotsInfo
-		{	
-			
+		{
+
 			class CowsSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleItems[] = 
+				compatibleItems[] =
 				{
 				"rhsusf_acc_LEUPOLDMK4",
 				"rhsusf_acc_LEUPOLDMK4_d",
@@ -289,6 +289,6 @@ class CfgWeapons
 				"ACE_optic_LRPS_PIP"
 				};
 			};
-		};	
+		};
     };
-};	
+};
