@@ -1,4 +1,92 @@
+#define mag_xx(a,b) class _xx_##a {magazine = a; count = b;}
+#define weap_xx(a,b) class _xx_##a {weapon = a; count = b;}
+#define item_xx(a,b) class _xx_##a {name = a; count = b;}
+
 class cfgVehicles {
+
+	//Backpack configs
+	class B_Carryall_Base;
+
+	//Ammo Bearer
+	class B_Carryall_ocamo: B_Carryall_Base {};
+	class B_Carryall_oucamo: B_Carryall_Base {};
+
+	class B_FieldPack_cbr_Ammo : B_Carryall_ocamo {
+
+		class TransportItems {
+			item_xx(FirstAidKit,4);
+		};
+
+		class TransportMagazines {
+			mag_xx(30Rnd_556x45_Stanag_green,6);
+			mag_xx(10Rnd_762x51_Mag,3);
+			mag_xx(10Rnd_93x64_DMR_05_Mag,2);
+			mag_xx(150Rnd_762x54_Box,1);
+			mag_xx(1Rnd_HE_Grenade_shell,6);
+			mag_xx(HandGrenade,2);
+			mag_xx(MiniGrenade,2);
+			mag_xx(RPG32_F,1);
+		};
+
+	};
+
+	//Urban CSAT ammo Bearer
+	class B_FieldPack_oucamo_Ammo: B_Carryall_oucamo {
+
+		class TransportItems {
+			item_xx(FirstAidKit,4);
+		};
+
+		class TransportMagazines {
+			mag_xx(10Rnd_762x51_Mag,3);
+			mag_xx(10Rnd_93x64_DMR_05_Mag,2);
+			mag_xx(150Rnd_762x54_Box,1);
+			mag_xx(1Rnd_HE_Grenade_shell,6);
+			mag_xx(30Rnd_556x45_Stanag_green,6);
+			mag_xx(HandGrenade,2);
+			mag_xx(MiniGrenade,2);
+			mag_xx(RPG32_F,1);
+		};
+
+	};
+
+	//Asst Autorifleman
+	class B_Carryall_ocamo_AAR : B_Carryall_ocamo {
+
+		class TransportItems {
+			item_xx(bipod_02_F_hex,1);
+			item_xx(muzzle_snds_93mmg,0);
+			item_xx(muzzle_snds_h_mg_khk_f,1);
+			item_xx(optic_tws_mg,1);
+		};
+
+		class TransportMagazines {
+			mag_xx(150Rnd_762x54_Box,1);
+			mag_xx(150Rnd_762x54_Box_Tracer,1);
+			mag_xx(150Rnd_93x64_Mag,0);
+			mag_xx(120Rnd_762x51_Mag_M80A1_F,2);
+		};
+
+	};
+
+	//Urban CSAT asst Autorifleman
+	class B_Carryall_oucamo_AAR: B_Carryall_oucamo {
+
+		class TransportItems {
+			item_xx(bipod_02_F_hex,1);
+			item_xx(muzzle_snds_93mmg,0);
+			item_xx(muzzle_snds_h_mg_khk_f,1);
+			item_xx(optic_tws_mg,1);
+		};
+
+		class TransportMagazines {
+			mag_xx(150Rnd_762x54_Box,1);
+			mag_xx(150Rnd_762x54_Box_Tracer,1);
+			mag_xx(150Rnd_93x64_Mag,0);
+			mag_xx(120Rnd_762x51_Mag_M80A1_F,2);
+		};
+
+	};
 
 	// Base classes
 	class SoldierEB;
@@ -260,18 +348,50 @@ class cfgVehicles {
 	};
 
 	class O_Soldier_AAT_F : O_Soldier_base_F {
+		magazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
+
+		respawnMagazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
+	};
+
+	class O_Soldier_AAA_F : O_Soldier_base_F {
+
+		magazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
+
+		respawnMagazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
 
 	};
 
-	class O_Soldier_AAA_F : O_Soldier_base_F {};
+	class O_Soldier_AHAT_F : O_Soldier_base_F {
 
-	class O_Soldier_AHAT_F : O_Soldier_base_F {};
+		magazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
 
-	class O_support_AMort_F : O_Soldier_base_F {};
+		respawnMagazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
 
-	class O_support_AMG_F : O_Soldier_base_F {};
+	};
 
-	class O_Soldier_AAR_F : O_Soldier_base_F {}; // suppressor, 7.62 for MG5
+	class O_support_AMort_F : O_Soldier_base_F {
+
+		magazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
+
+		respawnMagazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
+
+	};
+
+	class O_support_AMG_F : O_Soldier_base_F {
+
+		magazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
+
+		respawnMagazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
+
+	};
+
+	class O_Soldier_AAR_F : O_Soldier_base_F {
+
+		magazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
+
+		respawnMagazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
+
+	}; // suppressor, 7.62 for MG5
 
 	class O_Soldier_A_F : O_Soldier_base_F {magazines[] = { "30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","MiniGrenade","MiniGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red" };
 
