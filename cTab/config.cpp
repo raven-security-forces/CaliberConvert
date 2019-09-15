@@ -8776,7 +8776,7 @@ class CfgSounds
 	{
 		sound[]=
 		{
-			"\cTab\sounds\phoneVibrate.wss",
+			"\cTab\sounds\phoneVibrate.wav",
 			1,
 			1
 		};
@@ -8786,7 +8786,7 @@ class CfgSounds
 	{
 		sound[]=
 		{
-			"\cTab\sounds\mailSent.wss",
+			"\cTab\sounds\mailSent.wav",
 			1,
 			1
 		};
