@@ -37,6 +37,7 @@ class WeaponSlotsInfo;
 class MuzzleSlot;
 class SlotInfo;
 class CowsSlot;
+class PointerSlot;
 
 class CfgMagazines
 {
@@ -109,6 +110,17 @@ class DMR_07_base_F;
 				};
 			};
 		};
+		
+		class PointerSlot: PointerSlot //Doesn't have a rail so none
+			{
+				compatibleItems[] =
+				{
+				};
+			};
+		
+		
+		
+		
     };
 
 	class srifle_DMR_07_hex_F: DMR_07_base_F
