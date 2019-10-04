@@ -19,6 +19,14 @@ Makes changes to various weapons in terms of weight and caliber to fall in line 
 ### What it does
 Adds the Bamse cTab fix from Steam to the configuration files.
 
+## Weapon Reskins
+### What it does
+Adds a few Reskins of existing Weapons. Will most likely expanded to include more Weapons and other gear
+
+## Faucon Bleu
+### What it does
+Adds a new Faction: Faucon Bleu, a Serbian-French themed Paramilitary and Security Force.
+
 ## Have a bug to report?
 Submit an [issue by clicking on this link](https://github.com/SpartanD39/CaliberConvert/issues/new)
 #### What we need:
