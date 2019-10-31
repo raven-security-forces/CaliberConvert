@@ -141,7 +141,7 @@ class MMG_01_base_F;
 		};		
     };
 	
- class MMG_01_tan_F: MMG_01_hex_F
+	class MMG_01_tan_F: MMG_01_hex_F
     {
         displayName="MG5 (Tan)";
 		
@@ -160,5 +160,4 @@ class MMG_01_base_F;
 			};
 		};		
     };
-	
-};	
+};

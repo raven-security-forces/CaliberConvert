@@ -208,7 +208,6 @@ class cfgVehicles
 
 	};
 
-	class I_E_Soldier_Exp_F : I_E_Soldier_base_F {};
 	class I_E_soldier_Mine_F : I_E_Soldier_Exp_F {
 
 		magazines[] = { "s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","SmokeShellBlue","Chemlight_Blue","Chemlight_Blue" };
