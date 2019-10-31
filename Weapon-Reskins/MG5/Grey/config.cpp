@@ -55,7 +55,6 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		vehicleClass="WeaponsPrimary";
-		author="NeroTheHero111";
 		displayName="MG5 (Grey)";
 		class TransportItems
 		{
@@ -75,7 +74,6 @@ class CfgWeapons
 	{
 		DLC="Mark";
 		scope=2;
-		author="NeroTheHero111";
 		displayName="MG5 (Grey)";
 		picture="\Weapon-Reskins\MG5\Grey\UI\icon_MMG_01_grey.paa";
 		hiddenSelections[] = 
