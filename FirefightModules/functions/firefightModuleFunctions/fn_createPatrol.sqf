@@ -1,0 +1,63 @@
+
+
+//Parameters
+_faction = param [0,"",[""]];
+_pos = param [1,[0,0,0],[position player]];
+_soldierConfigs = _this select 2;
+
+//Get our list of available troops to spawn, as well as their side.
+_side = EAST;
+
+
+_singleSolder = _soldierConfigs select 0;
+
+_sideNum = getNumber (_singleSolder >> 'side');
+
+switch (_sideNum) do {
+
+    case 0: {
+      _side = EAST;
+    };
+
+    case 1: {
+      _side = WEST;
+    };
+
+    case 2: {
+      _side = resistance;
+    };
+
+    default {
+      _side = EAST;
+    };
+
+};
+
+_troopsToSpawn =[];
+
+//Spawn the patrol group
+for "_i" from 1 to 4 do {
+  _soldier = selectRandom _soldierConfigs;
+  _troopsToSpawn pushBack configName _soldier;
+};
+
+_spawnedGroup = [_pos, _side, _troopsToSpawn] call BIS_fnc_spawnGroup;
+[_spawnedGroup, getPos leader _spawnedGroup, 100, 6, "MOVE", "SAFE", "YELLOW", "NORMAL", "STAG_COLUMN", "", [3,6,9]] call CBA_fnc_taskPatrol;
+
+{
+  _soldier = _x;
+  {_x addCuratorEditableObjects [[_soldier] , false];} forEach allCurators;
+} forEach units _spawnedGroup;
+
+if (initWallet) then {
+  {
+    if (s39_ff_module_AddMoneyVal isEqualType 0) then {
+
+      } else {
+        s39_ff_module_AddMoneyVal = 250;
+    };
+    _x addMPEventHandler ["MPKilled", {[_this select 1, s39_ff_module_AddMoneyVal] call s39_fnc_makeMoney}];
+  } forEach units _spawnedGroup;
+};
+
+TRUE
