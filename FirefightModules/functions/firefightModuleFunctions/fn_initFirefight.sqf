@@ -140,6 +140,10 @@ _allowMove = selectRandom [true,false];
 
 } forEach _patrolPositions;
 
+//Setup our secondary objectives, we'll do two for now.
+[_firefightLoc, _radius] call s39_fnc_secondaryObjectives;
+
+[_firefightLoc, _radius] call s39_fnc_secondaryObjectives;
 //Create our task. Sanity checking to remove/readd the task if it was previously created/completed.
 if (_taskExists) then {
   ["ffAreaObj"] call BIS_fnc_deleteTask;
