@@ -41,6 +41,7 @@ class cfgFunctions {
       class createPatrol {};
       class garrisonNearBuilding {};
       class initFirefight {};
+      class secondaryObjectives {};
     };
 
     class guiFunctions {
