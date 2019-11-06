@@ -122,6 +122,8 @@ switch (_type) do {
     	false												// Show in unconscious state
     ] remoteExec ["BIS_fnc_holdActionAdd", 0, opforCom];
 
+		{ _x addCuratorEditableObjects [[opforCom],false];} forEach allCurators;
+
   };
 
   case "smallCache" : {
@@ -130,7 +132,7 @@ switch (_type) do {
 		smallAmmoBox1 setVariable ["ace_cookoff_enableammocookoff", false, true];
 		smallAmmoBox2 setVariable ["ace_cookoff_enableammocookoff", false, true];
 		smallCacheBox addMPEventHandler ["MPKilled", {[true, ["smallCacheDestroyed", "ffAreaObj"], ["","Destroyed Cache",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate;}];
-
+		{ _x addCuratorEditableObjects [[smallCacheBox, smallAmmoBox1, smallAmmoBox2],false];} forEach allCurators;
 	};
 
   case "bigCache" : {
@@ -139,13 +141,13 @@ switch (_type) do {
 		bigCacheAmmo1 setVariable ["ace_cookoff_enableammocookoff", false, true];
 		bigCacheAmmo2 setVariable ["ace_cookoff_enableammocookoff", false, true];
 		bigCacheTgt addMPEventHandler ["MPKilled", {[true, ["bigCacheDestroyed", "ffAreaObj"], ["","Destroyed Cache",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate;}];
-
+		{ _x addCuratorEditableObjects [[bigCacheTgt, bigCacheAmmo1, bigCacheAmmo2],false];} forEach allCurators;
 	};
 
   case "fuelDrop" : {
 
 		fuelDropTgt addMPEventHandler ["MPKilled", {[true, ["fuelDropDestroyed", "ffAreaObj"], ["","Destroyed fuel cache",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate;}];
-
+		{ _x addCuratorEditableObjects [[fuelDropTgt],false];} forEach allCurators;
 	};
 
   case "dataRelay" : {
@@ -167,6 +169,7 @@ switch (_type) do {
     	true,												// Remove on completion
     	false												// Show in unconscious state
     ] remoteExec ["BIS_fnc_holdActionAdd", 0, dataRelayTgt_2];
+		{ _x addCuratorEditableObjects [[dataRelayTgt_2],false];} forEach allCurators;
 
   };
 
@@ -191,6 +194,8 @@ switch (_type) do {
     ] remoteExec ["BIS_fnc_holdActionAdd", 0, heliCrashTgt];
 
 		_smoke = createVehicle ["test_EmptyObjectForSmoke", position heliCrashTgt, [],0,"CAN_COLLIDE"];
+
+		{ _x addCuratorEditableObjects [[heliCrashTgt],false];} forEach allCurators;
 
   };
 
