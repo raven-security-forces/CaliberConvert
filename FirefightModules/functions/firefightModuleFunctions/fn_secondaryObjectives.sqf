@@ -113,7 +113,7 @@ switch (_type) do {
     	"_caller distance _target < 3",						// Condition for the action to progress
     	{},													// Code executed when action starts
     	{},													// Code executed on every progress tick
-    	{ [true, "foundIntelComplete", ["","Found Intel",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate; },				// Code executed on completion
+    	{ [true, ["foundIntelComplete", "ffAreaObj"], ["","Found Intel",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate; },				// Code executed on completion
     	{},													// Code executed on interrupted
     	[],													// Arguments passed to the scripts as _this select 3
     	10,													// Action duration [s]
@@ -129,7 +129,7 @@ switch (_type) do {
 		smallCacheBox setVariable ["ace_cookoff_enableammocookoff", false, true];
 		smallAmmoBox1 setVariable ["ace_cookoff_enableammocookoff", false, true];
 		smallAmmoBox2 setVariable ["ace_cookoff_enableammocookoff", false, true];
-		smallCacheBox addMPEventHandler ["MPKilled", {[true, "smallCacheDestroyed", ["","Destroyed Cache",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate;}];
+		smallCacheBox addMPEventHandler ["MPKilled", {[true, ["smallCacheDestroyed", "ffAreaObj"], ["","Destroyed Cache",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate;}];
 
 	};
 
@@ -138,13 +138,13 @@ switch (_type) do {
 		bigCacheTgt setVariable ["ace_cookoff_enableammocookoff", false, true];
 		bigCacheAmmo1 setVariable ["ace_cookoff_enableammocookoff", false, true];
 		bigCacheAmmo2 setVariable ["ace_cookoff_enableammocookoff", false, true];
-		bigCacheTgt addMPEventHandler ["MPKilled", {[true, "bigCacheDestroyed", ["","Destroyed Cache",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate;}];
+		bigCacheTgt addMPEventHandler ["MPKilled", {[true, ["bigCacheDestroyed", "ffAreaObj"], ["","Destroyed Cache",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate;}];
 
 	};
 
   case "fuelDrop" : {
 
-		fuelDropTgt addMPEventHandler ["MPKilled", {[true, "fuelDropDestroyed", ["","Destroyed fuel cache",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate;}];
+		fuelDropTgt addMPEventHandler ["MPKilled", {[true, ["fuelDropDestroyed", "ffAreaObj"], ["","Destroyed fuel cache",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate;}];
 
 	};
 
@@ -159,7 +159,7 @@ switch (_type) do {
     	"_caller distance _target < 3",						// Condition for the action to progress
     	{},													// Code executed when action starts
     	{},													// Code executed on every progress tick
-    	{ [true, "disabledCommsComplete", ["","Disabled Comms",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate; },				// Code executed on completion
+    	{ [true, ["disabledCommsComplete", "ffAreaObj"], ["","Disabled Comms",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate; },				// Code executed on completion
     	{},													// Code executed on interrupted
     	[],													// Arguments passed to the scripts as _this select 3
     	10,													// Action duration [s]
@@ -181,7 +181,7 @@ switch (_type) do {
     	"_caller distance _target < 3",						// Condition for the action to progress
     	{},													// Code executed when action starts
     	{},													// Code executed on every progress tick
-    	{ [true, "secureBlackboxComplete", ["","Secured Black Box",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate; },				// Code executed on completion
+    	{ [true, ["secureBlackboxComplete", "ffAreaObj"], ["","Secured Black Box",""], objNull, "SUCCEEDED"] call BIS_fnc_taskCreate; },				// Code executed on completion
     	{},													// Code executed on interrupted
     	[],													// Arguments passed to the scripts as _this select 3
     	12,													// Action duration [s]
