@@ -13,6 +13,13 @@ _radius = 300;
 
 } forEach nearestObjects [_location, ["all"], _radius];
 
-//Delete our task.
-["ffAreaObj"] call BIS_fnc_deleteTask;
+//Delete our tasks that exist.
+
+{
+  _taskExists = [_x] call BIS_fnc_taskExists;
+  if(_taskExists) then {
+    [_x] call BIS_fnc_deleteTask;
+  };
+} forEach ["foundIntelComplete", "smallCacheDestroyed", "bigCacheDestroyed", "fuelDropDestroyed", "disabledCommsComplete", "secureBlackboxComplete", "ffAreaObj"];
+
 _handle = [] spawn {hint "Skirmish cleared!"; sleep 3; hintSilent "";};
