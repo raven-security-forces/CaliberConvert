@@ -1,4 +1,16 @@
-
+/* Create a patrol..
+ * Can be used on its own or in conjunection with other functions.
+ *
+ * Params:
+ * 0 - _faction - Name of the facion you want soldiers from
+ * 1 - _pos - position to spawn/garrison the soldiers near.
+ * 2 - _soldierConfigs - array - array of available entries to spawn soldiers from.
+ * returns - BOOL - true if success, false if failed.
+ *
+ * Exampe:
+ * ["IND_F", 0,0,0, _soldierConfigs] call s39_fnc_createPatrol;
+ *
+*/
 
 //Parameters
 _faction = param [0,"",[""]];

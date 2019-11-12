@@ -1,3 +1,18 @@
+/*
+ * Utility function created to clear firefights and objectives spawned by
+ * the firefight module system.
+ *
+ * Params:
+ * None.
+ *
+ * Returns:
+ * Nothing.
+ *
+ * Exampe:
+ * [] call s39_fnc_clearFirefight.
+ *
+*/
+
 //Check if our task exists and bail if it doesn't.
 _taskExists = ["ffAreaObj"] call BIS_fnc_taskExists;
 

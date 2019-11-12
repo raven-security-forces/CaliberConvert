@@ -1,14 +1,14 @@
 /*
  * Garrisons buildings near a given map marker with infantry units of the
  * specified faction. Also spawns up to 5 patrolling groups of the same faction.
- * Garrisoned units will leave their garrison if BLUFOR gets within 25m of the
+ * Some garrisoned units will leave their garrison if BLUFOR gets within 25m of the
  * leader of the group. Group max size is 8 for garrisons, 4 for patrols.
  *
  * Random garrisoned units will be able to leave their positions if BLUFOR is
  * within 25 meters.
  *
  * Params:
- * _firefightMarker - string - marker name.
+ * _firefightMarker - string - Marker position.
  * _faction - string - facion name from CfgFactions
  * _radius [optional] - integer - Radius to fill buildings in. 150 is default.
  * _level [optional] - string - how heavy the garrison should be. Defaults to full
