@@ -5,8 +5,8 @@
  * Params:
  * 0 - _faction - Name of the facion you want soldiers from
  * 1 - _pos - position to spawn/garrison the soldiers near.
- *
- *
+ * 2 - _allowMove - bool - whether or not to add a trigger which allows the garrison to leave the building.
+ * 3 - _soldierConfigs - array - array of available entries to spawn soldiers from. 
  * returns - BOOL - true if success, false if failed.
  *
  * Exampe:

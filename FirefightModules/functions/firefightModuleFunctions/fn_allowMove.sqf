@@ -1,3 +1,19 @@
+/*
+ * Utility function added to a unit that re-enables AI pathing.
+ * Intended for use with the firefight modules, specifically the 'garrisonBuilding'
+ * function.
+ *
+ * Params:
+ * A trigger logic object.
+ *
+ * Returns:
+ * Nothing.
+ *
+ * Exampe:
+ * [myUnitTrigger] call s39_fnc_allowMove
+ *
+*/
+
 _syncedTrigger = _this select 0;
 _groups = [];
 _allUnits = [];
