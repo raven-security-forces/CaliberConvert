@@ -144,7 +144,7 @@ class skirmishDisplay
   class submit_btn: RscButton
   {
   	idc = 1600;
-    onButtonClick = "[722, 723, 724, 725] call s39_fnc_gui_handleForm;";
+    onButtonClick = [722, 723, 724, 725] remoteExec ["s39_fnc_gui_handleForm"];
   	text = "Go"; //--- ToDo: Localize;
   	x = 9 * GUI_GRID_W + GUI_GRID_X;
   	y = 14 * GUI_GRID_H + GUI_GRID_Y;
