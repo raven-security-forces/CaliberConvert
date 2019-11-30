@@ -1,3 +1,6 @@
+The RSF Configurations mod is licensed under the APL-SA License:
+https://www.bohemia.net/community/licenses/arma-public-license-share-alike
+
 # RSF Configuration Files
 Custom configs for Raven Security Forces
 
