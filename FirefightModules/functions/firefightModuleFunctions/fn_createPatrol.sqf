@@ -54,7 +54,7 @@ for "_i" from 1 to 4 do {
 };
 
 _spawnedGroup = [_pos, _side, _troopsToSpawn] call BIS_fnc_spawnGroup;
-[_spawnedGroup, getPos leader _spawnedGroup, 100, 6, "MOVE", "SAFE", "YELLOW", "NORMAL", "STAG_COLUMN", "", [3,6,9]] call CBA_fnc_taskPatrol;
+[_spawnedGroup, getPos leader _spawnedGroup, 100] call BIS_fnc_taskPatrol;
 
 {
   _soldier = _x;

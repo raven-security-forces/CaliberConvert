@@ -90,7 +90,7 @@ _heliCrashSite = [[
 	["Land_Wreck_Heli_02_Wreck_03_F",[-2.12109,-6.96973,0],270,1,0,[0,0],"","",true,false]
 ], "heliCrashSite", "B_Plane_CAS_01_dynamicLoadout_F"];
 
-_possibleObjs = [_evidenceTable, _smallCache, _bigCache, _fuelDrop, _dataRelay, _heliCrashSite];
+_possibleObjs = [_smallCache, _bigCache, _fuelDrop, _dataRelay, _heliCrashSite];
 
 _objective = selectRandom _possibleObjs;
 

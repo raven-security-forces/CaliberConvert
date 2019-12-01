@@ -156,7 +156,7 @@ class skirmishDisplay
 	class gui_clearskirmish_btn: RscButton
 {
 	idc = 1601;
-	onButtonClick = "[] call s39_fnc_clearFirefight;";
+	onButtonClick = [] remoteExec ["s39_fnc_clearFirefight"];
 
 	text = "Clear Skirmish"; //--- ToDo: Localize;
 	x = 9 * GUI_GRID_W + GUI_GRID_X;

@@ -26,4 +26,4 @@ _syncedObjects = synchronizedObjects _syncedTrigger;
 
 {_x enableAI "PATH"; _x setUnitPos "AUTO";} forEach _allUnits;
 
-{_x setBehaviour "COMBAT";_x setCombatMode "RED";_x setSpeedMode "NORMAL"; [_x] call CBA_fnc_taskDefend;} forEach _groups;
+{_x setBehaviour "COMBAT";_x setCombatMode "RED";_x setSpeedMode "NORMAL"; [_x, (position leader _x)] call BIS_fnc_taskDefend;} forEach _groups;

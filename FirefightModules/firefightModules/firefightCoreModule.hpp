@@ -25,22 +25,13 @@ class s39_firefightCoreModule: Module_F
 	// Module attributes, uses https://community.bistudio.com/wiki/Eden_Editor:_Configuring_Attributes#Entity_Specific
 	class Attributes: AttributesBase
 	{
-		class MoneyToAdd: Edit
-			{
-				property = "s39_shopCoreModule_initAddMoneyEHVal";
-				displayName = "Amount to add per kill: ";
-				tooltip = "Amount added to killers wallet when a unit spawned by this module is killed.";
-        validate = "number";
-        typeName = "NUMBER";
-			};
-
 		class ModuleDescription: ModuleDescription {}; // Module description should be shown last
 	};
 
 	// Module description. Must inherit from base class, otherwise pre-defined entities won't be available
 	class ModuleDescription: ModuleDescription
 	{
-		description="Initializes the firefight system. Sync location modules to this to designate approved locations.";
+		description="Initializes the firefight system and provides the UI to synced objects. Synced FF position modules will designated selectable locations.";
 		position=0;
 		duplicate=0;
 	};
