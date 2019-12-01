@@ -6,7 +6,7 @@
  * 0 - _faction - Name of the facion you want soldiers from
  * 1 - _pos - position to spawn/garrison the soldiers near.
  * 2 - _allowMove - bool - whether or not to add a trigger which allows the garrison to leave the building.
- * 3 - _soldierConfigs - array - array of available entries to spawn soldiers from. 
+ * 3 - _soldierConfigs - array - array of available entries to spawn soldiers from.
  * returns - BOOL - true if success, false if failed.
  *
  * Exampe:
@@ -87,17 +87,6 @@ _soldiers = units _spawnedGroup;
  {_x addCuratorEditableObjects [[_soldier] , false];} forEach allCurators;
 
 } forEach _soldiers;
-
-if (initWallet) then {
-  {
-    if (s39_ff_module_AddMoneyVal isEqualType 0) then {
-
-      } else {
-        s39_ff_module_AddMoneyVal = 250;
-    };
-    _x addMPEventHandler ["MPKilled", {[_this select 1, s39_ff_module_AddMoneyVal] call s39_fnc_makeMoney}];
-  } forEach units _spawnedGroup;
-};
 
 if (_allowMove) then {
 

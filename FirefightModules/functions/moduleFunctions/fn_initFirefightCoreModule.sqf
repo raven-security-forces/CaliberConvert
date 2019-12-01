@@ -44,7 +44,8 @@ if (_activated) then {
 		[_x, ["Open Skirmish Display", { createDialog "skirmishDisplay"; }, [], 1.5, true, true, "", "true", 10, false, "", ""]] remoteExec ["addAction"];
 	} forEach _addViewItems;
 
-   //hint format ["%1 - Items to add the view to: %2", allGameMapMakers, _addViewItems];
+   //Broadcast our variables now;
+	 publicVariable "allGameMapMarkers";
 };
 // Module function is executed by spawn command, so returned value is not necessary, but it's good practice.
 true

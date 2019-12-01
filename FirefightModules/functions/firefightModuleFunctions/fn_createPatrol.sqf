@@ -61,15 +61,4 @@ _spawnedGroup = [_pos, _side, _troopsToSpawn] call BIS_fnc_spawnGroup;
   {_x addCuratorEditableObjects [[_soldier] , false];} forEach allCurators;
 } forEach units _spawnedGroup;
 
-if (initWallet) then {
-  {
-    if (s39_ff_module_AddMoneyVal isEqualType 0) then {
-
-      } else {
-        s39_ff_module_AddMoneyVal = 250;
-    };
-    _x addMPEventHandler ["MPKilled", {[_this select 1, s39_ff_module_AddMoneyVal] call s39_fnc_makeMoney}];
-  } forEach units _spawnedGroup;
-};
-
 TRUE
