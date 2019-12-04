@@ -74,11 +74,11 @@ if (_garrisonableBldngsCount > 30) then {
 switch (_level) do {
 
     case "light": {
-      _garrisonableBldngsCount = round (_garrisonableBldngsCount * .6);
+      _garrisonableBldngsCount = round (_garrisonableBldngsCount * .3);
     };
 
     case "medium": {
-      _garrisonableBldngsCount = round (_garrisonableBldngsCount * .8 );
+      _garrisonableBldngsCount = round (_garrisonableBldngsCount * .7 );
     };
 
     case "heavy": {
@@ -115,8 +115,6 @@ for "_i" from 0 to _garrisonableBldngsCount do {
   };
 
 };
-
-diag_log format ["road pos - %1 --- roads - %2 --- FF Location - %3", _roadPositions, _roads, _firefightLoc];
 
 for "_x" from 0 to _numPatrols do {
 
