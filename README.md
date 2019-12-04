@@ -32,7 +32,7 @@ Adds a new Faction: Faucon Bleu, a Serbian-French themed Paramilitary and Securi
 
 ## FirefightModules
 ### What it does
-Adds two new sets of modules to the 3DEN editor; Firefight and Shop modules. 
+Adds a new 'Firefight Core' and 'Firefight Position' module to the editor to easily set up spawnable fights.
 
 ### How it works
 Drop a FF Core module somewhere on the map, sync it to a unit, object, or whatever to create an addaction on that synced object(s) to open a skirmish display. Drop one or more FF Location modules in urban-ish areas and sync those to the FF Core module.
@@ -41,9 +41,7 @@ You can set custom location names in the location module options, otherwise will
 
 You can clear the active skirmish from within the skirmish UI.
 
-The shop module is similar; sync the module to a unit/laptop/whatevr to define the storefront, and then sync a box of some kind to the module to designate where the shop dumps what you buy. Do not tick the 'init wallet' option in the module settings for right now, that is only useful if ACE is disabled. 
-
-Add/Lose money EH modules are synced to units/vehicles/objects to define a reward for the killer when the object is destroyed. Due to how ACE changes the way 'killed' eventhandlers work, these are also not useful unless ACE is disabled.
+Shop/money modules have been entirely removed at this time.
 
 ## Have a bug to report?
 Submit an [issue by clicking on this link](https://github.com/SpartanD39/CaliberConvert/issues/new)
