@@ -74,11 +74,11 @@ if (_garrisonableBldngsCount > 30) then {
 switch (_level) do {
 
     case "light": {
-      _garrisonableBldngsCount = round (_garrisonableBldngsCount * .3);
+      _garrisonableBldngsCount = round (_garrisonableBldngsCount * .2);
     };
 
     case "medium": {
-      _garrisonableBldngsCount = round (_garrisonableBldngsCount * .7 );
+      _garrisonableBldngsCount = round (_garrisonableBldngsCount * .6 );
     };
 
     case "heavy": {
