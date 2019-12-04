@@ -32,7 +32,7 @@ Adds a new Faction: Faucon Bleu, a Serbian-French themed Paramilitary and Securi
 
 ## FirefightModules
 ### What it does
-Adds two new sets of modules to the 3DEN editor; Firefight and Shop modules. 
+Adds a new 'Firefight Core' and 'Firefight Position' module to the editor to easily set up spawnable fights.
 
 ### How it works
 Drop a FF Core module somewhere on the map, sync it to a unit, object, or whatever to create an addaction on that synced object(s) to open a skirmish display. Drop one or more FF Location modules in urban-ish areas and sync those to the FF Core module.
