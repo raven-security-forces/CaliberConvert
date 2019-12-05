@@ -12,15 +12,15 @@ switch (_mode) do {
     switch (_playerSide) do {
 
       case ("WEST"): {
-          _cfgItems = gameFactionsEast;
+          _cfgItems = gameFactionsEast + gameFactionsIndep;
       };
 
       case ("EAST"): {
-          _cfgItems = gameFactionsWest;
+          _cfgItems = gameFactionsWest + gameFactionsIndep;
       };
 
       case ("GUER"): {
-          _cfgItems = gameFactionsEast;
+          _cfgItems = gameFactionsEast + gameFactionsWest;
       };
 
     };
