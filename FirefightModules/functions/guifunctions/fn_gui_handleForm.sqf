@@ -18,4 +18,4 @@ _faction = _firefightParams select 0;
 _radius = parseNumber (_firefightParams select 2);
 _level = _firefightParams select 3;
 
-[_marker, _faction, _radius, _level] spawn s39_fnc_initFirefight;
+[_marker, _faction, _radius, _level] remoteExec ["s39_fnc_initFirefight"];

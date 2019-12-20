@@ -12,7 +12,7 @@ _activated = true;
 if (_activated) then {
   _displayName = _logic getVariable ["Name", -1];
   _skirmishLocation = getPos _logic;
-  _logic setVariable ["skirmishLocation", _skirmishLocation];
+  _logic setVariable ["skirmishLocation", _skirmishLocation, true];
 };
 // Module function is executed by spawn command, so returned value is not necessary, but it's good practice.
 true

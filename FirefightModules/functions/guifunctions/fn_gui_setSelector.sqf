@@ -12,15 +12,15 @@ switch (_mode) do {
     switch (_playerSide) do {
 
       case ("WEST"): {
-          _cfgItems = gameFactionsEast;
+          _cfgItems = gameFactionsEast + gameFactionsIndep;
       };
 
       case ("EAST"): {
-          _cfgItems = gameFactionsWest;
+          _cfgItems = gameFactionsWest + gameFactionsIndep;
       };
 
       case ("GUER"): {
-          _cfgItems = gameFactionsEast;
+          _cfgItems = gameFactionsEast + gameFactionsWest;
       };
 
     };
@@ -32,7 +32,7 @@ switch (_mode) do {
   };
 
   case ("radius"): {
-      _cfgItems = [["150","150"],["175","175"],["200","200"],["225","225"],["250","250"]];
+      _cfgItems = [["75","75"],["100","100"],["125","125"],["150","150"],["175","175"],["200","200"],["225","225"],["250","250"]];
   };
 
   case ("level"): {
