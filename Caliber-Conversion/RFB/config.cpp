@@ -7,24 +7,17 @@ class cfgPatches
         url = "";
         version="0.0.1";
         versionStr="0.0.1";
-		requiredAddons[] = {"A3_Data_F","A3_Weapons_F","A3_characters_f","ace_advanced_ballistics","ace_advanced_fatigue","ace_advanced_throwing",
-		"ace_ai","ace_aircraft","ace_apl","ace_arsenal","ace_atragmx","ace_attach","ace_backpacks","ace_ballistics",
-		"ace_captives","ace_cargo","ace_chemlights","ace_common","ace_concertina_wire","ace_cookoff","ace_dagr",
-		"ace_disarming","ace_disposable","ace_dogtags","ace_dragging","ace_explosives","ace_fastroping","ace_fcs",
-		"ace_finger","ace_flashlights","ace_flashsuppressors","ace_fonts","ace_frag","ace_gestures","ace_gforces",
-		"ace_goggles","ace_grenades","ace_gunbag","ace_hearing","ace_hellfire","ace_hitreactions","ace_hot",
-		"ace_huntir","ace_interact_menu","ace_interaction","ace_inventory","ace_javelin","ace_kestrel4500",
-		"ace_laser","ace_laserpointer","ace_logistics_uavbattery","ace_logistics_wirecutter","ace_magazinerepack",
-		"ace_main","ace_map","ace_map_gestures","ace_maptools","ace_markers","ace_maverick","ace_medical","ace_medical_ai",
-		"ace_medical_blood","ace_medical_menu","ace_microdagr","ace_minedetector","ace_missileguidance","ace_missionmodules",
-		"ace_mk6mortar","ace_modules","ace_movement","ace_mx2a","ace_nametags","ace_nightvision","ace_nlaw","ace_noidle",
-		"ace_noradio","ace_norearm","ace_optics","ace_optionsmenu","ace_overheating","ace_overpressure","ace_parachute",
-		"ace_pylons","ace_quickmount","ace_rangecard","ace_realisticnames","ace_realisticweights","ace_rearm",
-		"ace_recoil","ace_refuel","ace_reload","ace_reloadlaunchers","ace_repair","ace_respawn","ace_safemode",
-		"ace_sandbag","ace_scopes","ace_slideshow","ace_smallarms","ace_spectator","ace_spottingscope","ace_switchunits",
-		"ace_tacticalladder","ace_tagging","ace_thermals","ace_trenches","ace_tripod","ace_ui","ace_vector",
-		"ace_vehiclelock","ace_vehicles","ace_viewdistance","ace_weaponselect","ace_weather","ace_winddeflection",
-		"ace_yardage450","ace_zeus"
+		requiredAddons[] = 
+		{
+		"A3_Weapons_F",
+		"A3_Anims_F_Config_Sdr",
+		"A3_Data_F",
+		"A3_Ui_F",
+		"ace_ballistics",
+		"ace_common",
+		"ace_smallarms",
+		"ace_realisticnames",
+		"cba_jr"
 		};
         units[] = {};
         weapons[] = {};
@@ -50,27 +43,9 @@ class CfgWeapons
 		class GunParticles;
 	};
 
-	class SDAR_base_F : Rifle_Base_F
-	{
-		class WeaponSlotsInfo : WeaponSlotsInfo
-		{
-			class MuzzleSlot : MuzzleSlot //Suppressors and flashiders.
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE"; //This is needed to be able to display models.
-				compatibleItems[] = //our actual list of items, all classnames from in-game. Doesn't work so none
-				{
-				};
-			};
-			class CowsSlot
-			{
-			};
-			class PointerSlot
-			{
-			};
-		};
-	};
+	class SDAR_base_F : Rifle_Base_F {};
 
-	 class arifle_SDAR_F: SDAR_base_F
+	class arifle_SDAR_F: SDAR_base_F
     {
         displayName="RFB";
 		descriptionShort = "Assault Rifle Gun<br />Caliber: 7.62x51 mm";
@@ -111,10 +86,9 @@ class CfgWeapons
 		ACE_barrelLength = 460;
 		ACE_twistDirection = 1;
 		mass = 81.571;
-
+		
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-
 			class CowsSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
@@ -328,9 +302,10 @@ class CfgWeapons
 				"ACE_optic_SOS_2D",
 				"ACE_optic_SOS_PIP",
 				"ACE_optic_LRPS_2D",
-				"ACE_optic_LRPS_PIP"
+				"ACE_optic_LRPS_PIP",
+				"rhs_acc_okp7_picatinny"
 				};
 			};
 		};
-    };
+	};
 };

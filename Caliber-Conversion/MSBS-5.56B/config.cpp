@@ -21,7 +21,8 @@ class CfgPatches
 			"ace_common",
 			"ace_smallarms",
 			"ace_realisticnames",
-			"ace_compat_rhs_usf3"
+			"ace_compat_rhs_usf3",
+			"cba_jr"
 		};
 		units[] = {};
 		weapons[] = {"s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag_TracerG","s39_30Rnd_556x45_msbs_mag_TracerR","s39_30Rnd_556x45_msbs_mag_TracerY","s39_30Rnd_556x45_msbs_mag_m995_ap","s39_30Rnd_556x45_msbs_mag_mk262","s39_30Rnd_556x45_msbs_mag_mk318","s39_30Rnd_556x45_msbs_mag_ir_dim"};
@@ -206,19 +207,15 @@ class CfgMagazineWells
 class Mode_FullAuto;
 class Mode_Burst;
 class Mode_SemiAuto;
-class SlotInfo;
-class CowsSlot;
+class WeaponSlotsInfo;
 class MuzzleSlot;
-class PointerSlot;
 class BaseSoundModeType;
 
 class cfgWeapons
 {
-
 	class Rifle;
 
 	class Rifle_Base_F: Rifle {
-		class WeaponSlotsInfo;
 	};
 
 	//Base MSBS rifle definitions.
@@ -228,6 +225,7 @@ class cfgWeapons
 		magazines[] = {"s39_30Rnd_556x45_msbs_mag"};
 		magazineWell[] = {"s39_556x45_msbs"};
 		modes[] = {"Single","Burst","FullAuto","single_medium_optics1","single_medium_optics2","fullauto_medium"};
+		mass = 75;
 		ACE_barrelLength = 406;
 		ACE_barrelTwist = 178;
 		ACE_twistDirection = 1;
@@ -415,272 +413,27 @@ class cfgWeapons
 				};
 			};
 		};
-
+	
 		class WeaponSlotsInfo: WeaponSlotsInfo //Inheriting from the primitive class we imported above.
 		{
-			mass = 75;
 			class MuzzleSlot: MuzzleSlot //Suppressors and flashiders.
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE"; //This is needed to be able to display models.
 				compatibleItems[] = //our actual list of items, all classnames from in-game.
 				{
-					"muzzle_snds_M",
-					"muzzle_snds_m_khk_F",
-					"muzzle_snds_m_snd_F",
-					"rhsusf_acc_rotex5_grey",
-					"rhsusf_acc_rotex5_tan",
-					"rhsusf_acc_SF3P556",
-					"rhsusf_acc_SFMB556",
-					"rhsusf_acc_nt4_black",
-					"rhsusf_acc_nt4_tan",
-					"ACE_muzzle_mzls_L"
+				"ace_muzzle_mzls_l",
+				"ffaa_snds_gt_556",
+				"rhsusf_acc_nt4_black",
+				"rhsusf_acc_nt4_tan",
+				"rhsusf_acc_rotex5_grey",
+				"rhsusf_acc_rotex5_tan",
+				"muzzle_snds_m_snd_f",
+				"muzzle_snds_m_khk_f",
+				"muzzle_snds_m",
+				"rhsusf_acc_SF3P556",
+				"rhsusf_acc_SFMB556",
 				};
 			};
-
-			class CowsSlot: CowsSlot //Weapon optics.
-			{
-				compatibleItems[] =
-				{
-				"rhs_acc_rakurspm",
-				"rhs_acc_1p87",
-				"ffaa_optic_acog",
-				"optic_yorris",
-				"rhs_acc_dh520x56",
-				"rhs_acc_ekp8_18",
-				"ffaa_optic_elcan",
-				"ffaa_optic_elcan_ard",
-				"ffaa_optic_enasa",
-				"ffaa_optic_holografico",
-				"rksl_optic_eot552",
-				"rksl_optic_eot552_c",
-				"rksl_optic_eot552x",
-				"rksl_optic_eot552x_c",
-				"uk3cb_baf_kite",
-				"uk3cb_baf_maxikite",
-				"rksl_optic_lds",
-				"rksl_optic_lds_c",
-				"uk3cb_baf_specterlds",
-				"rhsusf_acc_premier_mrds",
-				"rhsusf_acc_leupoldmk4_2_mrds",
-				"ffaa_optic_Mk4_v1",
-				"ffaa_optic_Mk4_v2",
-				"ffaa_optic_lv",
-				"rksl_optic_rmr_ms19",
-				"rksl_optic_rmr_ms19_fde",
-				"rksl_optic_rmr_rm33",
-				"rksl_optic_rmr_rm33_fde",
-				"rhsgref_acc_rx01_nofilter_camo",
-				"rhsgref_acc_rx01_camo",
-				"rksl_optic_pmii_312",
-				"rksl_optic_pmii_312_des",
-				"rksl_optic_pmii_312_sunshade",
-				"rksl_optic_pmii_312_sunshade_des",
-				"rksl_optic_pmii_312_sunshade_wdl",
-				"rksl_optic_pmii_312_wdl",
-				"rksl_optic_pmii_525",
-				"rksl_optic_pmii_525_des",
-				"rksl_optic_pmii_525_wdl",
-				"ffaa_optic_3x12x50",
-				"ffaa_optic_5x25x56",
-				"uk3cb_baf_suit",
-				"uk3cb_baf_susat",
-				"ffaa_optic_susat",
-				"uk3cb_baf_ta31f",
-				"uk3cb_baf_ta31f_hornbill",
-				"uk3cb_baf_ta648",
-				"uk3cb_baf_ta648_308",
-				"optic_ico_01_f",
-				"optic_ico_01_black_f",
-				"optic_ico_01_sand_f",
-				"optic_ico_01_camo_f",
-				"optic_Nightstalker",
-				"optic_tws",
-				"optic_tws_mg",
-				"optic_NVS",
-				"optic_DMS",
-				"optic_LRPS",
-				"optic_ams",
-				"optic_AMS_snd",
-				"optic_AMS_khk",
-				"optic_KHS_blk",
-				"optic_KHS_tan",
-				"optic_KHS_hex",
-				"optic_KHS_old",
-				"optic_SOS",
-				"optic_MRCO",
-				"optic_Arco",
-				"optic_aco",
-				"optic_ACO_grn",
-				"optic_aco_smg",
-				"optic_ACO_grn_smg",
-				"optic_hamr",
-				"optic_Holosight",
-				"optic_Holosight_smg",
-				"optic_Hamr_khk_F",
-				"optic_SOS_khk_F",
-				"optic_Arco_ghex_F",
-				"optic_Arco_blk_F",
-				"optic_DMS_ghex_F",
-				"optic_ERCO_blk_F",
-				"optic_ERCO_khk_F",
-				"optic_ERCO_snd_F",
-				"optic_LRPS_ghex_F",
-				"optic_LRPS_tna_F",
-				"optic_Holosight_blk_F",
-				"optic_Holosight_khk_F",
-				"optic_Holosight_smg_blk_F",
-				"optic_Holosight_smg_khk_F",
-				"optic_DMS_weathered_F",
-				"optic_DMS_weathered_Kir_F",
-				"optic_Arco_lush_F",
-				"optic_Arco_arid_F",
-				"optic_Arco_AK_blk_F",
-				"optic_Arco_AK_lush_F",
-				"optic_Arco_AK_arid_F",
-				"optic_Holosight_lush_F",
-				"optic_Holosight_arid_F",
-				"rhsusf_acc_LEUPOLDMK4",
-				"rhsusf_acc_LEUPOLDMK4_d",
-				"rhsusf_acc_LEUPOLDMK4_wd",
-				"rhsusf_acc_LEUPOLDMK4_2",
-				"rhsusf_acc_LEUPOLDMK4_2_d",
-				"rhsusf_acc_premier",
-				"rhsusf_acc_premier_low",
-				"rhsusf_acc_premier_anpvs27",
-				"rhsusf_acc_ACOG_anpvs27",
-				"rhsusf_acc_M8541",
-				"rhsusf_acc_M8541_low",
-				"rhsusf_acc_M8541_low_d",
-				"rhsusf_acc_M8541_low_wd",
-				"rhsusf_acc_SpecterDR_pvs27",
-				"rhsusf_acc_EOTECH",
-				"rhsusf_acc_eotech_552",
-				"rhsusf_acc_eotech_552_d",
-				"rhsusf_acc_eotech_552_wd",
-				"rhsusf_acc_eotech_xps3",
-				"rhsusf_acc_g33_xps3",
-				"rhsusf_acc_g33_xps3_flip",
-				"rhsusf_acc_g33_xps3_tan",
-				"rhsusf_acc_g33_xps3_tan_flip",
-				"rhsusf_acc_g33_t1",
-				"rhsusf_acc_g33_t1_flip",
-				"rhsusf_acc_compm4",
-				"rhsusf_acc_T1_high",
-				"rhsusf_acc_T1_low",
-				"rhsusf_acc_RX01",
-				"rhsusf_acc_RX01_NoFilter",
-				"rhsusf_acc_RX01_tan",
-				"rhsusf_acc_RX01_NoFilter_tan",
-				"rhsusf_acc_RM05",
-				"rhsusf_acc_mrds",
-				"rhsusf_acc_mrds_c",
-				"rhsusf_acc_ACOG",
-				"rhsusf_acc_ACOG2",
-				"rhsusf_acc_ACOG3",
-				"rhsusf_acc_ACOG_wd",
-				"rhsusf_acc_ACOG_d",
-				"rhsusf_acc_ACOG_sa",
-				"rhsusf_acc_ACOG_USMC",
-				"rhsusf_acc_ACOG2_USMC",
-				"rhsusf_acc_ACOG3_USMC",
-				"rhsusf_acc_ACOG_RMR",
-				"rhsusf_acc_ACOG_PIP",
-				"rhsusf_acc_ACOG2_pip",
-				"rhsusf_acc_ACOG3_pip",
-				"rhsusf_acc_ACOG_wd_pip",
-				"rhsusf_acc_ACOG_d_pip",
-				"rhsusf_acc_ACOG_sa_pip",
-				"rhsusf_acc_ACOG_USMC_pip",
-				"rhsusf_acc_ACOG2_USMC_pip",
-				"rhsusf_acc_ACOG3_USMC_pip",
-				"rhsusf_acc_ACOG_RMR_PIP",
-				"rhsusf_acc_ACOG_3d",
-				"rhsusf_acc_ACOG2_3d",
-				"rhsusf_acc_ACOG3_3d",
-				"rhsusf_acc_ACOG_wd_3d",
-				"rhsusf_acc_ACOG_d_3d",
-				"rhsusf_acc_ACOG_sa_3d",
-				"rhsusf_acc_ACOG_USMC_3d",
-				"rhsusf_acc_ACOG2_USMC_3d",
-				"rhsusf_acc_ACOG3_USMC_3d",
-				"rhsusf_acc_ACOG_RMR_3d",
-				"rhsusf_acc_ELCAN",
-				"rhsusf_acc_ELCAN_ard",
-				"rhsusf_acc_ELCAN_3d",
-				"rhsusf_acc_ELCAN_ard_3d",
-				"rhsusf_acc_ELCAN_PIP",
-				"rhsusf_acc_ELCAN_ard_PIP",
-				"rhsusf_acc_su230",
-				"rhsusf_acc_su230_mrds",
-				"rhsusf_acc_su230a",
-				"rhsusf_acc_su230a_mrds",
-				"rhsusf_acc_su230_c",
-				"rhsusf_acc_su230_mrds_c",
-				"rhsusf_acc_su230a_c",
-				"rhsusf_acc_su230a_mrds_c",
-				"rhsusf_acc_su230_3d",
-				"rhsusf_acc_su230_mrds_3d",
-				"rhsusf_acc_su230a_3d",
-				"rhsusf_acc_su230a_mrds_3d",
-				"rhsusf_acc_su230_c_3d",
-				"rhsusf_acc_su230_mrds_c_3d",
-				"rhsusf_acc_su230a_c_3d",
-				"rhsusf_acc_su230a_mrds_c_3d",
-				"rhsusf_acc_SpecterDR",
-				"rhsusf_acc_SpecterDR_3d",
-				"rhsusf_acc_SpecterDR_A",
-				"rhsusf_acc_SpecterDR_A_3d",
-				"rhsusf_acc_SpecterDR_CX",
-				"rhsusf_acc_SpecterDR_CX_3D",
-				"rhsusf_acc_SpecterDR_D",
-				"rhsusf_acc_SpecterDR_OD",
-				"rhsusf_acc_SpecterDR_D_3D",
-				"rhsusf_acc_SpecterDR_OD_3D",
-				"rhsusf_acc_anpvs27",
-				"rhsusf_acc_anpas13gv1",
-				"rhsusf_acc_M2A1",
-				"rhsusf_acc_ACOG_MDO",
-				"ACE_optic_Hamr_2D",
-				"ACE_optic_Hamr_PIP",
-				"ACE_optic_Arco_2D",
-				"ACE_optic_Arco_PIP",
-				"ACE_optic_MRCO_2D",
-				"ACE_optic_MRCO_PIP",
-				"ACE_optic_SOS_2D",
-				"ACE_optic_SOS_PIP",
-				"ACE_optic_LRPS_2D",
-				"ACE_optic_LRPS_PIP"
-				};
-			};
-
-			class PointerSlot: PointerSlot //Lasers and flashlights.
-			{
-				compatibleItems[] =
-				{
-				"rhs_acc_2dpzenit_ris",
-				"ffaa_acc_puntero_ir",
-				"rhs_acc_perst1ik_ris",
-				"rhs_acc_perst3",
-				"acc_flashlight",
-				"acc_pointer_IR",
-				"rhsusf_acc_wmx",
-				"rhsusf_acc_wmx_bk",
-				"rhsusf_acc_M952V",
-				"rhsusf_acc_anpeq15A",
-				"rhsusf_acc_anpeq15side",
-				"rhsusf_acc_anpeq15side_bk",
-				"rhsusf_acc_anpeq16a",
-				"rhsusf_acc_anpeq16a_light",
-				"ACE_acc_pointer_red",
-				"ACE_acc_pointer_green",
-				"ACE_acc_pointer_green_IR",
-				"UK3CB_BAF_LLM_IR_Tan",
-				"UK3CB_BAF_LLM_IR_Black",
-				"UK3CB_BAF_LLM_Flashlight_Tan",
-				"UK3CB_BAF_LLM_Flashlight_Black"
-				};
-			};
-
 		};
 	};
 	
@@ -692,10 +445,7 @@ class cfgWeapons
 
 	class arifle_MSBS65_GL_base_F: arifle_MSBS65_base_F 
 	{
-		class WeaponSlotsInfo: WeaponSlotsInfo 
-		{
-			mass = 100;
-		};
+	mass = 100;
 	};
 	class arifle_MSBS65_GL_base_black_F;
 	class arifle_MSBS65_GL_base_camo_F;
@@ -703,9 +453,7 @@ class cfgWeapons
 
 	class arifle_MSBS65_UBS_base_F: arifle_MSBS65_base_F 
 	{
-		class WeaponSlotsInfo: WeaponSlotsInfo {
-			mass = 115;
-		};
+	mass = 115;
 	};
 	
 	class arifle_MSBS65_UBS_base_black_F;
@@ -719,220 +467,32 @@ class cfgWeapons
 		magazineWell[] = {"s39_762x51_msbs"};
 		reloadTime = 0.45;
 		modes[] = {"Single","single_medium_optics1","single_medium_optics2"};
+		mass = 95;
 		ACE_barrelLength = 406;
 		ACE_barrelTwist = 178;
 		ACE_twistDirection = 1;
 		class WeaponSlotsInfo: WeaponSlotsInfo //Inheriting from the primitive class we imported above.
 		{
-		mass = 95;
+		
 		class MuzzleSlot: MuzzleSlot //Suppressors and flashiders.
 		{
 			linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE"; //This is needed to be able to display models.
 			compatibleItems[] = //our actual list of items, all classnames from in-game.
 			{
+				"ace_muzzle_mzls_b",
 				"muzzle_snds_b",
-				"muzzle_snds_B_khk_F",
-				"muzzle_snds_B_snd_F",
-				"rhsusf_acc_sr25S",
-				"rhsusf_acc_SR25S_wd",
-				"rhsusf_acc_SR25S_d"
+				"muzzle_snds_b_snd_f",
+				"muzzle_snds_b_khk_f",
+				"muzzle_snds_b_lush_f",
+				"muzzle_snds_b_arid_f",
+				"rhsusf_acc_aac_762sd_silencer",
+				"rhsusf_acc_aac_762sdn6_silencer",	
+				"rhsgref_sdn6_suppressor",
+				"rhsusf_acc_aac_scarh_silencer",		
 			};
 		};
-
-		class CowsSlot: CowsSlot //Weapon optics.
-		{
-			compatibleItems[] =
-			{
-				"optic_ico_01_f",
-				"optic_ico_01_black_f",
-				"optic_ico_01_sand_f",
-				"optic_ico_01_camo_f",
-				"optic_Nightstalker",
-				"optic_tws",
-				"optic_tws_mg",
-				"optic_NVS",
-				"optic_DMS",
-				"optic_LRPS",
-				"optic_ams",
-				"optic_AMS_snd",
-				"optic_AMS_khk",
-				"optic_KHS_blk",
-				"optic_KHS_tan",
-				"optic_KHS_hex",
-				"optic_KHS_old",
-				"optic_SOS",
-				"optic_MRCO",
-				"optic_Arco",
-				"optic_aco",
-				"optic_ACO_grn",
-				"optic_aco_smg",
-				"optic_ACO_grn_smg",
-				"optic_hamr",
-				"optic_Holosight",
-				"optic_Holosight_smg",
-				"optic_Hamr_khk_F",
-				"optic_SOS_khk_F",
-				"optic_Arco_ghex_F",
-				"optic_Arco_blk_F",
-				"optic_DMS_ghex_F",
-				"optic_ERCO_blk_F",
-				"optic_ERCO_khk_F",
-				"optic_ERCO_snd_F",
-				"optic_LRPS_ghex_F",
-				"optic_LRPS_tna_F",
-				"optic_Holosight_blk_F",
-				"optic_Holosight_khk_F",
-				"optic_Holosight_smg_blk_F",
-				"optic_Holosight_smg_khk_F",
-				"optic_DMS_weathered_F",
-				"optic_DMS_weathered_Kir_F",
-				"optic_Arco_lush_F",
-				"optic_Arco_arid_F",
-				"optic_Arco_AK_blk_F",
-				"optic_Arco_AK_lush_F",
-				"optic_Arco_AK_arid_F",
-				"optic_Holosight_lush_F",
-				"optic_Holosight_arid_F",
-				"rhsusf_acc_LEUPOLDMK4",
-				"rhsusf_acc_LEUPOLDMK4_d",
-				"rhsusf_acc_LEUPOLDMK4_wd",
-				"rhsusf_acc_LEUPOLDMK4_2",
-				"rhsusf_acc_LEUPOLDMK4_2_d",
-				"rhsusf_acc_premier",
-				"rhsusf_acc_premier_low",
-				"rhsusf_acc_premier_anpvs27",
-				"rhsusf_acc_ACOG_anpvs27",
-				"rhsusf_acc_M8541",
-				"rhsusf_acc_M8541_low",
-				"rhsusf_acc_M8541_low_d",
-				"rhsusf_acc_M8541_low_wd",
-				"rhsusf_acc_SpecterDR_pvs27",
-				"rhsusf_acc_EOTECH",
-				"rhsusf_acc_eotech_552",
-				"rhsusf_acc_eotech_552_d",
-				"rhsusf_acc_eotech_552_wd",
-				"rhsusf_acc_eotech_xps3",
-				"rhsusf_acc_g33_xps3",
-				"rhsusf_acc_g33_xps3_flip",
-				"rhsusf_acc_g33_xps3_tan",
-				"rhsusf_acc_g33_xps3_tan_flip",
-				"rhsusf_acc_g33_t1",
-				"rhsusf_acc_g33_t1_flip",
-				"rhsusf_acc_compm4",
-				"rhsusf_acc_T1_high",
-				"rhsusf_acc_T1_low",
-				"rhsusf_acc_RX01",
-				"rhsusf_acc_RX01_NoFilter",
-				"rhsusf_acc_RX01_tan",
-				"rhsusf_acc_RX01_NoFilter_tan",
-				"rhsusf_acc_RM05",
-				"rhsusf_acc_mrds",
-				"rhsusf_acc_mrds_c",
-				"rhsusf_acc_ACOG",
-				"rhsusf_acc_ACOG2",
-				"rhsusf_acc_ACOG3",
-				"rhsusf_acc_ACOG_wd",
-				"rhsusf_acc_ACOG_d",
-				"rhsusf_acc_ACOG_sa",
-				"rhsusf_acc_ACOG_USMC",
-				"rhsusf_acc_ACOG2_USMC",
-				"rhsusf_acc_ACOG3_USMC",
-				"rhsusf_acc_ACOG_RMR",
-				"rhsusf_acc_ACOG_PIP",
-				"rhsusf_acc_ACOG2_pip",
-				"rhsusf_acc_ACOG3_pip",
-				"rhsusf_acc_ACOG_wd_pip",
-				"rhsusf_acc_ACOG_d_pip",
-				"rhsusf_acc_ACOG_sa_pip",
-				"rhsusf_acc_ACOG_USMC_pip",
-				"rhsusf_acc_ACOG2_USMC_pip",
-				"rhsusf_acc_ACOG3_USMC_pip",
-				"rhsusf_acc_ACOG_RMR_PIP",
-				"rhsusf_acc_ACOG_3d",
-				"rhsusf_acc_ACOG2_3d",
-				"rhsusf_acc_ACOG3_3d",
-				"rhsusf_acc_ACOG_wd_3d",
-				"rhsusf_acc_ACOG_d_3d",
-				"rhsusf_acc_ACOG_sa_3d",
-				"rhsusf_acc_ACOG_USMC_3d",
-				"rhsusf_acc_ACOG2_USMC_3d",
-				"rhsusf_acc_ACOG3_USMC_3d",
-				"rhsusf_acc_ACOG_RMR_3d",
-				"rhsusf_acc_ELCAN",
-				"rhsusf_acc_ELCAN_ard",
-				"rhsusf_acc_ELCAN_3d",
-				"rhsusf_acc_ELCAN_ard_3d",
-				"rhsusf_acc_ELCAN_PIP",
-				"rhsusf_acc_ELCAN_ard_PIP",
-				"rhsusf_acc_su230",
-				"rhsusf_acc_su230_mrds",
-				"rhsusf_acc_su230a",
-				"rhsusf_acc_su230a_mrds",
-				"rhsusf_acc_su230_c",
-				"rhsusf_acc_su230_mrds_c",
-				"rhsusf_acc_su230a_c",
-				"rhsusf_acc_su230a_mrds_c",
-				"rhsusf_acc_su230_3d",
-				"rhsusf_acc_su230_mrds_3d",
-				"rhsusf_acc_su230a_3d",
-				"rhsusf_acc_su230a_mrds_3d",
-				"rhsusf_acc_su230_c_3d",
-				"rhsusf_acc_su230_mrds_c_3d",
-				"rhsusf_acc_su230a_c_3d",
-				"rhsusf_acc_su230a_mrds_c_3d",
-				"rhsusf_acc_SpecterDR",
-				"rhsusf_acc_SpecterDR_3d",
-				"rhsusf_acc_SpecterDR_A",
-				"rhsusf_acc_SpecterDR_A_3d",
-				"rhsusf_acc_SpecterDR_CX",
-				"rhsusf_acc_SpecterDR_CX_3D",
-				"rhsusf_acc_SpecterDR_D",
-				"rhsusf_acc_SpecterDR_OD",
-				"rhsusf_acc_SpecterDR_D_3D",
-				"rhsusf_acc_SpecterDR_OD_3D",
-				"rhsusf_acc_anpvs27",
-				"rhsusf_acc_anpas13gv1",
-				"rhsusf_acc_M2A1",
-				"rhsusf_acc_ACOG_MDO",
-				"ACE_optic_Hamr_2D",
-				"ACE_optic_Hamr_PIP",
-				"ACE_optic_Arco_2D",
-				"ACE_optic_Arco_PIP",
-				"ACE_optic_MRCO_2D",
-				"ACE_optic_MRCO_PIP",
-				"ACE_optic_SOS_2D",
-				"ACE_optic_SOS_PIP",
-				"ACE_optic_LRPS_2D",
-				"ACE_optic_LRPS_PIP"
-			};
 		};
-
-		class PointerSlot: PointerSlot //Lasers and flashlights.
-		{
-			compatibleItems[] =
-			{
-				"acc_flashlight",
-				"acc_pointer_IR",
-				"rhsusf_acc_wmx",
-				"rhsusf_acc_wmx_bk",
-				"rhsusf_acc_M952V",
-				"rhsusf_acc_anpeq15A",
-				"rhsusf_acc_anpeq15side",
-				"rhsusf_acc_anpeq15side_bk",
-				"rhsusf_acc_anpeq16a",
-				"rhsusf_acc_anpeq16a_light",
-				"ACE_acc_pointer_red",
-				"ACE_acc_pointer_green",
-				"ACE_acc_pointer_green_IR",
-				"UK3CB_BAF_LLM_IR_Tan",
-				"UK3CB_BAF_LLM_IR_Black",
-				"UK3CB_BAF_LLM_Flashlight_Tan",
-				"UK3CB_BAF_LLM_Flashlight_Black"
-			};
-		};
-
-		};
-
+		
     class Single: Mode_SemiAuto
 	{
 		class BaseSoundModeType;
