@@ -38,7 +38,7 @@ class CfgWeapons
 		author="Raven Security Forces";
 		_generalMacro="H_Beret_1SEC_01_F";
 		displayName="Beret (1 Section)";
-		picture = "\A3\Characters_F_Bootcamp\Data\UI\icon_H_Beret_Colonel_ca.paa";
+		picture = "\Gear-Reskins\Headgear-Reskins\Berets\UI\icon_H_beretSEC1_ca.paa";
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsMaterials[] = {"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_1SEC_01.rvmat"};
@@ -59,7 +59,7 @@ class CfgWeapons
 	{
 		_generalMacro="H_Beret_2SEC_01_F";
 		displayName="Beret (2 Section)";
-		picture = "\A3\Characters_F_Bootcamp\Data\UI\icon_H_Beret_Colonel_ca.paa";
+		picture = "\Gear-Reskins\Headgear-Reskins\Berets\UI\icon_H_beretSEC2_ca.paa";
 		hiddenSelectionsMaterials[] = {"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_2SEC_01.rvmat"};
 		hiddenSelectionsTextures[]=
 		{
@@ -71,7 +71,7 @@ class CfgWeapons
 	{
 		_generalMacro="H_Beret_3SEC_01_F";
 		displayName="Beret (3 Section)";
-		picture = "\A3\Characters_F_Bootcamp\Data\UI\icon_H_Beret_Colonel_ca.paa";
+		picture = "\Gear-Reskins\Headgear-Reskins\Berets\UI\icon_H_beretSEC3_ca.paa";
 		hiddenSelectionsMaterials[] = {"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_3SEC_01.rvmat"};
 		hiddenSelectionsTextures[]=
 		{
@@ -83,7 +83,7 @@ class CfgWeapons
 	{
 		_generalMacro="H_Beret_4SEC_01_F";
 		displayName="Beret (4 Section)";
-		picture = "\A3\Characters_F_Bootcamp\Data\UI\icon_H_Beret_Colonel_ca.paa";
+		picture = "\Gear-Reskins\Headgear-Reskins\Berets\UI\icon_H_beretSEC4_ca.paa";
 		hiddenSelectionsMaterials[] = {"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_4SEC_01.rvmat"};
 		hiddenSelectionsTextures[]=
 		{
