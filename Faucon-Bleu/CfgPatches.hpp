@@ -40,20 +40,20 @@ class CfgPatches {
             "I_PMContract_Military_Panther_Sand_Arid_01",
             "I_PMContract_Military_Panther_Green_Arid_01",
             "I_PMContract_Military_MiG_29_Arid_01",
-            "I_PMContract_Military_CH_47F_Arid_01",
+            "I_IPMContractMilitaryArid_Partol_Offroad_01",
             "I_PMContract_Military_Mi8_Hip_Arid_01",
             "I_PMContract_Military_MD_500_Arid_01",
             "I_PMContract_Military_Officer_Arid_01",
             "I_PMContract_Military_Mortar_Arid_01",
-            "I_IPMContractMilitaryArid_Partol_Offroad_01"
+            "I_IPMContractMilitaryArid_CH_47F_01"
         };
         weapons[] = {};
         requiredVersion = 1.62;
         requiredAddons[] = {
-            "rhs_c_2s1",
-            "A3_Soft_F_Enoch_Offroad_01"
+            "RHS_US_A2_AirImport",
+            "ace_compat_rhs_usf3"
         };
-        author = "VikTheGreat";
-        authors[] = {"VikTheGreat"};
+        author = "[2Lt] Vik [Boio]";
+        authors[] = {"[2Lt] Vik [Boio]"};
     };
 };
