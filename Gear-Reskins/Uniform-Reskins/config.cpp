@@ -43,7 +43,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
-		
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class milgp_u_g3_field_set_rolled_atacsfg;
 	class RSFGear_u_g3_field_set_rolled_cabbage: milgp_u_g3_field_set_rolled_atacsfg
@@ -70,6 +70,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_g3_field_set_cabbagea: milgp_u_g3_field_set_atacsfg
 	{
@@ -95,7 +96,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
-		
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
 	class RSFGear_u_g3_field_set_rolled_cabbagea: milgp_u_g3_field_set_rolled_atacsfg
 	{
@@ -121,6 +122,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
 	class RSFGear_u_g3_field_set_takur: milgp_u_g3_field_set_atacsfg
 	{
@@ -146,7 +148,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
-		
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
 	class RSFGear_u_g3_field_set_rolled_takur: milgp_u_g3_field_set_rolled_atacsfg
 	{
@@ -172,8 +174,9 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
-		class RSFGear_u_g3_field_set_gcam: milgp_u_g3_field_set_atacsfg
+	class RSFGear_u_g3_field_set_gcam: milgp_u_g3_field_set_atacsfg
 	{
 		scope=1;
 		faction="BLU_F";
@@ -197,7 +200,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
-		
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
 	class RSFGear_u_g3_field_set_rolled_gcam: milgp_u_g3_field_set_rolled_atacsfg
 	{
@@ -223,6 +226,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
 		class RSFGear_u_g3_field_set_gcn: milgp_u_g3_field_set_atacsfg
 	{
@@ -248,7 +252,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
-		
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
 	class RSFGear_u_g3_field_set_rolled_gcn: milgp_u_g3_field_set_rolled_atacsfg
 	{
@@ -274,6 +278,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_g3_field_set_sld: milgp_u_g3_field_set_atacsfg
 	{
@@ -299,7 +304,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
-		
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
 	class RSFGear_u_g3_field_set_rolled_sld: milgp_u_g3_field_set_rolled_atacsfg
 	{
@@ -325,6 +330,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
 	class RSFGear_u_g3_field_set_spw: milgp_u_g3_field_set_atacsfg
 	{
@@ -350,7 +356,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
-		
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
 	class RSFGear_u_g3_field_set_rolled_spw: milgp_u_g3_field_set_rolled_atacsfg
 	{
@@ -376,6 +382,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
 	class milgp_u_fleece_grey_g3_field_pants_3CD;
 	class RSFGear_u_fleece_rgr_g3_field_pants_cab: milgp_u_fleece_grey_g3_field_pants_3CD
@@ -403,6 +410,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_fleece_rgr_g3_field_pants_gcam: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -429,6 +437,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_fleece_rgr_g3_field_pants_sld: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -455,6 +464,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";		
 	};
 	class RSFGear_u_fleece_khk_g3_field_pants_gcam: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -481,6 +491,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_fleece_khk_g3_field_pants_tkg: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -507,6 +518,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";	
 	};
 	class RSFGear_u_fleece_khk_g3_field_pants_caba: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -533,6 +545,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_fleece_rgr_g3_field_pants_caba: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -559,6 +572,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_fleece_grey_g3_field_pants_caba: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -585,6 +599,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_fleece_grey_g3_field_pants_cab: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -611,6 +626,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_fleece_grey_g3_field_pants_gcam: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -637,6 +653,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_fleece_grey_g3_field_pants_tkg: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -663,6 +680,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_fleece_grey_g3_field_pants_sld: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -689,6 +707,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_fleece_grey_g3_field_pants_spw: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -715,6 +734,7 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
 	class RSFGear_u_fleece_rgr_g3_field_pants_spw: milgp_u_fleece_grey_g3_field_pants_3CD
 	{
@@ -741,20 +761,9 @@ class CfgVehicles
 		};
 		linkedItems[]={};
 		respawnLinkedItems[]={};
+		picture="\Gear-Reskins\Uniform-Reskins\Equipment\cabbage.paa";
 	};
-
-	
-	
-	
-	
-	
-	
-	
 };
-
-
-
-
 
 class cfgWeapons
 {
