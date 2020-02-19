@@ -5,7 +5,7 @@ class CfgPatches
 		name="RSF Reskins FNX-45 (Black)";
 		units[]=
 		{
-			"item_hgun_Pistol_heavy_black_01_F"
+			"Weapon_hgun_Pistol_heavy_black_01_F"
 		};
 		weapons[]=
 		{
@@ -30,11 +30,13 @@ class CfgPatches
 class CfgVehicles
 {
 	class Weapon_Base_F;
-	class item_hgun_Pistol_heavy_black_01_F: Weapon_Base_F
+	class Weapon_hgun_Pistol_heavy_black_01_F: Weapon_Base_F
 	{
 		scope=2;
 		scopeCurator=2;
-		vehicleClass="WeaponsPrimary";
+		editorCategory = "EdCat_Weapons";
+		editorSubcategory = "EdSubcat_Pistols";
+		vehicleClass = "WeaponsHandguns";
 		author="NeroTheHero111";
 		displayName="FNX-45 (Black)";
 		class TransportItems

@@ -5,7 +5,7 @@ class CfgPatches
 		name="RSF Reskins";
 		units[]=
 		{
-			"item_MMG_01_grey_F"
+			"Weapon_MMG_01_grey_F"
 		};
 		weapons[]=
 		{
@@ -25,35 +25,19 @@ class CfgPatches
 		version="0.0.1";
 		versionStr="0.0.1";
 	};
-		
-	class A3_Weapons_F_Mark_Machineguns_MMG_01
-	{
-		addonRootClass="A3_Weapons_F_Mark";
-		requiredAddons[]=
-		{
-			"A3_Weapons_F_Mark"
-		};
-		requiredVersion=0.1;
-		units[]={};
-		weapons[]=
-		{
-			"MMG_01_hex_ARCO_LP_F",
-			"MMG_01_hex_F",
-			"MMG_01_tan_F",
-			"MMG_01_grey_F"
-		};
-	};
 
 };
 	
 class CfgVehicles
 {
 	class Weapon_Base_F;
-	class item_MMG_01_grey_F: Weapon_Base_F
+	class Weapon_MMG_01_grey_F: Weapon_Base_F
 	{
 		dlc="Mark";
 		scope=2;
 		scopeCurator=2;
+		editorCategory = "EdCat_Weapons";
+		editorSubcategory = "EdSubcat_MachineGuns";
 		vehicleClass="WeaponsPrimary";
 		displayName="MG5 (Grey)";
 		class TransportItems

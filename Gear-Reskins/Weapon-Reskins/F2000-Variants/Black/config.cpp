@@ -5,9 +5,9 @@ class CfgPatches
 		name="RSF Reskins F2000";
 		units[]=
 		{
-			"item_arifle_Mk20_Black_F",
-			"item_arifle_Mk20_Black_GL_F",
-			"item_arifle_Mk20C_Black_F"
+			"Weapon_arifle_Mk20_Black_F",
+			"Weapon_arifle_Mk20_Black_GL_F",
+			"Weapon_arifle_Mk20C_Black_F"
 		};
 		weapons[]=
 		{
@@ -34,7 +34,7 @@ class CfgPatches
 class CfgVehicles
 {
 	class Weapon_Base_F;
-	class item_arifle_Mk20_Black_F: Weapon_Base_F
+	class Weapon_arifle_Mk20_Black_F: Weapon_Base_F
 	{
 		scope=2;
 		scopeCurator=2;
@@ -52,7 +52,7 @@ class CfgVehicles
 	};
 	
 	
-	class item_arifle_Mk20_Black_GL_F: Weapon_Base_F
+	class Weapon_arifle_Mk20_Black_GL_F: Weapon_Base_F
 	{
 		scope=2;
 		scopeCurator=2;
@@ -70,7 +70,7 @@ class CfgVehicles
 	};
 	
 
-	class item_arifle_Mk20C_Black_F: Weapon_Base_F
+	class Weapon_arifle_Mk20C_Black_F: Weapon_Base_F
 	{
 		scope=2;
 		scopeCurator=2;

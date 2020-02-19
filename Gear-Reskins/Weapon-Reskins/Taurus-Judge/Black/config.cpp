@@ -5,7 +5,7 @@ class CfgPatches
 		name="RSF Reskins Taurus Judge (Black)";
 		units[]=
 		{
-			"item_hgun_Pistol_Signal_lethal_black_F"
+			"Weapon_hgun_Pistol_Signal_lethal_black_F"
 		};
 		weapons[]=
 		{
@@ -30,10 +30,12 @@ class CfgPatches
 class CfgVehicles
 {
 	class Weapon_Base_F;
-	class item_hgun_Pistol_Signal_lethal_black_F: Weapon_Base_F
+	class Weapon_hgun_Pistol_Signal_lethal_black_F: Weapon_Base_F
 	{
 		scope=2;
 		scopeCurator=2;
+		editorCategory = "EdCat_Weapons";
+		editorSubcategory = "EdSubcat_Pistols";
 		vehicleClass="WeaponsPrimary";
 		author="NeroTheHero111";
 		displayName="Taurus Judge (.45/Black)";

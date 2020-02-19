@@ -90,7 +90,35 @@ class CfgMagazines
 	mass=38;
 	};
 };
-
+class CfgVehicles
+{
+	class Weapon_Base_F;
+	class Weapon_MMG_01_hex_F : Weapon_Base_F
+	{
+		displayName = "MG5 (Hex)";
+		class TransportItems
+		{
+			class _xx_MMG_01_hex_F
+			{
+				name="MMG_01_hex_F";
+				count=1;
+			};
+		};
+	};
+	
+	class Weapon_MMG_01_tan_F : Weapon_Base_F
+	{
+		displayName = "MG5 (Tan)";	
+		class TransportItems
+		{
+			class _xx_MMG_01_tan_F
+			{
+				name="MMG_01_tan_F";
+				count=1;
+			};
+		};
+	};	
+};
 class CfgWeapons 
 {
 	

@@ -4,6 +4,47 @@
 
 class cfgVehicles {
 
+	// Weapon Renaming
+	class Weapon_Base_F;
+	class Weapon_srifle_DMR_07_blk_F: Weapon_Base_F
+	{
+		displayName="QBU-88 (Black)";
+		class TransportItems
+		{
+			class _xx_srifle_DMR_07_blk_F
+			{
+				name="srifle_DMR_07_blk_F";
+				count=1;
+			};
+		};
+	};	
+	
+	class Weapon_srifle_DMR_07_ghex_F: Weapon_Base_F
+	{
+		displayName="QBU-88 (Green Hex)";
+		class TransportItems
+		{
+			class _xx_srifle_DMR_07_ghex_F
+			{
+				name="srifle_DMR_07_ghex_F";
+				count=1;
+			};
+		};
+	};		
+
+	class Weapon_srifle_DMR_07_hex_F: Weapon_Base_F
+	{
+		displayName="QBU-88 (Hex)";
+		class TransportItems
+		{
+			class _xx_srifle_DMR_07_hex_F
+			{
+				name="srifle_DMR_07_hex_F";
+				count=1;
+			};
+		};
+	};	
+	
   //Backpacks
   class B_Carryall_Base;
   class B_Carryall_ghex_F: B_Carryall_Base {};

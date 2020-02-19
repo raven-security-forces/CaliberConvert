@@ -1,5 +1,215 @@
 class cfgVehicles 
 {	
+	// Weapon Renaming
+	class Weapon_Base_F;
+	class Weapon_arifle_MSBS65_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_F
+			{
+				name="arifle_MSBS65_F";
+				count=1;
+			};
+		};
+	};		
+
+	class Weapon_arifle_MSBS65_black_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B (Black)";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_black_F
+			{
+				name="arifle_MSBS65_black_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_camo_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B (Camo)";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_camo_F
+			{
+				name="arifle_MSBS65_camo_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_sand_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B (Sand)";
+		class TransportItems
+		{
+			class _xx_arifle_arifle_MSBS65_sand_F
+			{
+				name="arifle_MSBS65_sand_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_GL_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B UGL";
+		class TransportItems
+		{
+			class _xx_arifle_arifle_MSBS65_GL_F
+			{
+				name="arifle_MSBS65_GL_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_GL_black_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B UGL (Black)";
+		class TransportItems
+		{
+			class _xx_arifle_arifle_MSBS65_GL_black_F
+			{
+				name="arifle_MSBS65_GL_black_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_GL_camo_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B UGL (Camo)";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_GL_camo_F
+			{
+				name="arifle_MSBS65_GL_camo_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_GL_sand_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B UGL (Sand)";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_GL_sand_F
+			{
+				name="arifle_MSBS65_GL_sand_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_Mark_F: Weapon_Base_F
+	{
+		displayName="MSBS-7.62N";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_Mark_F
+			{
+				name="arifle_MSBS65_Mark_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_Mark_black_F: Weapon_Base_F
+	{
+		displayName="MSBS-7.62N (Black)";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_Mark_black_F
+			{
+				name="arifle_MSBS65_Mark_black_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_Mark_camo_F: Weapon_Base_F
+	{
+		displayName="MSBS-7.62N (Camo)";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_Mark_camo_F
+			{
+				name="arifle_MSBS65_Mark_camo_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_Mark_sand_F: Weapon_Base_F
+	{
+		displayName="MSBS-7.62N (Sand)";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_Mark_sand_F
+			{
+				name="arifle_MSBS65_Mark_sand_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_UBS_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B SIX12";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_UBS_F
+			{
+				name="arifle_MSBS65_UBS_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_UBS_black_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B SIX12 (Black)";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_UBS_black_F
+			{
+				name="arifle_MSBS65_UBS_black_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_UBS_camo_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B SIX12 (Camo)";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_UBS_camo_F
+			{
+				name="arifle_MSBS65_UBS_camo_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_MSBS65_UBS_sand_F: Weapon_Base_F
+	{
+		displayName="MSBS-5.56B SIX12 (Sand)";
+		class TransportItems
+		{
+			class _xx_arifle_MSBS65_UBS_sand_F
+			{
+				name="arifle_MSBS65_UBS_sand_F";
+				count=1;
+			};
+		};
+	};	
+	
 	class I_E_Man_Base_F;
 	class I_E_Soldier_base_F : I_E_Man_Base_F {};
 	

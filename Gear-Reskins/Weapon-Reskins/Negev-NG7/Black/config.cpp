@@ -5,7 +5,7 @@ class CfgPatches
 		name="RSF Reskins Negev NG7";
 		units[]=
 		{
-			"item_LMG_Zafir_black_F"
+			"Weapon_LMG_Zafir_black_F"
 		};
 		weapons[]=
 		{
@@ -30,10 +30,12 @@ class CfgPatches
 class CfgVehicles
 {
 	class Weapon_Base_F;
-	class item_LMG_Zafir_black_F: Weapon_Base_F
+	class Weapon_LMG_Zafir_black_F: Weapon_Base_F
 	{
 		scope=2;
 		scopeCurator=2;
+		editorCategory = "EdCat_Weapons";
+		editorSubcategory = "EdSubcat_MachineGuns";
 		vehicleClass="WeaponsPrimary";
 		author="NeroTheHero111";
 		displayName="Negev NG7 (Black)";

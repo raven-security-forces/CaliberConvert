@@ -48,5 +48,11 @@ class CfgWorldsTextures
         surfaceTextureBasePath = "vt7\data\";
         suffix = "co.paa";
 		camouflageObjects[] = {};
+	};
+	
+    class rhspkl {
+        surfaceTextureBasePath = "rhspkl\addons\rhspkl_art\data\ground\";
+        suffix = "co.paa";
+		camouflageObjects[] = {};		
     };	
 };

@@ -1,5 +1,20 @@
 class cfgVehicles {
 	
+	// Weapon Renaming
+	class Weapon_Base_F;
+	class Weapon_arifle_SDAR_F: Weapon_Base_F
+	{
+		displayName="RFB";
+		class TransportItems
+		{
+			class _xx_arifle_SDAR_F
+			{
+				name="arifle_SDAR_F";
+				count=1;
+			};
+		};
+	};	
+	
 	class B_Soldier_base_F;
 	class B_Soldier_diver_base_F : B_Soldier_base_F {
 	

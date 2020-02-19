@@ -5,7 +5,7 @@ class CfgPatches
 		name="RSF Reskins Mk14 Mod 1 EBR";
 		units[]=
 		{
-			"item_srifle_EBR_grey_F"
+			"Weapon_srifle_EBR_grey_F"
 		};
 		weapons[]=
 		{
@@ -30,10 +30,12 @@ class CfgPatches
 class CfgVehicles
 {
 	class Weapon_Base_F;
-	class item_srifle_EBR_grey_F: Weapon_Base_F
+	class Weapon_srifle_EBR_grey_F: Weapon_Base_F
 	{
 		scope=2;
 		scopeCurator=2;
+		editorCategory = "EdCat_Weapons";
+		editorSubcategory = "EdSubcat_SniperRifles";
 		vehicleClass="WeaponsPrimary";
 		author="NeroTheHero111";
 		displayName="Mk14 Mod 1 EBR (Black)";

@@ -3,6 +3,47 @@
 #define item_xx(a,b) class _xx_##a {name = a; count = b;}
 
 class cfgVehicles {
+	
+	// Weapon Renaming
+	class Weapon_Base_F;
+	class Weapon_arifle_Katiba_F: Weapon_Base_F
+	{
+		displayName="KH-2002";
+		class TransportItems
+		{
+			class _xx_arifle_Katiba_F
+			{
+				name="arifle_Katiba_F";
+				count=1;
+			};
+		};
+	};		
+
+	class Weapon_arifle_Katiba_C_F: Weapon_Base_F
+	{
+		displayName="KH-2002C";
+		class TransportItems
+		{
+			class _xx_arifle_Katiba_C_F
+			{
+				name="arifle_Katiba_C_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Weapon_arifle_Katiba_GL_F: Weapon_Base_F
+	{
+		displayName="KH-2002 UGL";
+		class TransportItems
+		{
+			class _xx_arifle_Katiba_GL_F
+			{
+				name="arifle_Katiba_GL_F";
+				count=1;
+			};
+		};
+	};	
 
 	//Backpack configs
 	class B_Carryall_Base;

@@ -4,6 +4,206 @@
 
 class CfgVehicles {
 	
+	// ACR Weapon Renaming
+	
+	class Weapon_Base_F;
+	class Weapon_arifle_MX_F: Weapon_Base_F
+	{
+		displayName = "ACR Basic";
+		class TransportItems
+		{
+			class _xx_arifle_MX_F
+			{
+				name="arifle_MX_F";
+				count=1;
+			};
+		};
+	};
+	
+	class Weapon_arifle_MX_Black_F: Weapon_Base_F
+	{
+		displayName = "ACR Basic (Black)";
+		class TransportItems
+		{
+			class _xx_arifle_MX_Black_F
+			{
+				name="arifle_MX_Black_F";
+				count=1;
+			};
+		};
+	};	
+	
+	class Weapon_arifle_MX_khk_F: Weapon_Base_F
+	{
+		displayName = "ACR Basic (Khaki)";
+		class TransportItems
+		{
+			class _xx_arifle_MX_khk_F
+			{
+				name="arifle_MX_khk_F";
+				count=1;
+			};
+		};
+	};
+	
+	class Weapon_arifle_MX_GL_F: Weapon_Base_F
+	{
+		displayName = "ACR Basic 3GL";
+		class TransportItems
+		{
+			class _xx_arifle_MX_GL_F
+			{
+				name="arifle_MX_GL_F";
+				count=1;
+			};
+		};
+	};		
+	
+	class Weapon_arifle_MX_GL_Black_F: Weapon_Base_F
+	{
+		displayName = "ACR Basic 3GL (Black)";
+		class TransportItems
+		{
+			class _xx_arifle_MX_GL_Black_F
+			{
+				name="arifle_MX_GL_Black_F";
+				count=1;
+			};
+		};
+	};
+	
+	class Weapon_arifle_MX_GL_khk_F: Weapon_Base_F
+	{
+		displayName = "ACR Basic 3GL (Khaki)";
+		class TransportItems
+		{
+			class _xx_arifle_MX_GL_khk_F
+			{
+				name="arifle_MX_GL_khk_F";
+				count=1;
+			};
+		};
+	};		
+
+	class Weapon_arifle_MXC_F: Weapon_Base_F
+	{
+		displayName = "ACR SBR";
+		class TransportItems
+		{
+			class _xx_arifle_MXC_F
+			{
+				name="arifle_MXC_F";
+				count=1;
+			};
+		};
+	};
+	
+	class Weapon_arifle_MXC_Black_F: Weapon_Base_F
+	{
+		displayName = "ACR SBR (Black)";
+		class TransportItems
+		{
+			class _xx_arifle_MXC_Black_F
+			{
+				name="arifle_MXC_Black_F";
+				count=1;
+			};
+		};
+	};		
+
+	class Weapon_arifle_MXC_khk_F: Weapon_Base_F
+	{
+		displayName = "ACR SBR (Khaki)";
+		class TransportItems
+		{
+			class _xx_arifle_MXC_khk_F
+			{
+				name="arifle_MXC_khk_F";
+				count=1;
+			};
+		};
+	};
+	
+	class Weapon_arifle_MXM_F: Weapon_Base_F
+	{
+		displayName = "ACR DMR";
+		class TransportItems
+		{
+			class _xx_arifle_MXM_F
+			{
+				name="arifle_MXM_F";
+				count=1;
+			};
+		};
+	};	
+	
+	class Weapon_arifle_MXM_Black_F: Weapon_Base_F
+	{
+		displayName = "ACR DMR (Black)";
+		class TransportItems
+		{
+			class _xx_arifle_MXM_Black_F
+			{
+				name="arifle_MXM_Black_F";
+				count=1;
+			};
+		};
+	};	
+	
+	class Weapon_arifle_MXM_khk_F: Weapon_Base_F
+	{
+		displayName = "ACR DMR (Khaki)";
+		class TransportItems
+		{
+			class _xx_arifle_MXM_khk_F
+			{
+				name="arifle_MXM_khk_F";
+				count=1;
+			};
+		};
+	};
+	
+	class Weapon_arifle_MX_SW_F: Weapon_Base_F
+	{
+	displayName = "ACR Enhanced";
+		class TransportItems
+		{
+			class _xx_arifle_MX_SW_F
+			{
+				name="arifle_MX_SW_F";
+				count=1;
+			};
+		};
+	};		
+	
+	class Weapon_arifle_MX_SW_Black_F: Weapon_Base_F
+	{
+		displayName = "ACR Enhanced (Black)";
+		class TransportItems
+		{
+			class _xx_arifle_MX_SW_Black_F
+			{
+				name="arifle_MX_SW_Black_F";
+				count=1;
+			};
+		};
+	};
+
+	class Weapon_arifle_MX_SW_khk_F: Weapon_Base_F
+	{
+		displayName = "ACR Enhanced (Khaki)";
+		class TransportItems
+		{
+			class _xx_arifle_MX_SW_khk_F
+			{
+				name="arifle_MX_SW_khk_F";
+				count=1;
+			};
+		};
+	};
+
+	// Start of Backpack assignment
+	
 	class B_Carryall_Base;
 	class B_Kitbag_Base;
 	

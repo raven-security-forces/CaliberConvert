@@ -5,7 +5,7 @@ class CfgPatches
 		name="RSF Reskins VS-121";
 		units[]=
 		{
-			"item_srifle_DMR_01_dhex_F"
+			"Weapon_srifle_DMR_01_dhex_F"
 		};
 		weapons[]=
 		{
@@ -30,10 +30,12 @@ class CfgPatches
 class CfgVehicles
 {
 	class Weapon_Base_F;
-	class item_srifle_DMR_01_dhex_F: Weapon_Base_F
+	class Weapon_srifle_DMR_01_dhex_F: Weapon_Base_F
 	{
 		scope=2;
 		scopeCurator=2;
+		editorCategory = "EdCat_Weapons";
+		editorSubcategory = "EdSubcat_SniperRifles";
 		vehicleClass="WeaponsPrimary";
 		author="NeroTheHero111";
 		displayName="VS-121 (Dark Hex)";

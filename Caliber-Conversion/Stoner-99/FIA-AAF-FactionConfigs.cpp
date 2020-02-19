@@ -4,6 +4,21 @@
 
 class cfgVehicles {
 
+	// Weapon Renaming
+	class Weapon_Base_F;
+	class Weapon_LMG_Mk200_black_F: Weapon_Base_F
+	{
+		displayName="Stoner 99 LMG (Black)";
+		class TransportItems
+		{
+			class _xx_LMG_Mk200_black_F
+			{
+				name="LMG_Mk200_black_F";
+				count=1;
+			};
+		};
+	};	
+	
 	//Backpacks
 	class B_Carryall_Base;
 	class B_Carryall_oli: B_Carryall_Base {};
