@@ -11,14 +11,22 @@ class CfgPatches
 			"Headgear_H_Beret_1SEC_01_F",
 			"Headgear_H_Beret_2SEC_01_F",		
 			"Headgear_H_Beret_3SEC_01_F",			
-			"Headgear_H_Beret_4SEC_01_F",			
+			"Headgear_H_Beret_4SEC_01_F",	
+			"Headgear_H_Beret_JAC_01_F",
+			"Headgear_H_Beret_ARMR_01_F",
+			"Headgear_H_Beret_DELTA_01_F",			
+			"Headgear_H_Beret_RSF_01_F",
 		};
 		weapons[]=
 		{
 			"H_Beret_1SEC_01_F",
 			"H_Beret_2SEC_01_F",		
-			"H_Beret_3SEC_01_F",		
+			"H_Beret_3SEC_01_F",				
 			"H_Beret_4SEC_01_F",
+			"H_Beret_JAC_01_F",
+			"H_Beret_ARMR_01_F",
+			"H_Beret_DELTA_01_F",
+			"H_Beret_RSF_01_F",
 		};
 	};
 };
@@ -89,7 +97,56 @@ class CfgWeapons
 		{
 		"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_4SEC_01_co.paa",
 		};
-	};		
+	};
+			
+	class H_Beret_JAC_01_F: H_Beret_1SEC_01_F
+	{
+		_generalMacro="H_Beret_JAC_01_F";
+		displayName="Beret (JAC)";
+		picture = "\Gear-Reskins\Headgear-Reskins\Berets\UI\icon_H_beretJAC_ca.paa";
+		hiddenSelectionsMaterials[] = {"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_JAC_01.rvmat"};
+		hiddenSelectionsTextures[]=
+		{
+		"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_JAC_01_co.paa",
+		};
+	};
+
+	class H_Beret_ARMR_01_F: H_Beret_1SEC_01_F
+	{
+		_generalMacro="H_Beret_ARMR_01_F";
+		displayName="Beret (Armour)";
+		picture = "\Gear-Reskins\Headgear-Reskins\Berets\UI\icon_H_Beret_ARMR_ca.paa";
+		hiddenSelectionsMaterials[] = {"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_ARMR_01.rvmat"};
+		hiddenSelectionsTextures[]=
+		{
+		"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_ARMR_01_co.paa",
+		};
+	};
+
+	class H_Beret_DELTA_01_F: H_Beret_1SEC_01_F
+	{
+		_generalMacro="H_Beret_DELTA_01_F";
+		displayName="Beret (Delta)";
+		picture = "\Gear-Reskins\Headgear-Reskins\Berets\UI\icon_H_beretDELTA_ca.paa";
+		hiddenSelectionsMaterials[] = {"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_DELTA_01.rvmat"};
+		hiddenSelectionsTextures[]=
+		{
+		"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_DELTA_01_co.paa",
+		};
+	};
+
+	class H_Beret_RSF_01_F: H_Beret_1SEC_01_F
+	{
+		_generalMacro="H_Beret_RSF_01_F";
+		displayName="Beret (RSF)";
+		picture = "\Gear-Reskins\Headgear-Reskins\Berets\UI\icon_H_beretRSF_ca.paa";
+		hiddenSelectionsMaterials[] = {"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_RSF_01.rvmat"};
+		hiddenSelectionsTextures[]=
+		{
+		"\Gear-Reskins\Headgear-Reskins\Berets\Data\H_Beret_RSF_01_co.paa",
+		};
+	};
+	
 };
 
 class CfgVehicles
@@ -154,5 +211,57 @@ class CfgVehicles
 				count=1;
 			};
 		};
-	};		
+	};
+	
+	class Headgear_H_Beret_JAC_01_F: Headgear_H_Beret_1SEC_01_F
+	{
+		displayName="Beret (JAC)";
+		class TransportItems
+		{
+			class H_Beret_JAC_01_F
+			{
+				name="H_Beret_JAC_01_F";
+				count=1;
+			};
+		};
+	};
+
+	class Headgear_H_Beret_ARMR_01_F: Headgear_H_Beret_1SEC_01_F
+	{
+		displayName="Beret (Armour)";
+		class TransportItems
+		{
+			class H_Beret_ARMR_01_F
+			{
+				name="H_Beret_ARMR_01_F";
+				count=1;
+			};
+		};
+	};
+	
+	class Headgear_H_Beret_DELTA_01_F: Headgear_H_Beret_1SEC_01_F
+	{
+		displayName="Beret (Delta)";
+		class TransportItems
+		{
+			class H_Beret_DELTA_01_F
+			{
+				name="H_Beret_DELTA_01_F";
+				count=1;
+			};
+		};
+	};	
+
+	class Headgear_H_Beret_RSF_01_F: Headgear_H_Beret_1SEC_01_F
+	{
+		displayName="Beret (RSF)";
+		class TransportItems
+		{
+			class H_Beret_RSF_01_F
+			{
+				name="H_Beret_RSF_01_F";
+				count=1;
+			};
+		};
+	};
 };

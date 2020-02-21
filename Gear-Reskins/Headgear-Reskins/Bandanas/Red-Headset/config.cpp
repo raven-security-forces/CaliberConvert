@@ -55,10 +55,10 @@ class CfgWeapons
 		scope=2;
 		author="NeroTheHero111";
 		displayName="Bandana (Red/Headset)";
-		picture="\Gear-Reskins\Headgear-Reskins\Bandanas\Red+Headset\icon_H_Bandanna_red_ca.paa";	
+		picture="\Gear-Reskins\Headgear-Reskins\Bandanas\Red-Headset\icon_H_Bandanna_red_ca.paa";	
 		hiddenSelectionsTextures[] = 
 		{
-		"\Gear-Reskins\Headgear-Reskins\Bandanas\Red+Headset\h_bandana_red_co.paa",
+		"\Gear-Reskins\Headgear-Reskins\Bandanas\Red-Headset\h_bandana_red_co.paa",
 		};
 	};
 };
