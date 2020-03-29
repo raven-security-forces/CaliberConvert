@@ -29,96 +29,59 @@ class MuzzleSlot;
 
 class CfgMagazines
 {
-  class Default;
-  class CA_Magazine: Default {};
+	class CA_Magazine;
   
-	class 120Rnd_762x51_Mag_M61_F: CA_Magazine
+	class 150Rnd_93x64_Mag : CA_Magazine
 	{
-	picture = "\A3\Weapons_F_Mark\Data\UI\M_93x64_CA.paa";
-	scope=2;
-	displayName = "7.62 mm 120Rnd M61 AP Box";
-	displayNameShort = "";
-	descriptionShort = "Caliber: 7.62x51 mm<br />Rounds: 120<br />Used in: MG5";
-	ammo="rhs_ammo_762x51_M61_AP";
+	ACE_isBelt = 1;
+	ammo = "B_762x51_Ball";
+	author = "Bohemia Interactive";
 	count = 120;
-	initSpeed=838;
-	tracersEvery=5;
-	lastRoundsTracer=0;
-	mass=38;
-	};
-
-  class 120Rnd_762x51_Mag_M62_F: 120Rnd_762x51_Mag_M61_F
-	{
-	displayName = "7.62 mm 120Rnd M62 (Tracer) Box";
-	ammo="rhs_ammo_762x51_M62_Tracer";
-	tracersEvery=1;
-	lastRoundsTracer=0;
-	};
-  
-   class 120Rnd_762x51_Mag_M80_F: 120Rnd_762x51_Mag_M61_F
-	{
-	displayName = "7.62 mm 120Rnd M80 Box";
-	ammo="rhs_ammo_762x51_M80_Ball";
-	};
-  
-   class 120Rnd_762x51_Mag_M80A1_F: 120Rnd_762x51_Mag_M61_F
-	{
-	displayName = "7.62 mm 120Rnd M80A1 EPR Box";
-	ammo="rhs_ammo_762x51_M80A1EPR_Ball";
-	initSpeed=803;
-	};
-  
-    class 120Rnd_762x51_Mag_M993_AP_F: 120Rnd_762x51_Mag_M61_F
-	{
-	displayName = "7.62 mm 120Rnd M993 AP Box";
-	ammo="rhs_ammo_762x51_M993_Ball";
-	initSpeed=911;
-	};
-  
-  	class 120Rnd_762x51_Mag_M82_F: CA_Magazine
-	{
-	picture = "\A3\Weapons_F_Mark\Data\UI\M_93x64_CA.paa";
-	scope=2;
-	displayName = "7.62 mm 120Rnd M82 (Blank) Box";
+	descriptionShort = "Caliber: 7.62x51mm<br />Rounds: 120<br />Used in: MG5";
+	displayName = "7.62mm 120Rnd Mixed Box";
 	displayNameShort = "";
-	descriptionShort = "Caliber: 7.62x51 mm<br />Rounds: 120<br />Used in: MG5";
-	ammo="rhs_ammo_762x51_M82_blank";
-	count = 120;
-	initSpeed=838;
-	tracersEvery=5;
-	lastRoundsTracer=0;
-	mass=38;
-	};
-};
-class CfgVehicles
-{
-	class Weapon_Base_F;
-	class Weapon_MMG_01_hex_F : Weapon_Base_F
-	{
-		displayName = "MG5 (Hex)";
-		class TransportItems
-		{
-			class _xx_MMG_01_hex_F
-			{
-				name="MMG_01_hex_F";
-				count=1;
-			};
-		};
+	initSpeed = 768;
+	lastRoundsTracer = 6;
+	mass = 38;
+	maxLeadSpeed = 25;
+	maxThrowHoldTime = 2;
+	maxThrowIntensityCoef = 1.4;
+	minThrowIntensityCoef = 0.3;
+	model = "\A3\weapons_F\ammo\mag_univ.p3d";
+	modelSpecial = "";
+	nameSound = "magazine";
+	picture = "\A3\Weapons_F_Mark\Data\UI\M_93x64_CA.paa";
+	quickReload = 0;
+	reloadAction = "";
+	scope = 2;
+	selectionFireAnim = "zasleh";
+	simulation = "ProxyMagazines";
+	tracersEvery = 5;
+	type = 256;
+	useAction = 0;
+	useActionTitle = "";
+	value = 1;
+	weaponpoolavailable = 1;
+	weight = 0;	
 	};
 	
-	class Weapon_MMG_01_tan_F : Weapon_Base_F
+	class 150Rnd_93x64_Mag_2 : 150Rnd_93x64_Mag
 	{
-		displayName = "MG5 (Tan)";	
-		class TransportItems
-		{
-			class _xx_MMG_01_tan_F
-			{
-				name="MMG_01_tan_F";
-				count=1;
-			};
-		};
+	displayName = "7.62mm 120Rnd Box";	
+	lastRoundsTracer = 0;	
+	tracersEvery = 0;	
 	};	
+	
+	class 150Rnd_93x64_Mag_Tracer : 150Rnd_93x64_Mag
+	{
+	displayName = "7.62mm 120Rnd Tracer Box";	
+	lastRoundsTracer = 0;	
+	tracersEvery = 1;	
+	};
+	
+	
 };
+
 class CfgWeapons 
 {
 	
@@ -129,14 +92,11 @@ class CfgWeapons
 		descriptionShort = "Medium Machine Gun<br />Caliber: 7.62x51 mm";
 		magazines[] = 
 		{
-		"120Rnd_762x51_Mag_M61_F",
-		"120Rnd_762x51_Mag_M62_F",
-		"120Rnd_762x51_Mag_M80_F",
-		"120Rnd_762x51_Mag_M80A1_F",
-		"120Rnd_762x51_Mag_M993_AP_F",
-		"120Rnd_762x51_Mag_M82_F",
+		"150Rnd_93x64_Mag",
+		"150Rnd_93x64_Mag_2",
+		"150Rnd_93x64_Mag_Tracer"
 		};
-        magazineWell[] = {};
+        magazineWell[] = {""};
 		ACE_barrelTwist = 360;
 		ACE_barrelLength = 550;
 		ACE_twistDirection = 1;

@@ -25,7 +25,7 @@ class CfgPatches
 			"cba_jr"
 		};
 		units[] = {};
-		weapons[] = {"s39_30Rnd_556x45_msbs_mag","s39_30Rnd_556x45_msbs_mag_TracerG","s39_30Rnd_556x45_msbs_mag_TracerR","s39_30Rnd_556x45_msbs_mag_TracerY","s39_30Rnd_556x45_msbs_mag_m995_ap","s39_30Rnd_556x45_msbs_mag_mk262","s39_30Rnd_556x45_msbs_mag_mk318","s39_30Rnd_556x45_msbs_mag_ir_dim"};
+		weapons[] = {};
 	};
 };
 
@@ -33,175 +33,52 @@ class CfgPatches
 
 class CfgMagazines
 {
-
-	class 30Rnd_65x39_caseless_msbs_mag;
-	class s39_30Rnd_556x45_msbs_mag: 30Rnd_65x39_caseless_msbs_mag
+	class 30Rnd_65x39_caseless_mag;
+	
+	class 30Rnd_65x39_caseless_msbs_mag : 30Rnd_65x39_caseless_mag
 	{
-		ammo = "B_545x39_Ball_Green_F";
-		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56 mm 30Rnd MSBS Mag";
-		displayNameShort = "5.56mm";
-		descriptionShort = "Caliber: 5.56x45mm NATO<br />Rounds: 30<br />Used in: MSBS";
-		initSpeed=920;
-		lastRoundsTracer=4;
-	};
-
-	class s39_30Rnd_556x45_msbs_mag_TracerG: s39_30Rnd_556x45_msbs_mag
-	{
-		ammo = "B_556x45_Ball_Tracer_Green";
-		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56 mm 30Rnd MSBS Tracer (Green) Mag";
-		displayNameShort = "5.56mm Tracer";
-		descriptionShort = "Caliber: 5.56x45mm NATO green tracer<br />Rounds: 30<br />Used in: MSBS";
-		tracersEvery = 1;
-	};
-
-	class s39_30Rnd_556x45_msbs_mag_TracerR: s39_30Rnd_556x45_msbs_mag
-	{
-		ammo = "B_556x45_Ball_Tracer_Red";
-		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56 mm 30Rnd MSBS Tracer (Red) Mag";
-		displayNameShort = "5.56mm Tracer";
-		descriptionShort = "Caliber: 5.56x45mm NATO red tracer<br />Rounds: 30<br />Used in: MSBS";
-		tracersEvery = 1;
-	};
-
-	class s39_30Rnd_556x45_msbs_mag_TracerY: s39_30Rnd_556x45_msbs_mag
-	{
-		ammo = "B_556x45_Ball_Tracer_Yellow";
-		author="Bohemia Interactive, modified by SpartanD39";
-		displayName = "5.56 mm 30Rnd MSBS Tracer (Yellow) Mag";
-		displayNameShort = "5.56mm Tracer";
-		descriptionShort = "Caliber: 5.56x45mm NATO yellow tracer<br />Rounds: 30<br />Used in: MSBS";
-		tracersEvery = 1;
+	ammo = "B_65x39_Caseless";
+	author = "Bohemia Interactive";
+	count = 30;
+	descriptionShort = "Caliber: 5.56x45 mm STANAG Caseless<br />Rounds: 30<br />Used in: MSBS Grot B";
+	displayName = "5.56 mm 30Rnd Mag";
+	displaynameshort = "5.56mm";
+	DLC = "Enoch";
+	hiddenSelections[] = {};
+	hiddenSelectionsTextures[] = {"\a3\weapons_f\rifles\mx\data\xmx_base_co.paa"};
+	initSpeed = 774;
+	lastRoundsTracer = 0;
+	mass = 10;
+	maxLeadSpeed = 25;
+	maxThrowHoldTime = 2;
+	maxThrowIntensityCoef = 1.4;
+	minThrowIntensityCoef = 0.3;
+	model = "\A3\weapons_F\ammo\mag_univ.p3d";
+	modelSpecial = "a3\Weapons_F_Enoch\MagazineProxies\mag_65x39c_msbs_30rnd.p3d";
+	modelSpecialIsProxy = 1;
+	nameSound = "magazine";
+	picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_msbs_mag_CA.paa";
+	quickReload = 0;
+	reloadAction = "";
+	scope = 2;
+	selectionFireAnim = "zasleh";
+	simulation = "ProxyMagazines";
+	tracersEvery = 0;
+	type = 256;
+	useAction = 0;
+	useActionTitle = "";
+	value = 1;
+	weaponpoolavailable = 1;
+	weight = 0;
 	};
 	
-	class s39_30Rnd_556x45_msbs_mag_m995_ap: s39_30Rnd_556x45_msbs_mag
-	{
-		ammo = "ACE_556x45_Ball_M995_AP";
-		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.5 6mm 30Rnd MSBS M995 AP";
-		displayNameShort = "5.56mm M995";
-		descriptionShort = "Caliber: 5.56x45mm NATO M995 AP<br />Rounds: 30<br />Used in: MSBS";
-		initSpeed = 875;
-		lastRoundsTracer=4;
+	class 30Rnd_65x39_caseless_msbs_mag_Tracer : 30Rnd_65x39_caseless_msbs_mag
+	{	
+	displayName = "5.56 mm 30Rnd Tracer Mag";	
+	displayNameShort = "Tracer";
+	picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_msbs_mag_Tracer_CA.paa";
+	tracersEvery = 1;
 	};
-
-	class s39_30Rnd_556x45_msbs_mag_mk262: s39_30Rnd_556x45_msbs_mag
-	{
-		ammo = "ACE_556x45_Ball_Mk262";
-		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.56 mm 30Rnd MSBS Mk262";
-		displayNameShort = "5.56mm Mk262";
-		descriptionShort = "Caliber: 5.56x45mm NATO Mk262 high-accuracy rounds<br />Rounds: 30<br />Used in: MSBS";
-		initSpeed = 832;
-		lastRoundsTracer=4;
-	};
-
-	class s39_30Rnd_556x45_msbs_mag_mk318: s39_30Rnd_556x45_msbs_mag
-	{
-		ammo = "ACE_556x45_Ball_Mk318";
-		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.56 mm 30Rnd MSBS Mk318 SOST";
-		displayNameShort = "5.56mm Mk318";
-		descriptionShort = "Caliber: 5.56x45mm NATO Mk318 SOST<br />Rounds: 30<br />Used in: MSBS";
-		initSpeed = 923;
-		lastRoundsTracer=4;
-	};
-
-	class s39_30Rnd_556x45_msbs_mag_ir_dim: s39_30Rnd_556x45_msbs_mag
-	{
-		ammo = "ACE_B_556x45_Ball_Tracer_Dim";
-		author="Bohemia Interactive, ACE-Team, hacked together by SpartanD39";
-		displayName = "5.56 mm 30Rnd MSBS IR-DIM";
-		displayNameShort = "5.56mm IR-DIM";
-		descriptionShort = "Caliber: 5.56x45mm NATO Tracer IR-DIM<br />Rounds: 30<br />Used in: MSBS";
-		initSpeed = 869;
-		tracersEvery = 1;
-	};
-};
-
-class CfgMagazineWells
-{
-	class s39_556x45_msbs
-	{
-		//Custom magazines from above.
-		s39_msbs_magazines[] =
-		{
-			"s39_30Rnd_556x45_msbs_mag",
-			"s39_30Rnd_556x45_msbs_mag_TracerG",
-			"s39_30Rnd_556x45_msbs_mag_TracerR",
-			"s39_30Rnd_556x45_msbs_mag_TracerY",
-			"s39_30Rnd_556x45_msbs_mag_m995_ap",
-			"s39_30Rnd_556x45_msbs_mag_mk262",
-			"s39_30Rnd_556x45_msbs_mag_mk318",
-			"s39_30Rnd_556x45_msbs_mag_ir_dim"
-		};
-		//Normal Magazines.
-		BI_Magazines[] =
-		{
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag_green",
-			"30Rnd_556x45_Stanag_red",
-			"30Rnd_556x45_Stanag_Tracer_Red",
-			"30Rnd_556x45_Stanag_Tracer_Green",
-			"30Rnd_556x45_Stanag_Tracer_Yellow"
-		};
-		
-		RHS_Magazines[] =
-		{
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855_Stanag",
-			"rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_M200_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_PMAG",
-			"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855_PMAG",
-			"rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_Mk318_PMAG",
-			"rhs_mag_30Rnd_556x45_Mk262_PMAG",
-			"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
-			"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855_PMAG_Tan",
-			"rhs_mag_30Rnd_556x45_M855_PMAG_Tan_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan",
-			"rhs_mag_30Rnd_556x45_Mk262_PMAG_Tan",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Orange",
-			"rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Green",
-			"rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Yellow",
-			"rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Orange"
-	   };
-
-		ACE_Magazines[] =
-		{
-			"ACE_30Rnd_556x45_Stanag_Tracer_Dim",
-			"ACE_30Rnd_556x45_Stanag_Mk318_mag",
-			"ACE_30Rnd_556x45_Stanag_Mk262_mag",
-			"ACE_30Rnd_556x45_Stanag_M995_AP_mag"
-		};
-	};
-
-	class s39_762x51_msbs
-	{
-		s39_762x51_msbs_mags[] =
-		{
-			"20Rnd_762x51_Mag",
-			"ACE_20Rnd_762x51_M118LR_Mag",
-			"ACE_20Rnd_762x51_M993_AP_Mag",
-			"ACE_20Rnd_762x51_Mag_SD",
-			"ACE_20Rnd_762x51_Mag_Tracer",
-			"ACE_20Rnd_762x51_Mag_Tracer_Dim",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag"
-		};
-	};
-
 };
 
 class Mode_FullAuto;
@@ -209,157 +86,48 @@ class Mode_Burst;
 class Mode_SemiAuto;
 class WeaponSlotsInfo;
 class MuzzleSlot;
+class PointerSlot;
+class CowsSlot;
 class BaseSoundModeType;
 
 class cfgWeapons
 {
-	class Rifle;
-
-	class Rifle_Base_F: Rifle {
-	};
-
+	class Rifle_Base_F;
+	
 	//Base MSBS rifle definitions.
 	class arifle_MSBS65_base_F: Rifle_Base_F
 	{
 		descriptionShort = "Assault Rifle<br />Caliber: 5.56x45 mm";
-		magazines[] = {"s39_30Rnd_556x45_msbs_mag"};
-		magazineWell[] = {"s39_556x45_msbs"};
+		magazines[] = 
+		{
+		"30Rnd_65x39_caseless_msbs_mag",
+		"30Rnd_65x39_caseless_msbs_mag_Tracer"
+		};
+		magazineWell[] = {"CBA_556x45_STANAG"};
 		modes[] = {"Single","Burst","FullAuto","single_medium_optics1","single_medium_optics2","fullauto_medium"};
 		mass = 75;
 		ACE_barrelLength = 406;
 		ACE_barrelTwist = 178;
 		ACE_twistDirection = 1;
-		bullet1[]=
-		{
-			"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_01",
-			0.44668359,
-			1,
-			15
-		};
-		bullet2[]=
-		{
-			"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_02",
-			0.44668359,
-			1,
-			15
-		};
-		bullet3[]=
-		{
-			"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_03",
-			0.44668359,
-			1,
-			15
-		};
-		bullet4[]=
-		{
-			"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_04",
-			0.44668359,
-			1,
-			15
-		};
-		bullet5[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\Shellcase_762_Dirt_01",
-			0.56234133,
-			1,
-			15
-		};
-		bullet6[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\Shellcase_762_Dirt_02",
-			0.56234133,
-			1,
-			15
-		};
-		bullet7[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\Shellcase_762_Dirt_03",
-			0.56234133,
-			1,
-			15
-		};
-		bullet8[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\Shellcase_762_Dirt_04",
-			0.56234133,
-			1,
-			15
-		};
-		bullet9[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\Shellcase_762_Grass_01",
-			0.56234133,
-			1,
-			15
-		};
-		bullet10[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\Shellcase_762_Grass_02",
-			0.56234133,
-			1,
-			15
-		};
-		bullet11[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\Shellcase_762_Grass_03",
-			0.56234133,
-			1,
-			15
-		};
-		bullet12[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\Shellcase_762_Grass_04",
-			0.56234133,
-			1,
-			15
-		};
-		soundBullet[]=
-		{
-			"bullet1",
-			0.086999997,
-			"bullet2",
-			0.082999997,
-			"bullet3",
-			0.082999997,
-			"bullet4",
-			0.082999997,
-			"bullet5",
-			0.082999997,
-			"bullet6",
-			0.082999997,
-			"bullet7",
-			0.082999997,
-			"bullet8",
-			0.082999997,
-			"bullet9",
-			0.082999997,
-			"bullet10",
-			0.082999997,
-			"bullet11",
-			0.082999997,
-			"bullet12",
-			0.082999997
-		};
-
+		
 		class Single: Mode_SemiAuto
 		{
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[]=
+				soundSetShot[] = 
 				{
-					"SPAR01_Shot_SoundSet",
-					"SPAR01_Tail_SoundSet",
-					"SPAR01_InteriorTail_SoundSet"
+					"Msbs65_01_Shot_SoundSet",
+					"Msbs65_01_Tail_SoundSet",
+					"Mx_Tail_Contact_SoundSet"
 				};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				SoundSetShot[]=
+				soundSetShot[] = 
 				{
-					"SPAR01_silencerShot_SoundSet",
-					"SPAR01_silencerTail_SoundSet",
-					"SPAR01_silencerInteriorTail_SoundSet"
+					"Msbs65_01_Shot_Silencer_SoundSet",
+					"Msbs65_01_Tail_Int_Silencer_SoundSet"
 				};
 			};
 		};
@@ -373,20 +141,19 @@ class cfgWeapons
 			};
 			class StandardSound: baseSoundModeType
 			{
-				soundSetShot[]=
+				soundSetShot[] = 
 				{
-					"SPAR01_Shot_SoundSet",
-					"SPAR01_Tail_SoundSet",
-					"SPAR01_InteriorTail_SoundSet"
+					"Msbs65_01_Shot_SoundSet",
+					"Msbs65_01_Tail_SoundSet",
+					"Mx_Tail_Contact_SoundSet"
 				};
 			};
 			class SilencedSound: baseSoundModeType
 			{
-				soundSetShot[]=
+				soundSetShot[] = 
 				{
-					"SPAR01_silencerShot_SoundSet",
-					"SPAR01_silencerTail_SoundSet",
-					"SPAR01_silencerInteriorTail_SoundSet"
+					"Msbs65_01_Shot_Silencer_SoundSet",
+					"Msbs65_01_Tail_Int_Silencer_SoundSet"
 				};
 			};
 		};
@@ -396,20 +163,19 @@ class cfgWeapons
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[]=
+				soundSetShot[] = 
 				{
-					"SPAR01_Shot_SoundSet",
-					"SPAR01_Tail_SoundSet",
-					"SPAR01_InteriorTail_SoundSet"
+					"Msbs65_01_Shot_SoundSet",
+					"Msbs65_01_Tail_SoundSet",
+					"Mx_Tail_Contact_SoundSet"
 				};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				SoundSetShot[]=
+				soundSetShot[] = 
 				{
-					"SPAR01_silencerShot_SoundSet",
-					"SPAR01_silencerTail_SoundSet",
-					"SPAR01_silencerInteriorTail_SoundSet"
+					"Msbs65_01_Shot_Silencer_SoundSet",
+					"Msbs65_01_Tail_Int_Silencer_SoundSet"
 				};
 			};
 		};
@@ -432,6 +198,234 @@ class cfgWeapons
 				"muzzle_snds_m",
 				"rhsusf_acc_SF3P556",
 				"rhsusf_acc_SFMB556",
+				};
+			};
+			
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[] =
+				{
+				"rhs_acc_rakurspm",
+				"rhs_acc_1p87",
+				"ffaa_optic_acog",
+				"optic_yorris",
+				"rhs_acc_dh520x56",
+				"rhs_acc_ekp8_18",
+				"rhs_acc_okp7_picatinny",
+				"ffaa_optic_elcan",
+				"ffaa_optic_elcan_ard",
+				"ffaa_optic_enasa",
+				"ffaa_optic_holografico",
+				"rksl_optic_eot552",
+				"rksl_optic_eot552_c",
+				"rksl_optic_eot552x",
+				"rksl_optic_eot552x_c",
+				"uk3cb_baf_kite",
+				"uk3cb_baf_maxikite",
+				"rksl_optic_lds",
+				"rksl_optic_lds_c",
+				"uk3cb_baf_specterlds",
+				"rhsusf_acc_premier_mrds",
+				"rhsusf_acc_leupoldmk4_2_mrds",
+				"ffaa_optic_Mk4_v1",
+				"ffaa_optic_Mk4_v2",
+				"ffaa_optic_lv",
+				"rksl_optic_rmr_ms19",
+				"rksl_optic_rmr_ms19_fde",
+				"rksl_optic_rmr_rm33",
+				"rksl_optic_rmr_rm33_fde",
+				"rhsgref_acc_rx01_nofilter_camo",
+				"rhsgref_acc_rx01_camo",
+				"rksl_optic_pmii_312",
+				"rksl_optic_pmii_312_des",
+				"rksl_optic_pmii_312_sunshade",
+				"rksl_optic_pmii_312_sunshade_des",
+				"rksl_optic_pmii_312_sunshade_wdl",
+				"rksl_optic_pmii_312_wdl",
+				"rksl_optic_pmii_525",
+				"rksl_optic_pmii_525_des",
+				"rksl_optic_pmii_525_wdl",
+				"ffaa_optic_3x12x50",
+				"ffaa_optic_5x25x56",
+				"uk3cb_baf_suit",
+				"uk3cb_baf_susat",
+				"ffaa_optic_susat",
+				"uk3cb_baf_ta31f",
+				"uk3cb_baf_ta31f_hornbill",
+				"uk3cb_baf_ta648",
+				"uk3cb_baf_ta648_308",
+				"optic_ico_01_f",
+				"optic_ico_01_black_f",
+				"optic_ico_01_sand_f",
+				"optic_ico_01_camo_f",
+				"optic_Nightstalker",
+				"optic_tws",
+				"optic_tws_mg",
+				"optic_NVS",
+				"optic_DMS",
+				"optic_LRPS",
+				"optic_ams",
+				"optic_AMS_snd",
+				"optic_AMS_khk",
+				"optic_KHS_blk",
+				"optic_KHS_tan",
+				"optic_KHS_hex",
+				"optic_KHS_old",
+				"optic_SOS",
+				"optic_MRCO",
+				"optic_Arco",
+				"optic_aco",
+				"optic_ACO_grn",
+				"optic_aco_smg",
+				"optic_ACO_grn_smg",
+				"optic_hamr",
+				"optic_Holosight",
+				"optic_Holosight_smg",
+				"optic_Hamr_khk_F",
+				"optic_SOS_khk_F",
+				"optic_Arco_ghex_F",
+				"optic_Arco_blk_F",
+				"optic_DMS_ghex_F",
+				"optic_ERCO_blk_F",
+				"optic_ERCO_khk_F",
+				"optic_ERCO_snd_F",
+				"optic_LRPS_ghex_F",
+				"optic_LRPS_tna_F",
+				"optic_Holosight_blk_F",
+				"optic_Holosight_khk_F",
+				"optic_Holosight_smg_blk_F",
+				"optic_Holosight_smg_khk_F",
+				"optic_DMS_weathered_F",
+				"optic_DMS_weathered_Kir_F",
+				"optic_Arco_lush_F",
+				"optic_Arco_arid_F",
+				"optic_Arco_AK_blk_F",
+				"optic_Arco_AK_lush_F",
+				"optic_Arco_AK_arid_F",
+				"optic_Holosight_lush_F",
+				"optic_Holosight_arid_F",
+				"rhsusf_acc_LEUPOLDMK4",
+				"rhsusf_acc_LEUPOLDMK4_d",
+				"rhsusf_acc_LEUPOLDMK4_wd",
+				"rhsusf_acc_LEUPOLDMK4_2",
+				"rhsusf_acc_LEUPOLDMK4_2_d",
+				"rhsusf_acc_premier",
+				"rhsusf_acc_premier_low",
+				"rhsusf_acc_premier_anpvs27",
+				"rhsusf_acc_ACOG_anpvs27",
+				"rhsusf_acc_M8541",
+				"rhsusf_acc_M8541_low",
+				"rhsusf_acc_M8541_low_d",
+				"rhsusf_acc_M8541_low_wd",
+				"rhsusf_acc_SpecterDR_pvs27",
+				"rhsusf_acc_EOTECH",
+				"rhsusf_acc_eotech_552",
+				"rhsusf_acc_eotech_552_d",
+				"rhsusf_acc_eotech_552_wd",
+				"rhsusf_acc_eotech_xps3",
+				"rhsusf_acc_g33_xps3",
+				"rhsusf_acc_g33_xps3_flip",
+				"rhsusf_acc_g33_xps3_tan",
+				"rhsusf_acc_g33_xps3_tan_flip",
+				"rhsusf_acc_g33_t1",
+				"rhsusf_acc_g33_t1_flip",
+				"rhsusf_acc_compm4",
+				"rhsusf_acc_T1_high",
+				"rhsusf_acc_T1_low",
+				"rhsusf_acc_RX01",
+				"rhsusf_acc_RX01_NoFilter",
+				"rhsusf_acc_RX01_tan",
+				"rhsusf_acc_RX01_NoFilter_tan",
+				"rhsusf_acc_RM05",
+				"rhsusf_acc_mrds",
+				"rhsusf_acc_mrds_c",
+				"rhsusf_acc_ACOG",
+				"rhsusf_acc_ACOG2",
+				"rhsusf_acc_ACOG3",
+				"rhsusf_acc_ACOG_wd",
+				"rhsusf_acc_ACOG_d",
+				"rhsusf_acc_ACOG_sa",
+				"rhsusf_acc_ACOG_USMC",
+				"rhsusf_acc_ACOG2_USMC",
+				"rhsusf_acc_ACOG3_USMC",
+				"rhsusf_acc_ACOG_RMR",
+				"rhsusf_acc_ACOG_PIP",
+				"rhsusf_acc_ACOG2_pip",
+				"rhsusf_acc_ACOG3_pip",
+				"rhsusf_acc_ACOG_wd_pip",
+				"rhsusf_acc_ACOG_d_pip",
+				"rhsusf_acc_ACOG_sa_pip",
+				"rhsusf_acc_ACOG_USMC_pip",
+				"rhsusf_acc_ACOG2_USMC_pip",
+				"rhsusf_acc_ACOG3_USMC_pip",
+				"rhsusf_acc_ACOG_RMR_PIP",
+				"rhsusf_acc_ELCAN",
+				"rhsusf_acc_ELCAN_ard",
+				"rhsusf_acc_ELCAN_PIP",
+				"rhsusf_acc_ELCAN_ard_PIP",
+				"rhsusf_acc_su230",
+				"rhsusf_acc_su230_mrds",
+				"rhsusf_acc_su230a",
+				"rhsusf_acc_su230a_mrds",
+				"rhsusf_acc_su230_c",
+				"rhsusf_acc_su230_mrds_c",
+				"rhsusf_acc_su230a_c",
+				"rhsusf_acc_su230a_mrds_c",
+				"rhsusf_acc_SpecterDR",
+				"rhsusf_acc_SpecterDR_A",
+				"rhsusf_acc_SpecterDR_CX",
+				"rhsusf_acc_SpecterDR_D",
+				"rhsusf_acc_SpecterDR_OD",
+				"rhsusf_acc_anpvs27",
+				"rhsusf_acc_anpas13gv1",
+				"rhsusf_acc_M2A1",
+				"rhsusf_acc_ACOG_MDO",
+				"ACE_optic_Hamr_2D",
+				"ACE_optic_Hamr_PIP",
+				"ACE_optic_Arco_2D",
+				"ACE_optic_Arco_PIP",
+				"ACE_optic_MRCO_2D",
+				"ACE_optic_MRCO_PIP",
+				"ACE_optic_SOS_2D",
+				"ACE_optic_SOS_PIP",
+				"ACE_optic_LRPS_2D",
+				"ACE_optic_LRPS_PIP"
+				};
+			};
+			
+			class PointerSlot: Pointerslot
+			{
+			compatibleItems[]=
+				{
+				"rhs_acc_2dpzenit_ris",
+				"rhsusf_acc_anpeq15side",
+				"rhsusf_acc_anpeq15_top",
+				"rhsusf_acc_anpeq15_wmx",
+				"rhsusf_acc_anpeq15_wmx_light",
+				"rhsusf_acc_anpeq15side_bk",				
+				"rhsusf_acc_anpeq15_bk_top",					
+				"rhsusf_acc_anpeq15",					
+				"rhsusf_acc_anpeq15_light",					
+				"rhsusf_acc_anpeq15_bk",			
+				"rhsusf_acc_anpeq15_bk_light",					
+				"rhsusf_acc_anpeq15a",					
+				"rhsusf_acc_anpeq16a",			
+				"rhsusf_acc_anpeq16a_light",
+				"rhsusf_acc_anpeq16a_top",
+				"rhsusf_acc_anpeq16a_light_top",
+				"ffaa_acc_puntero_ir",
+				"ace_acc_pointer_green",
+				"acc_pointer_ir",
+				"uk3cb_baf_llm_flashlight_black",
+				"uk3cb_baf_llm_flashlight_tan",
+				"uk3cb_baf_llm_ir_black",
+				"uk3cb_baf_llm_ir_tan",
+				"rhsusf_acc_m952v",
+				"rhs_acc_perst1ik_ris",
+				"rhs_acc_perst3",
+				"acc_flashlight",
+				"rhsusf_acc_wmx",
+				"rhsusf_acc_wmx_bk",
 				};
 			};
 		};
@@ -462,171 +456,260 @@ class cfgWeapons
 	
 	class arifle_MSBS65_Mark_base_F: arifle_MSBS65_base_F 
 	{
-		descriptionShort = "Designated Marksman Rifle<br />Caliber: 7.62x51mm NATO";
-		magazines[] = {"20Rnd_762x51_Mag"};
-		magazineWell[] = {"s39_762x51_msbs"};
-		reloadTime = 0.45;
-		modes[] = {"Single","single_medium_optics1","single_medium_optics2"};
+		class WeaponSlotsInfo: WeaponSlotsInfo //Inheriting from the primitive class we imported above.
+		{
+			class MuzzleSlot: MuzzleSlot //Suppressors and flashiders.
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE"; //This is needed to be able to display models.
+				compatibleItems[] = //our actual list of items, all classnames from in-game.
+				{
+				"ace_muzzle_mzls_l",
+				"ffaa_snds_gt_556",
+				"rhsusf_acc_nt4_black",
+				"rhsusf_acc_nt4_tan",
+				"rhsusf_acc_rotex5_grey",
+				"rhsusf_acc_rotex5_tan",
+				"muzzle_snds_m_snd_f",
+				"muzzle_snds_m_khk_f",
+				"muzzle_snds_m",
+				"rhsusf_acc_SF3P556",
+				"rhsusf_acc_SFMB556",
+				};
+			};
+			
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[] =
+				{
+				"rhs_acc_rakurspm",
+				"rhs_acc_1p87",
+				"ffaa_optic_acog",
+				"optic_yorris",
+				"rhs_acc_dh520x56",
+				"rhs_acc_ekp8_18",
+				"rhs_acc_okp7_picatinny",
+				"ffaa_optic_elcan",
+				"ffaa_optic_elcan_ard",
+				"ffaa_optic_enasa",
+				"ffaa_optic_holografico",
+				"rksl_optic_eot552",
+				"rksl_optic_eot552_c",
+				"rksl_optic_eot552x",
+				"rksl_optic_eot552x_c",
+				"uk3cb_baf_kite",
+				"uk3cb_baf_maxikite",
+				"rksl_optic_lds",
+				"rksl_optic_lds_c",
+				"uk3cb_baf_specterlds",
+				"rhsusf_acc_premier_mrds",
+				"rhsusf_acc_leupoldmk4_2_mrds",
+				"ffaa_optic_Mk4_v1",
+				"ffaa_optic_Mk4_v2",
+				"ffaa_optic_lv",
+				"rksl_optic_rmr_ms19",
+				"rksl_optic_rmr_ms19_fde",
+				"rksl_optic_rmr_rm33",
+				"rksl_optic_rmr_rm33_fde",
+				"rhsgref_acc_rx01_nofilter_camo",
+				"rhsgref_acc_rx01_camo",
+				"rksl_optic_pmii_312",
+				"rksl_optic_pmii_312_des",
+				"rksl_optic_pmii_312_sunshade",
+				"rksl_optic_pmii_312_sunshade_des",
+				"rksl_optic_pmii_312_sunshade_wdl",
+				"rksl_optic_pmii_312_wdl",
+				"rksl_optic_pmii_525",
+				"rksl_optic_pmii_525_des",
+				"rksl_optic_pmii_525_wdl",
+				"ffaa_optic_3x12x50",
+				"ffaa_optic_5x25x56",
+				"uk3cb_baf_suit",
+				"uk3cb_baf_susat",
+				"ffaa_optic_susat",
+				"uk3cb_baf_ta31f",
+				"uk3cb_baf_ta31f_hornbill",
+				"uk3cb_baf_ta648",
+				"uk3cb_baf_ta648_308",
+				"optic_ico_01_f",
+				"optic_ico_01_black_f",
+				"optic_ico_01_sand_f",
+				"optic_ico_01_camo_f",
+				"optic_Nightstalker",
+				"optic_tws",
+				"optic_tws_mg",
+				"optic_NVS",
+				"optic_DMS",
+				"optic_LRPS",
+				"optic_ams",
+				"optic_AMS_snd",
+				"optic_AMS_khk",
+				"optic_KHS_blk",
+				"optic_KHS_tan",
+				"optic_KHS_hex",
+				"optic_KHS_old",
+				"optic_SOS",
+				"optic_MRCO",
+				"optic_Arco",
+				"optic_aco",
+				"optic_ACO_grn",
+				"optic_aco_smg",
+				"optic_ACO_grn_smg",
+				"optic_hamr",
+				"optic_Holosight",
+				"optic_Holosight_smg",
+				"optic_Hamr_khk_F",
+				"optic_SOS_khk_F",
+				"optic_Arco_ghex_F",
+				"optic_Arco_blk_F",
+				"optic_DMS_ghex_F",
+				"optic_ERCO_blk_F",
+				"optic_ERCO_khk_F",
+				"optic_ERCO_snd_F",
+				"optic_LRPS_ghex_F",
+				"optic_LRPS_tna_F",
+				"optic_Holosight_blk_F",
+				"optic_Holosight_khk_F",
+				"optic_Holosight_smg_blk_F",
+				"optic_Holosight_smg_khk_F",
+				"optic_DMS_weathered_F",
+				"optic_DMS_weathered_Kir_F",
+				"optic_Arco_lush_F",
+				"optic_Arco_arid_F",
+				"optic_Arco_AK_blk_F",
+				"optic_Arco_AK_lush_F",
+				"optic_Arco_AK_arid_F",
+				"optic_Holosight_lush_F",
+				"optic_Holosight_arid_F",
+				"rhsusf_acc_LEUPOLDMK4",
+				"rhsusf_acc_LEUPOLDMK4_d",
+				"rhsusf_acc_LEUPOLDMK4_wd",
+				"rhsusf_acc_LEUPOLDMK4_2",
+				"rhsusf_acc_LEUPOLDMK4_2_d",
+				"rhsusf_acc_premier",
+				"rhsusf_acc_premier_low",
+				"rhsusf_acc_premier_anpvs27",
+				"rhsusf_acc_ACOG_anpvs27",
+				"rhsusf_acc_M8541",
+				"rhsusf_acc_M8541_low",
+				"rhsusf_acc_M8541_low_d",
+				"rhsusf_acc_M8541_low_wd",
+				"rhsusf_acc_SpecterDR_pvs27",
+				"rhsusf_acc_EOTECH",
+				"rhsusf_acc_eotech_552",
+				"rhsusf_acc_eotech_552_d",
+				"rhsusf_acc_eotech_552_wd",
+				"rhsusf_acc_eotech_xps3",
+				"rhsusf_acc_g33_xps3",
+				"rhsusf_acc_g33_xps3_flip",
+				"rhsusf_acc_g33_xps3_tan",
+				"rhsusf_acc_g33_xps3_tan_flip",
+				"rhsusf_acc_g33_t1",
+				"rhsusf_acc_g33_t1_flip",
+				"rhsusf_acc_compm4",
+				"rhsusf_acc_T1_high",
+				"rhsusf_acc_T1_low",
+				"rhsusf_acc_RX01",
+				"rhsusf_acc_RX01_NoFilter",
+				"rhsusf_acc_RX01_tan",
+				"rhsusf_acc_RX01_NoFilter_tan",
+				"rhsusf_acc_RM05",
+				"rhsusf_acc_mrds",
+				"rhsusf_acc_mrds_c",
+				"rhsusf_acc_ACOG",
+				"rhsusf_acc_ACOG2",
+				"rhsusf_acc_ACOG3",
+				"rhsusf_acc_ACOG_wd",
+				"rhsusf_acc_ACOG_d",
+				"rhsusf_acc_ACOG_sa",
+				"rhsusf_acc_ACOG_USMC",
+				"rhsusf_acc_ACOG2_USMC",
+				"rhsusf_acc_ACOG3_USMC",
+				"rhsusf_acc_ACOG_RMR",
+				"rhsusf_acc_ACOG_PIP",
+				"rhsusf_acc_ACOG2_pip",
+				"rhsusf_acc_ACOG3_pip",
+				"rhsusf_acc_ACOG_wd_pip",
+				"rhsusf_acc_ACOG_d_pip",
+				"rhsusf_acc_ACOG_sa_pip",
+				"rhsusf_acc_ACOG_USMC_pip",
+				"rhsusf_acc_ACOG2_USMC_pip",
+				"rhsusf_acc_ACOG3_USMC_pip",
+				"rhsusf_acc_ACOG_RMR_PIP",
+				"rhsusf_acc_ELCAN",
+				"rhsusf_acc_ELCAN_ard",
+				"rhsusf_acc_ELCAN_PIP",
+				"rhsusf_acc_ELCAN_ard_PIP",
+				"rhsusf_acc_su230",
+				"rhsusf_acc_su230_mrds",
+				"rhsusf_acc_su230a",
+				"rhsusf_acc_su230a_mrds",
+				"rhsusf_acc_su230_c",
+				"rhsusf_acc_su230_mrds_c",
+				"rhsusf_acc_su230a_c",
+				"rhsusf_acc_su230a_mrds_c",
+				"rhsusf_acc_SpecterDR",
+				"rhsusf_acc_SpecterDR_A",
+				"rhsusf_acc_SpecterDR_CX",
+				"rhsusf_acc_SpecterDR_D",
+				"rhsusf_acc_SpecterDR_OD",
+				"rhsusf_acc_anpvs27",
+				"rhsusf_acc_anpas13gv1",
+				"rhsusf_acc_M2A1",
+				"rhsusf_acc_ACOG_MDO",
+				"ACE_optic_Hamr_2D",
+				"ACE_optic_Hamr_PIP",
+				"ACE_optic_Arco_2D",
+				"ACE_optic_Arco_PIP",
+				"ACE_optic_MRCO_2D",
+				"ACE_optic_MRCO_PIP",
+				"ACE_optic_SOS_2D",
+				"ACE_optic_SOS_PIP",
+				"ACE_optic_LRPS_2D",
+				"ACE_optic_LRPS_PIP"
+				};
+			};
+			
+			class PointerSlot: Pointerslot
+			{
+			compatibleItems[]=
+				{
+				"rhs_acc_2dpzenit_ris",
+				"rhsusf_acc_anpeq15side",
+				"rhsusf_acc_anpeq15_top",
+				"rhsusf_acc_anpeq15_wmx",
+				"rhsusf_acc_anpeq15_wmx_light",
+				"rhsusf_acc_anpeq15side_bk",				
+				"rhsusf_acc_anpeq15_bk_top",					
+				"rhsusf_acc_anpeq15",					
+				"rhsusf_acc_anpeq15_light",					
+				"rhsusf_acc_anpeq15_bk",			
+				"rhsusf_acc_anpeq15_bk_light",					
+				"rhsusf_acc_anpeq15a",					
+				"rhsusf_acc_anpeq16a",			
+				"rhsusf_acc_anpeq16a_light",
+				"rhsusf_acc_anpeq16a_top",
+				"rhsusf_acc_anpeq16a_light_top",
+				"ffaa_acc_puntero_ir",
+				"ace_acc_pointer_green",
+				"acc_pointer_ir",
+				"uk3cb_baf_llm_flashlight_black",
+				"uk3cb_baf_llm_flashlight_tan",
+				"uk3cb_baf_llm_ir_black",
+				"uk3cb_baf_llm_ir_tan",
+				"rhsusf_acc_m952v",
+				"rhs_acc_perst1ik_ris",
+				"rhs_acc_perst3",
+				"acc_flashlight",
+				"rhsusf_acc_wmx",
+				"rhsusf_acc_wmx_bk",
+				};
+			};
+		};
+		descriptionShort = "Assault Rifle<br />Caliber: 5.56x45mm NATO";
 		mass = 95;
 		ACE_barrelLength = 406;
 		ACE_barrelTwist = 178;
 		ACE_twistDirection = 1;
-		class WeaponSlotsInfo: WeaponSlotsInfo //Inheriting from the primitive class we imported above.
-		{
-		
-		class MuzzleSlot: MuzzleSlot //Suppressors and flashiders.
-		{
-			linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE"; //This is needed to be able to display models.
-			compatibleItems[] = //our actual list of items, all classnames from in-game.
-			{
-				"ace_muzzle_mzls_b",
-				"muzzle_snds_b",
-				"muzzle_snds_b_snd_f",
-				"muzzle_snds_b_khk_f",
-				"muzzle_snds_b_lush_f",
-				"muzzle_snds_b_arid_f",
-				"rhsusf_acc_aac_762sd_silencer",
-				"rhsusf_acc_aac_762sdn6_silencer",	
-				"rhsgref_sdn6_suppressor",
-				"rhsusf_acc_aac_scarh_silencer",		
-			};
-		};
-		};
-		
-    class Single: Mode_SemiAuto
-	{
-		class BaseSoundModeType;
-		class StandardSound: BaseSoundModeType
-		{
-			soundSetShot[]=
-			{
-				"Mk18_Shot_SoundSet",
-				"Mk18_tail_SoundSet",
-				"Mk18_InteriorTail_SoundSet"
-			};
-		};
-		class SilencedSound: BaseSoundModeType
-		{
-			soundsetshot[]=
-			{
-				"Mk18_silencerShot_SoundSet",
-				"Mk18_silencerTail_SoundSet",
-				"Mk18_silencerInteriorTail_SoundSet"
-			};
-		};
-	};
-
-		bullet1[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\metal_762_01",
-			0.39810717,
-			1,
-			15
-		};
-		bullet2[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\metal_762_02",
-			0.39810717,
-			1,
-			15
-		};
-		bullet3[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\metal_762_03",
-			0.39810717,
-			1,
-			15
-		};
-		bullet4[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\metal_762_04",
-			0.39810717,
-			1,
-			15
-		};
-		bullet5[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\dirt_762_01",
-			0.2818383,
-			1,
-			15
-		};
-		bullet6[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\dirt_762_02",
-			0.2818383,
-			1,
-			15
-		};
-		bullet7[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\dirt_762_03",
-			0.2818383,
-			1,
-			15
-		};
-		bullet8[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\dirt_762_04",
-			0.2818383,
-			1,
-			15
-		};
-		bullet9[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\grass_762_01",
-			0.2818383,
-			1,
-			15
-		};
-		bullet10[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\grass_762_02",
-			0.2818383,
-			1,
-			15
-		};
-		bullet11[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\grass_762_03",
-			0.2818383,
-			1,
-			15
-		};
-		bullet12[]=
-		{
-			"A3\sounds_f\weapons\shells\7_62\grass_762_04",
-			0.2818383,
-			1,
-			15
-		};
-		soundBullet[]=
-		{
-			"bullet1",
-			0.082999997,
-			"bullet2",
-			0.082999997,
-			"bullet3",
-			0.082999997,
-			"bullet4",
-			0.082999997,
-			"bullet5",
-			0.082999997,
-			"bullet6",
-			0.082999997,
-			"bullet7",
-			0.082999997,
-			"bullet8",
-			0.082999997,
-			"bullet9",
-			0.082999997,
-			"bullet10",
-			0.082999997,
-			"bullet11",
-			0.082999997,
-			"bullet12",
-			0.082999997
-		};
 	};
 
 	class arifle_MSBS65_Mark_base_black_F;
@@ -636,87 +719,87 @@ class cfgWeapons
 	//Base MSBS
 	class arifle_MSBS65_F: arifle_MSBS65_base_F
 	{
-		displayName="MSBS-5.56B";
+		displayName="MSBS Grot B";
 	};
 
 
 	class arifle_MSBS65_black_F: arifle_MSBS65_base_black_F
 	{
-		displayName="MSBS-5.56B (Black)";
+		displayName="MSBS Grot B (Black)";
 	};
 
 
 	class arifle_MSBS65_camo_F: arifle_MSBS65_base_camo_F
 	{
-		displayName="MSBS-5.56B (Camo)";
+		displayName="MSBS Grot B (Camo)";
 	};
 
 
 	class arifle_MSBS65_sand_F: arifle_MSBS65_base_sand_F
 	{
-		displayName="MSBS-5.56B (Sand)";
+		displayName="MSBS Grot B (Sand)";
 	};
 
 	//MSBS GL
 	class arifle_MSBS65_GL_F: arifle_MSBS65_GL_base_F
 	{
-		displayName="MSBS-5.56B UGL";
+		displayName="MSBS Grot B UGL";
 	};
 
 	class arifle_MSBS65_GL_black_F: arifle_MSBS65_GL_base_black_F
 	{
-		displayName="MSBS-5.56B UGL (Black)";
+		displayName="MSBS Grot B UGL (Black)";
 	};
 
 	class arifle_MSBS65_GL_camo_F: arifle_MSBS65_GL_base_camo_F
 	{
-		displayName="MSBS-5.56B UGL (Camo)";
+		displayName="MSBS Grot B UGL (Camo)";
 	};
 
 	class arifle_MSBS65_GL_sand_F: arifle_MSBS65_GL_base_sand_F
 	{
-		displayName="MSBS-5.56B UGL (Sand)";
+		displayName="MSBS Grot B UGL (Sand)";
 	};
 
 	//MSBS Marksman
 	class arifle_MSBS65_Mark_F: arifle_MSBS65_Mark_base_F
 	{
-		displayName="MSBS-7.62N";
+		displayName="MSBS Grot B DMR";
 	};
 
 	class arifle_MSBS65_Mark_black_F: arifle_MSBS65_Mark_base_black_F
 	{
-		displayName="MSBS-7.62N (Black)";
+		displayName="MSBS Grot B DMR (Black)";
 	};
 
 	class arifle_MSBS65_Mark_camo_F: arifle_MSBS65_Mark_base_camo_F
 	{
-		displayName="MSBS-7.62N (Camo)";
+		displayName="MSBS Grot B DMR (Camo)";
 	};
 
 	class arifle_MSBS65_Mark_sand_F: arifle_MSBS65_Mark_base_sand_F
 	{
-		displayName="MSBS-7.62N (Sand)";
+		displayName="MSBS Grot B DMR (Sand)";
 	};
 
 	//MSBS Uderbarrel Shotgun
 	class arifle_MSBS65_UBS_F: arifle_MSBS65_UBS_base_F
 	{
-		displayName="MSBS-5.56B SIX12";
+		displayName="MSBS Grot B SIX12";
 	};
 
 	class arifle_MSBS65_UBS_black_F: arifle_MSBS65_UBS_base_black_F
 	{
-		displayName="MSBS-5.56B SIX12 (Black)";
+		displayName="MSBS Grot B SIX12 (Black)";
 	};
 
 	class arifle_MSBS65_UBS_camo_F: arifle_MSBS65_UBS_base_camo_F
 	{
-		displayName="MSBS-5.56B SIX12 (Camo)";
+		displayName="MSBS Grot B SIX12 (Camo)";
 	};
 
 	class arifle_MSBS65_UBS_sand_F: arifle_MSBS65_UBS_base_sand_F
 	{
-		displayName="MSBS-5.56B SIX12 (Sand)";
+		displayName="MSBS Grot B SIX12 (Sand)";
 	};
 };

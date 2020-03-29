@@ -1,4 +1,4 @@
-class cfgPatches
+class CfgPatches
 {
     class RSF_Stoner_99_Conversion
     {
@@ -42,9 +42,42 @@ class CfgWeapons
 		linkProxy="\A3\data_f\proxies\weapon_slots\MAGAZINESLOT";
 		magazines[] =
 		{
-		"rhsusf_200Rnd_556x45_soft_pouch"
+		"200Rnd_65x39_cased_Box",
+		"200Rnd_65x39_cased_Box_Red",
+		"200Rnd_65x39_cased_Box_Tracer",
+		"200Rnd_65x39_cased_Box_Tracer_Red",
+		"rhsusf_200Rnd_556x45_box",
+		"rhsusf_200rnd_556x45_mixed_box",
+		"rhsusf_200rnd_556x45_M855_box",
+		"rhsusf_200rnd_556x45_M855_mixed_box",
+		"rhsusf_200Rnd_556x45_soft_pouch",
+		"rhsusf_200Rnd_556x45_mixed_soft_pouch",
+		"rhsusf_200Rnd_556x45_soft_pouch_ucp",
+		"rhsusf_200Rnd_556x45_mixed_soft_pouch_ucp",
+		"rhsusf_200Rnd_556x45_soft_pouch_coyote",
+		"rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",
+		"rhsusf_200Rnd_556x45_M855_soft_pouch",
+		"rhsusf_200Rnd_556x45_M855_mixed_soft_pouch",
+		"rhsusf_200Rnd_556x45_M855_soft_pouch_ucp",
+		"rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_ucp",
+		"rhsusf_200Rnd_556x45_M855_soft_pouch_coyote",
+		"rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_coyote",
+		"rhsusf_100Rnd_556x45_soft_pouch",
+		"rhsusf_100Rnd_556x45_mixed_soft_pouch",
+		"rhsusf_100Rnd_556x45_soft_pouch_ucp",
+		"rhsusf_100Rnd_556x45_mixed_soft_pouch_ucp",
+		"rhsusf_100Rnd_556x45_soft_pouch_coyote",
+		"rhsusf_100Rnd_556x45_mixed_soft_pouch_coyote",
+		"rhsusf_100Rnd_556x45_M855_soft_pouch",
+		"rhsusf_100Rnd_556x45_M855_mixed_soft_pouch",
+		"rhsusf_100Rnd_556x45_M855_soft_pouch_ucp",
+		"rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_ucp",
+		"rhsusf_100Rnd_556x45_M855_soft_pouch_coyote",
+		"rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote",
+		"rhsusf_100Rnd_556x45_M200_soft_pouch",
+		"rhsusf_100Rnd_556x45_M200_soft_pouch_ucp",
+		"rhsusf_100Rnd_556x45_M200_soft_pouch_coyote"		
 		};
-        magazineWell[] = {"M249_556x45"};
 		ACE_barrelTwist = 178;
 		ACE_barrelLength = 318;
 		ACE_twistDirection = 1;
@@ -77,8 +110,111 @@ class CfgWeapons
 		linkProxy="\A3\data_f\proxies\weapon_slots\MAGAZINESLOT";
 		magazines[] =
 		{
-		"rhsusf_200Rnd_556x45_soft_pouch"
+		"200Rnd_65x39_cased_Box",
+		"200Rnd_65x39_cased_Box_Red",
+		"200Rnd_65x39_cased_Box_Tracer",
+		"200Rnd_65x39_cased_Box_Tracer_Red",
+		"rhsusf_200Rnd_556x45_box",
+		"rhsusf_200rnd_556x45_mixed_box",
+		"rhsusf_200rnd_556x45_M855_box",
+		"rhsusf_200rnd_556x45_M855_mixed_box",
+		"rhsusf_200Rnd_556x45_soft_pouch",
+		"rhsusf_200Rnd_556x45_mixed_soft_pouch",
+		"rhsusf_200Rnd_556x45_soft_pouch_ucp",
+		"rhsusf_200Rnd_556x45_mixed_soft_pouch_ucp",
+		"rhsusf_200Rnd_556x45_soft_pouch_coyote",
+		"rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",
+		"rhsusf_200Rnd_556x45_M855_soft_pouch",
+		"rhsusf_200Rnd_556x45_M855_mixed_soft_pouch",
+		"rhsusf_200Rnd_556x45_M855_soft_pouch_ucp",
+		"rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_ucp",
+		"rhsusf_200Rnd_556x45_M855_soft_pouch_coyote",
+		"rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_coyote",
+		"rhsusf_100Rnd_556x45_soft_pouch",
+		"rhsusf_100Rnd_556x45_mixed_soft_pouch",
+		"rhsusf_100Rnd_556x45_soft_pouch_ucp",
+		"rhsusf_100Rnd_556x45_mixed_soft_pouch_ucp",
+		"rhsusf_100Rnd_556x45_soft_pouch_coyote",
+		"rhsusf_100Rnd_556x45_mixed_soft_pouch_coyote",
+		"rhsusf_100Rnd_556x45_M855_soft_pouch",
+		"rhsusf_100Rnd_556x45_M855_mixed_soft_pouch",
+		"rhsusf_100Rnd_556x45_M855_soft_pouch_ucp",
+		"rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_ucp",
+		"rhsusf_100Rnd_556x45_M855_soft_pouch_coyote",
+		"rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote",
+		"rhsusf_100Rnd_556x45_M200_soft_pouch",
+		"rhsusf_100Rnd_556x45_M200_soft_pouch_ucp",
+		"rhsusf_100Rnd_556x45_M200_soft_pouch_coyote"		
 		};
-        magazineWell[] = {"M249_556x45"};
     };
+};
+
+class CfgMagazines
+{
+	class 100Rnd_65x39_caseless_mag;
+	
+	class 200Rnd_65x39_cased_Box : 100Rnd_65x39_caseless_mag
+	{
+	ACE_isBelt = 1;
+	ammo = "B_556x45_Ball_Tracer_Yellow";
+	author = "Bohemia Interactive";
+	count = 200;
+	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 200<br />Used in: Stoner 99";
+	displayName = "5.56 mm 200Rnd Belt";
+	displayNameShort = "";
+	hiddenSelections[] = {"camo"};
+	hiddenSelectionsTextures[] = {"\a3\weapons_f\rifles\mx\data\xmx_lmg_co.paa"};
+	initSpeed = 743;
+	lastRoundsTracer = 3;
+	mass = 50;
+	maxLeadSpeed = 25;
+	maxThrowHoldTime = 2;
+	maxThrowIntensityCoef = 1.4;
+	minThrowIntensityCoef = 0.3;
+	model = "\A3\weapons_F\ammo\mag_univ.p3d";
+	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_100rnd.p3d";
+	modelSpecialIsProxy = 1;
+	nameSound = "mgun";
+	picture = "\A3\Weapons_F\Data\UI\M_200Rnd_65x39_CA.paa";
+	quickReload = 0;
+	reloadAction = "";
+	scope = 2;
+	selectionFireAnim = "zasleh";
+	simulation = "ProxyMagazines";
+	tracersEvery = 5;
+	type = "2*		256";
+	useAction = 0;
+	useActionTitle = "";
+	value = 1;
+	weaponpoolavailable = 1;
+	weight = 0;
+	};
+
+	class 200Rnd_65x39_cased_Box_Red : 200Rnd_65x39_cased_Box
+	{
+	ammo = "B_556x45_Ball_Tracer_Red";
+	displayName = "5.56 mm 200Rnd Reload Tracer (Red) Belt";
+	};
+
+	class 200Rnd_65x39_cased_Box_Tracer : 200Rnd_65x39_cased_Box
+	{
+	ammo = "B_556x45_Ball_Tracer_Yellow";	
+	descriptionShort = "Caliber: 5.56x45 mm Tracer - Yellow<br />Rounds: 200<br />Used in: Stoner 99";
+	displayName = "5.56 mm 200Rnd Belt Tracer (Yellow) Belt";
+	displaynameshort = "Tracer";
+	lastRoundsTracer = 200;
+	picture = "\A3\Weapons_F\Data\UI\m_200rnd_65x39_yellow_ca.paa";
+	tracersEvery = 1;
+	};
+	
+	class 200Rnd_65x39_cased_Box_Tracer_Red : 200Rnd_65x39_cased_Box
+	{
+	ammo = "B_556x45_Ball_Tracer_Red";	
+	descriptionShort = "Caliber: 5.56x45 mm Tracer - Yellow<br />Rounds: 200<br />Used in: Stoner 99";
+	displayName = "5.56 mm 200Rnd Belt Tracer (Red) Belt";
+	displaynameshort = "Tracer";
+	lastRoundsTracer = 200;
+	picture = "\A3\Weapons_F\Data\UI\m_200rnd_65x39_red_ca.paa";
+	tracersEvery = 1;
+	};	
 };

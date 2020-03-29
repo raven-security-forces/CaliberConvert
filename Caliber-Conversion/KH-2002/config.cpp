@@ -29,53 +29,6 @@ class CfgPatches
 
 #include "csatconfig.cpp"
 
-class CfgMagazineWells
-{
-	class nth_556x45_katiba
-	{
-		KH_Magazines[] =
-		{
-		"ACE_30Rnd_556x45_Stanag_M995_AP_mag",
-  		"ACE_30Rnd_556x45_Stanag_Mk262_mag",
-  		"ACE_30Rnd_556x45_Stanag_Mk318_mag",
-  		"ACE_30Rnd_556x45_Stanag_Tracer_Dim",
-  		"30Rnd_556x45_Stanag",
-  		"30Rnd_556x45_Stanag_green",
-  		"30Rnd_556x45_Stanag_red",
-  		"30Rnd_556x45_Stanag_Tracer_Red",
-  		"30Rnd_556x45_Stanag_Tracer_Green",
-  		"30Rnd_556x45_Stanag_Tracer_Yellow",
-  		"rhs_mag_30Rnd_556x45_M855_Stanag",
-  		"rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",
-  		"rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Green",
-  		"rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Yellow",
-  		"rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Orange",
-  		"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-  		"rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",
-  		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-  		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green",
-  		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow",
-  		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Orange",
-  		"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-  		"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-  		"rhs_mag_30Rnd_556x45_M200_Stanag",
-  		"rhs_mag_30Rnd_556x45_M855A1_PMAG",
-  		"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",
-  		"rhs_mag_30Rnd_556x45_M855_PMAG",
-  		"rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red",
-  		"rhs_mag_30Rnd_556x45_Mk318_PMAG",
-  		"rhs_mag_30Rnd_556x45_Mk262_PMAG",
-  		"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
-  		"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
-  		"rhs_mag_30Rnd_556x45_M855_PMAG_Tan",
-  		"rhs_mag_30Rnd_556x45_M855_PMAG_Tan_Tracer_Red",
-  		"rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan",
-  		"rhs_mag_30Rnd_556x45_Mk262_PMAG_Tan"
-		};
-	};
-
-};
-
 class Mode_FullAuto;
 class Mode_Burst;
 class Mode_SemiAuto;
@@ -90,14 +43,18 @@ class CfgWeapons
   class arifle_Katiba_F: arifle_Katiba_base_F
   {
     displayName="KH-2002";
-		descriptionShort = "Assault Rifle<br />Caliber: 5.56x45 mm";
-		caseless[] = {"",0,0,0};
-		linkProxy="\A3\data_f\proxies\weapon_slots\MAGAZINESLOT";
-		magazines[] ={"30Rnd_556x45_Stanag_green"};
-		magazineWell[] = {"nth_556x45_katiba"};
-		ACE_barrelTwist = 203;
-		ACE_barrelLength = 508;
-		ACE_twistDirection = 1;
+	descriptionShort = "Assault Rifle<br />Caliber: 5.56x45 mm";
+	caseless[] = {"",0,0,0};
+	linkProxy="\A3\data_f\proxies\weapon_slots\MAGAZINESLOT";
+	magazines[] =
+	{
+	"30Rnd_65x39_caseless_green",
+	"30Rnd_65x39_caseless_green_mag_Tracer"
+	};
+	magazineWell[] = {"CBA_556x45_STANAG"};
+	ACE_barrelTwist = 203;
+	ACE_barrelLength = 508;
+	ACE_twistDirection = 1;
 
     modes[]=
   	{
@@ -381,57 +338,102 @@ class CfgWeapons
 	};
 };
 
-class arifle_Katiba_C_F: arifle_Katiba_F
-{
-    displayName="KH-2002C";
-  	ACE_barrelLength = 394;
-    magazines[] = {"30Rnd_556x45_Stanag_green"};
-	
-	class WeaponSlotsInfo: WeaponSlotsInfo
+	class arifle_Katiba_C_F: arifle_Katiba_F
 	{
-		class MuzzleSlot: MuzzleSlot
+    displayName="KH-2002C";
+  	ACE_barrelLength = 394;	
+		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
-			compatibleItems[]=
+			class MuzzleSlot: MuzzleSlot
 			{
-			"ace_muzzle_mzls_l",
-			"ffaa_snds_gt_556",
-			"rhsusf_acc_nt4_black",
-			"rhsusf_acc_nt4_tan",
-			"rhsusf_acc_rotex5_grey",
-			"rhsusf_acc_rotex5_tan",
-			"muzzle_snds_m_snd_f",
-			"muzzle_snds_m_khk_f",
-			"muzzle_snds_m",
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[]=
+				{
+				"ace_muzzle_mzls_l",
+				"ffaa_snds_gt_556",
+				"rhsusf_acc_nt4_black",
+				"rhsusf_acc_nt4_tan",
+				"rhsusf_acc_rotex5_grey",
+				"rhsusf_acc_rotex5_tan",
+				"muzzle_snds_m_snd_f",
+				"muzzle_snds_m_khk_f",
+				"muzzle_snds_m",
+				};
 			};
 		};
 	};
-};
 
 	class arifle_Katiba_GL_F: arifle_Katiba_F
-{
-		displayName="KH-2002 UGL";
-    magazines[] = {"30Rnd_556x45_Stanag_green"};
-	
-	class WeaponSlotsInfo: WeaponSlotsInfo
 	{
-		class MuzzleSlot: MuzzleSlot
+	displayName="KH-2002 UGL";
+		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
+			class MuzzleSlot: MuzzleSlot
+			{
 			linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
 			compatibleItems[]=
-			{
-			"ace_muzzle_mzls_l",
-			"ffaa_snds_gt_556",
-			"rhsusf_acc_nt4_black",
-			"rhsusf_acc_nt4_tan",
-			"rhsusf_acc_rotex5_grey",
-			"rhsusf_acc_rotex5_tan",
-			"muzzle_snds_m_snd_f",
-			"muzzle_snds_m_khk_f",
-			"muzzle_snds_m",
+				{
+				"ace_muzzle_mzls_l",
+				"ffaa_snds_gt_556",
+				"rhsusf_acc_nt4_black",
+				"rhsusf_acc_nt4_tan",
+				"rhsusf_acc_rotex5_grey",
+				"rhsusf_acc_rotex5_tan",
+				"muzzle_snds_m_snd_f",
+				"muzzle_snds_m_khk_f",
+				"muzzle_snds_m",
+				};
 			};
-		};
-	};		
+		};		
+	};
 };
+
+class CfgMagazines
+{
+	class 30Rnd_65x39_caseless_mag;
+	
+	class 30Rnd_65x39_caseless_green : 30Rnd_65x39_caseless_mag
+	{
+	ammo = "B_556x45_Ball_Tracer_Green";
+	author = "Bohemia Interactive";
+	count = 30;
+	descriptionShort = "Caliber: 5.56x45 mm - Caseless<br />Rounds: 30<br />Used in: KH-2002";
+	displayname = "5.56 mm 30Rnd Mag";
+	displaynameshort = "5.56mm";
+	hiddenSelections[] = {"camo"};
+	hiddenSelectionsTextures[] = {"\a3\weapons_f\rifles\mx\data\xmx_base_co.paa"};
+	initSpeed = 788;
+	lastRoundsTracer = 0;
+	mass = 10;
+	maxLeadSpeed = 25;
+	maxThrowHoldTime = 2;
+	maxThrowIntensityCoef = 1.4;
+	minThrowIntensityCoef = 0.3;
+	model = "\A3\weapons_F\ammo\mag_univ.p3d";
+	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
+	modelSpecialIsProxy = 1;
+	nameSound = "magazine";
+	picture = "\A3\weapons_f\data\ui\m_20stanag_CA.paa";
+	quickReload = 0;
+	reloadAction = "";
+	scope = 2;
+	selectionFireAnim = "zasleh";
+	simulation = "ProxyMagazines";
+	tracersEvery = 0;
+	type = 256;
+	useAction = 0;
+	useActionTitle = "";
+	value = 1;
+	weaponpoolavailable = 1;
+	weight = 0;	
+	};
+
+	class 30Rnd_65x39_caseless_green_mag_Tracer : 30Rnd_65x39_caseless_green
+	{
+	descriptionShort = "Caliber: 5.56x45 mm Tracer (Green) - Caseless<br />Rounds: 30<br />Used in: KH-2002";
+	displayname = "5.56 mm 30Rnd Tracer Mag";
+	displaynameshort = "Tracer";	
+	tracersEvery = 1;
+	};
 
 };

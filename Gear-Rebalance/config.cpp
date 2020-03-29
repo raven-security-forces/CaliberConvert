@@ -16,7 +16,8 @@ class CfgPatches
 		"A3_Weapons_F",
 		"A3_Characters_F",
 		"A3_Characters_F_Exp",
-		"A3_Characters_F_TacOps"
+		"A3_Characters_F_TacOps",
+		"A3_Characters_F_Enoch",
 		};
 		author="NeroTheHero111";
 		authors[]=
@@ -31,2808 +32,506 @@ class CfgPatches
 
 class CfgVehicles
 {
-	class UniformSlotInfo;
-	// Calling Base Class and lowering structural armour from 4 to 3, explosionShielding from blabla 4 to blabla 3
-	class SoldierEB;
-	class O_Soldier_base_F: SoldierEB
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		_generalMacro="O_Soldier_base_F";
-		expansion=1;
-		identityTypes[]=
-		{
-			"LanguagePER_F",
-			"Head_TK",
-			"G_IRAN_default"
-		};
-		faceType="Man_A3";
-		side=0;
-		faction="OPF_F";
-		genericNames="TakistaniMen";
-		vehicleClass="Men";
-		editorSubcategory="EdSubcat_Personnel";
-		portrait="";
-		picture="";
-		icon="iconMan";
-		accuracy=2.3;
-		threat[]={0.80000001,0.1,0.1};
-		camouflage=1.4;
-		minFireTime=7;
-		canCarryBackPack=1;
-		scope=0;
-		class Wounds
-		{
-			tex[]={};
-			mat[]=
-			{
-				"A3\Characters_F\OPFOR\Data\clothing.rvmat",
-				"A3\Characters_F\OPFOR\Data\clothing_injury.rvmat",
-				"A3\Characters_F\OPFOR\Data\clothing_injury.rvmat"
-			};
-		};
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=4;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.33000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=6;
-				material=-1;
-				name="spine1";
-				passThrough=0.33000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=6;
-				material=-1;
-				name="spine2";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1.5;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=6;
-				material=-1;
-				name="spine3";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1.5;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1.5;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=6;
-				material=-1;
-				name="arms";
-				passThrough=0.89999998;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=6;
-				material=-1;
-				name="hands";
-				passThrough=0.89999998;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=6;
-				material=-1;
-				name="legs";
-				passThrough=0.89999998;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-		armor=2;
-		armorStructural=4;
-		explosionShielding=0.40000001;
-		model="\A3\characters_F\OPFOR\o_soldier_01.p3d";
-		modelSides[]={0,3};
-		nakedUniform="U_BasicBody";
-		uniformClass="U_O_CombatUniform_ocamo";
-		class UniformInfo
-		{
-			class SlotsInfo
-			{
-				class NVG: UniformSlotInfo
-				{
-					slotType=602;
-				};
-				class Scuba: UniformSlotInfo
-				{
-					slotType=604;
-				};
-				class Googles: UniformSlotInfo
-				{
-					slotType=603;
-				};
-				class Headgear: UniformSlotInfo
-				{
-					slotType=605;
-				};
-			};
-		};
-		class EventHandlers;
-		weapons[]=
-		{
-			"arifle_Katiba_ACO_pointer_F",
-			"hgun_Rook40_F",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"arifle_Katiba_ACO_pointer_F",
-			"hgun_Rook40_F",
-			"Throw",
-			"Put"
-		};
-		magazines[]=
-		{
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"HandGrenade",
-			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellRed",
-			"Chemlight_red",
-			"Chemlight_red"
-		};
-		respawnMagazines[]=
-		{
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"HandGrenade",
-			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellRed",
-			"Chemlight_red",
-			"Chemlight_red"
-		};
-		Items[]=
-		{
-			"FirstAidKit"
-		};
-		RespawnItems[]=
-		{
-			"FirstAidKit"
-		};
-		linkedItems[]=
-		{
-			"V_HarnessO_brn",
-			"H_HelmetO_ocamo",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
-			"NVGoggles_OPFOR"
-		};
-		respawnLinkedItems[]=
-		{
-			"V_HarnessO_brn",
-			"H_HelmetO_ocamo",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
-			"NVGoggles_OPFOR"
-		};
-		hiddenSelections[]=
-		{
-			"Camo1",
-			"Camo2",
-			"insignia"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\OPFOR\Data\clothing_co.paa",
-			"\A3\Characters_F\OPFOR\Data\tech_CO.paa"
-		};
-	};
-	
-	class O_Soldier_Urban_base: O_Soldier_base_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		_generalMacro="O_Soldier_Urban_base";
-		scope=0;
-		displayName="$STR_O_Soldier_Urban_base0";
-		vehicleClass="MenUrban";
-		editorSubcategory="EdSubcat_Personnel_Camo_Urban";
-		role="Rifleman";
-		linkedItems[]=
-		{
-			"V_HarnessO_gry",
-			"H_HelmetO_oucamo",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
-			"NVGoggles_OPFOR"
-		};
-		respawnLinkedItems[]=
-		{
-			"V_HarnessO_gry",
-			"H_HelmetO_oucamo",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
-			"NVGoggles_OPFOR"
-		};
-		uniformClass="U_O_CombatUniform_oucamo";
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\OPFOR\Data\clothing_oucamo_co.paa",
-			"\A3\Characters_F\OPFOR\Data\tech_oucamo_CO.paa"
-		};
-		weapons[]=
-		{
-			"arifle_Katiba_ACO_pointer_F",
-			"hgun_Rook40_F",
-			"Throw",
-			"Put"
-		};
-		respawnWeapons[]=
-		{
-			"arifle_Katiba_ACO_pointer_F",
-			"hgun_Rook40_F",
-			"Throw",
-			"Put"
-		};
-		magazines[]=
-		{
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"HandGrenade",
-			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellRed",
-			"Chemlight_red",
-			"Chemlight_red"
-		};
-		respawnMagazines[]=
-		{
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"30Rnd_65x39_caseless_green",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"HandGrenade",
-			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellRed",
-			"Chemlight_red",
-			"Chemlight_red"
-		};
-	};
-	
-	class O_Soldier_sniper_base_F: O_Soldier_base_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		_generalMacro="O_Soldier_sniper_base_F";
-		scope=0;
-		displayName="$STR_B_Soldier_sniper_base_F0";
-		vehicleClass="MenSniper";
-		editorSubcategory="EdSubcat_Personnel_SpecialForces";
-		cost=250000;
-		threat[]={0.80000001,0.30000001,0.30000001};
-		role="Marksman";
-		model="A3\Characters_F\OPFOR\o_sniper.p3d";
-		uniformClass="U_O_GhillieSuit";
-		linkedItems[]=
-		{
-			"V_Chestrig_khk",
-			"ItemGPS",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
-			"NVGoggles_OPFOR"
-		};
-		respawnLinkedItems[]=
-		{
-			"V_Chestrig_khk",
-			"ItemGPS",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
-			"NVGoggles_OPFOR"
-		};
-		primaryAmmoCoef=0.2;
-		secondaryAmmoCoef=0.050000001;
-		handgunAmmoCoef=0.1;
-	};
-	
-	class O_ghillie_base_F: O_Soldier_sniper_base_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		class SpeechVariants
-		{
-			class Default
-			{
-				speechSingular[]=
-				{
-					"veh_infantry_sniper_s"
-				};
-				speechPlural[]=
-				{
-					"veh_infantry_sniper_p"
-				};
-			};
-		};
-		textSingular="$STR_A3_nameSound_veh_infantry_sniper_s";
-		textPlural="$STR_A3_nameSound_veh_infantry_sniper_p";
-		nameSound="veh_infantry_sniper_s";
-		_generalMacro="O_ghillie_base_F";
-		displayName="$STR_A3_cfgVehicles_O_ghillie_base_F0";
-		uniformClass="U_O_FullGhillie_lsh";
-		model="\A3\Characters_F_Mark\OPFOR\o_fullghillie_f.p3d";
-		hiddenSelections[]=
-		{
-			"camo",
-			"camo3",
-			"camo4"
-		};
-		DLC="Mark";
-		class Wounds
-		{
-			tex[]={};
-			mat[]=
-			{
-				"A3\Characters_F\BLUFOR\Data\clothing1.rvmat",
-				"A3\Characters_F\BLUFOR\Data\clothing1_injury.rvmat",
-				"A3\Characters_F\BLUFOR\Data\clothing1_injury.rvmat",
-				"A3\Characters_F\Common\Data\basicbody.rvmat",
-				"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
-				"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
-				"A3\characters_f\common\data\coveralls.rvmat",
-				"A3\Characters_F\Common\Data\coveralls_injury.rvmat",
-				"A3\Characters_F\Common\Data\coveralls_injury.rvmat",
-				"A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat",
-				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
-				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
-				"A3\Characters_F\Heads\Data\hl_black_bald_muscular.rvmat",
-				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
-				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
-				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular.rvmat",
-				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
-				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
-				"A3\Characters_F\Heads\Data\hl_white_old.rvmat",
-				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
-				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
-				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular.rvmat",
-				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
-				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
-				"A3\Characters_F_Mark\OPFOR\Data\ghillie_coverall_opfor.rvmat",
-				"A3\Characters_F_Mark\OPFOR\Data\ghillie_coverall_opfor_injury.rvmat",
-				"A3\Characters_F_Mark\OPFOR\Data\ghillie_coverall_opfor_injury.rvmat"
-			};
-		};
-		weapons[]=
-		{
-			"srifle_GM6_camo_LRPS_F",
-			"hgun_Rook40_snds_F",
-			"Throw",
-			"Put",
-			"Rangefinder"
-		};
-		respawnWeapons[]=
-		{
-			"srifle_GM6_camo_LRPS_F",
-			"hgun_Rook40_snds_F",
-			"Throw",
-			"Put",
-			"Rangefinder"
-		};
-		hideProxySelections[]=
-		{
-			"ghillie_hide"
-		};
-		magazines[]=
-		{
-			"5Rnd_127x108_Mag",
-			"5Rnd_127x108_Mag",
-			"5Rnd_127x108_Mag",
-			"5Rnd_127x108_Mag",
-			"5Rnd_127x108_APDS_Mag",
-			"5Rnd_127x108_APDS_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"ClaymoreDirectionalMine_Remote_Mag",
-			"APERSTripMine_Wire_Mag",
-			"SmokeShell",
-			"SmokeShellRed",
-			"SmokeShellOrange",
-			"SmokeShellYellow",
-			"Chemlight_red",
-			"Chemlight_red"
-		};
-		respawnMagazines[]=
-		{
-			"5Rnd_127x108_Mag",
-			"5Rnd_127x108_Mag",
-			"5Rnd_127x108_Mag",
-			"5Rnd_127x108_Mag",
-			"5Rnd_127x108_APDS_Mag",
-			"5Rnd_127x108_APDS_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"ClaymoreDirectionalMine_Remote_Mag",
-			"APERSTripMine_Wire_Mag",
-			"SmokeShell",
-			"SmokeShellRed",
-			"SmokeShellOrange",
-			"SmokeShellYellow",
-			"Chemlight_red",
-			"Chemlight_red"
-		};
-		role="Marksman";
-		camouflage=0.40000001;
-		armor=2;
-		armorStructural=3;
-		explosionShielding=0.30000001;
-	};
-	
-	class O_Soldier_02_F: O_Soldier_base_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		_generalMacro="O_Soldier_02_F";
-		scope=0;
-		model="\A3\characters_F\Common\pilot_f.p3d";
-		modelSides[]={0,3};
-		uniformClass="U_O_PilotCoveralls";
-		hiddenSelections[]=
-		{
-			"Camo",
-			"insignia"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\Common\Data\pilot_suit_iran_co.paa"
-		};
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=4;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.33000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=6;
-				material=-1;
-				name="spine1";
-				passThrough=0.33000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=6;
-				material=-1;
-				name="spine2";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1.5;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=6;
-				material=-1;
-				name="spine3";
-				passThrough=0.33000001;
-				radius=0.18000001;
-				explosionShielding=1.5;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1.5;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=6;
-				material=-1;
-				name="arms";
-				passThrough=0.89999998;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=6;
-				material=-1;
-				name="hands";
-				passThrough=0.89999998;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=6;
-				material=-1;
-				name="legs";
-				passThrough=0.89999998;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-		armor=2;
-		armorStructural=1.2;
-		explosionShielding=0.12;
-		class Wounds
-		{
-			tex[]={};
-			mat[]=
-			{
-				"A3\characters_f\common\data\pilot_suit.rvmat",
-				"A3\Characters_F\Common\Data\W1_pilot_suit.rvmat",
-				"A3\Characters_F\Common\Data\W1_pilot_suit.rvmat"
-			};
-		};
-	};
-	
-	// Edit of Base classes below here
-		
-	class O_Soldier_F: O_Soldier_base_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
-	
-	class O_Soldier_unarmed_F: O_Soldier_F{};
-	class O_CBRN_Unarmed: O_Soldier_unarmed_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
-	
-	class O_T_Soldier_F: O_Soldier_F
-	{};	
-	
-	class O_soldierU_F: O_Soldier_Urban_base
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
 
-	class O_ghillie_ard_F: O_ghillie_base_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
-	
-	class O_T_ghillie_tna_F: O_ghillie_base_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
-	
-	class O_ghillie_lsh_F: O_ghillie_base_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
-	
-	class O_ghillie_sard_F: O_ghillie_base_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
+class SoldierEB;
+class Hitpoints;
 
-	class O_sniper_F: O_Soldier_sniper_base_F
+class O_Soldier_base_F : SoldierEB
 	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
-	
-	class O_T_Sniper_F: O_sniper_F
-	{};
+_generalMacro = "O_Soldier_base_F";
+accuracy = 2.3;
+armor = 2;
+armorStructural = 3;
+camouflage = 1.4;
+expansion = 1;
+explosionShielding = 0.3;
+faction = "OPF_F";
+genericNames = "TakistaniMen";
+hiddenSelections[] = {"Camo1","Camo2","insignia"};
+hiddenSelectionsMaterials[] = {};
+hiddenSelectionsTextures[] = {"\A3\Characters_F\OPFOR\Data\clothing_co.paa","\A3\Characters_F\OPFOR\Data\tech_CO.paa"};
+identityTypes[] = {"LanguagePER_F","Head_TK","G_IRAN_default"};
+Items[] = {"FirstAidKit"};
+linkedItems[] = {"V_HarnessO_brn","H_HelmetO_ocamo","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
+magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
+minFireTime = 7;
+nakedUniform = "U_BasicBody";
+RespawnItems[] = {"FirstAidKit"};
+respawnLinkedItems[] = {"V_HarnessO_brn","H_HelmetO_ocamo","ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles_OPFOR"};
+respawnMagazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellRed","Chemlight_red","Chemlight_red"};
+respawnWeapons[] = {"arifle_Katiba_ACO_pointer_F","hgun_Rook40_F","Throw","Put"};
+uniformClass = "U_O_CombatUniform_ocamo";
+weapons[] = {"arifle_Katiba_ACO_pointer_F","hgun_Rook40_F","Throw","Put"};
 
-	class O_helipilot_F: O_Soldier_02_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
-
-	class O_officer_F: O_Soldier_base_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
-	
-	class O_T_Officer_F: O_officer_F
-	{};
-	
-	class O_A_soldier_base_F: O_officer_F{};
-	class O_A_officer_F: O_A_soldier_base_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	DLC="Tacops";
-	};
-
-	class O_crew_F: O_Soldier_base_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
-	
-	class O_V_Soldier_base_F: O_Soldier_base_F{};
-	class O_V_Soldier_TL_hex_F: O_V_Soldier_base_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
-	
-	class O_V_Soldier_TL_ghex_F: O_V_Soldier_TL_hex_F
-	{};
-	
-	class O_R_Man_Base_F: O_Soldier_F{};
-	class O_R_Gorka_base_F: O_R_Man_Base_F{};
-	class O_R_Gorka_F: O_R_Gorka_base_F
-	{
-		class HitPoints
-		{
-			class HitFace
-			{
-				armor=1;
-				material=-1;
-				name="face_hub";
-				passThrough=0.80000001;
-				radius=0.079999998;
-				explosionShielding=0.1;
-				minimalHit=0.0099999998;
-			};
-			class HitNeck: HitFace
-			{
-				armor=1;
-				material=-1;
-				name="neck";
-				passThrough=0.80000001;
-				radius=0.1;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-			};
-			class HitHead: HitNeck
-			{
-				armor=1;
-				material=-1;
-				name="head";
-				passThrough=0.80000001;
-				radius=0.2;
-				explosionShielding=0.5;
-				minimalHit=0.0099999998;
-				depends="HitFace max HitNeck";
-			};
-			class HitPelvis: HitHead
-			{
-				armor=6;
-				material=-1;
-				name="pelvis";
-				passThrough=0.80000001;
-				radius=0.23999999;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitAbdomen: HitPelvis
-			{
-				armor=1;
-				material=-1;
-				name="spine1";
-				passThrough=0.80000001;
-				radius=0.16;
-				explosionShielding=1;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitDiaphragm: HitAbdomen
-			{
-				armor=1;
-				material=-1;
-				name="spine2";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitChest: HitDiaphragm
-			{
-				armor=1;
-				material=-1;
-				name="spine3";
-				passThrough=0.80000001;
-				radius=0.18000001;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-			};
-			class HitBody: HitChest
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=2.4000001;
-				visual="injury_body";
-				minimalHit=0.0099999998;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-			class HitArms: HitBody
-			{
-				armor=5;
-				material=-1;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class HitHands: HitArms
-			{
-				armor=5;
-				material=-1;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				explosionShielding=0.30000001;
-				visual="injury_hands";
-				minimalHit=0.0099999998;
-				depends="HitArms";
-			};
-			class HitLegs: HitHands
-			{
-				armor=5;
-				material=-1;
-				name="legs";
-				passThrough=1;
-				radius=0.14;
-				explosionShielding=0.30000001;
-				visual="injury_legs";
-				minimalHit=0.0099999998;
-				depends="0";
-			};
-			class Incapacitated: HitLegs
-			{
-				armor=1000;
-				material=-1;
-				name="body";
-				passThrough=1;
-				radius=0;
-				explosionShielding=1;
-				visual="";
-				minimalHit=0;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-			};
-		};
-	armor=2;
-	armorStructural=3;
-	};
-	
-	class O_R_Gorka_brown_F: O_R_Gorka_F
-	{};
-	
-	class O_R_Gorka_camo_F: O_R_Gorka_F
-	{};
-	
-	class O_R_Gorka_black_F: O_R_Gorka_F
-	{};
+class HitPoints
+{
+class HitAbdomen
+{
+armor = 1;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "spine1";
+passThrough = 0.8;
+radius = 0.16;
+visual = "injury_body";
 };
+class HitArms
+{
+armor = 3;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "arms";
+passThrough = 1;
+radius = 0.1;
+visual = "injury_hands";	
+};
+class HitBody
+{
+armor = 1000;
+depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+explosionShielding = 6;
+material = -1;
+minimalHit = 0.01;
+name = "body";
+passThrough = 1;
+radius = 0;
+visual = "injury_body";
+};
+class HitChest
+{
+armor = 1;
+depends = "0";
+explosionShielding = 6;
+material = -1;
+minimalHit = 0.01;
+name = "spine3";
+passThrough = 0.8;
+radius = 0.18;
+visual = "injury_body";	
+};
+class HitDiaphragm
+{
+armor = 1;
+depends = "0";
+explosionShielding = 6;
+material = -1;
+minimalHit = 0.01;
+name = "spine2";
+passThrough = 0.8;
+radius = 0.18;
+visual = "injury_body";	
+};
+class HitFace
+{
+armor = 1;
+explosionShielding = 0.1;
+material = -1;
+minimalHit = 0.01;
+name = "face_hub";
+passThrough = 0.8;
+radius = 0.08;	
+};
+class HitHands
+{
+armor = 3;
+depends = "HitArms";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "hands";
+passThrough = 1;
+radius = 0.1;
+visual = "injury_hands";	
+};
+class HitHead
+{
+armor = 1;
+depends = "HitFace max HitNeck";
+explosionShielding = 0.5;
+material = -1;
+minimalHit = 0.01;
+name = "head";
+passThrough = 0.8;
+radius = 0.2;	
+};
+class HitLegs
+{
+armor = 3;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "legs";
+passThrough = 1;
+radius = 0.14;
+visual = "injury_legs";	
+};
+class HitNeck
+{
+armor = 1;
+explosionShielding = 0.5;
+material = -1;
+minimalHit = 0.01;
+name = "neck";
+passThrough = 0.8;
+radius = 0.1;	
+};
+class HitPelvis
+{
+armor = 6;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "pelvis";
+passThrough = 0.8;
+radius = 0.24;
+visual = "injury_body";	
+};
+class Incapacitated
+{
+armor = 1000;
+depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0;
+name = "body";
+passThrough = 1;
+radius = 0;
+visual = "";	
+};
+};
+	};
+	
+class O_Soldier_02_F : O_Soldier_base_F
+	{
+_generalMacro = "O_Soldier_02_F";	
+hiddenSelections[] = {"Camo","insignia"};	
+hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Data\pilot_suit_iran_co.paa"};	
+model = "\A3\characters_F\Common\pilot_f.p3d";	
+uniformClass = "U_O_PilotCoveralls";	
+
+class HitPoints
+{
+class HitAbdomen
+{
+armor = 1;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "spine1";
+passThrough = 0.8;
+radius = 0.16;
+visual = "injury_body";
+};
+class HitArms
+{
+armor = 3;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "arms";
+passThrough = 1;
+radius = 0.1;
+visual = "injury_hands";	
+};
+class HitBody
+{
+armor = 1000;
+depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+explosionShielding = 6;
+material = -1;
+minimalHit = 0.01;
+name = "body";
+passThrough = 1;
+radius = 0;
+visual = "injury_body";
+};
+class HitChest
+{
+armor = 1;
+depends = "0";
+explosionShielding = 6;
+material = -1;
+minimalHit = 0.01;
+name = "spine3";
+passThrough = 0.8;
+radius = 0.18;
+visual = "injury_body";	
+};
+class HitDiaphragm
+{
+armor = 1;
+depends = "0";
+explosionShielding = 6;
+material = -1;
+minimalHit = 0.01;
+name = "spine2";
+passThrough = 0.8;
+radius = 0.18;
+visual = "injury_body";	
+};
+class HitFace
+{
+armor = 1;
+explosionShielding = 0.1;
+material = -1;
+minimalHit = 0.01;
+name = "face_hub";
+passThrough = 0.8;
+radius = 0.08;	
+};
+class HitHands
+{
+armor = 3;
+depends = "HitArms";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "hands";
+passThrough = 1;
+radius = 0.1;
+visual = "injury_hands";	
+};
+class HitHead
+{
+armor = 1;
+depends = "HitFace max HitNeck";
+explosionShielding = 0.5;
+material = -1;
+minimalHit = 0.01;
+name = "head";
+passThrough = 0.8;
+radius = 0.2;	
+};
+class HitLegs
+{
+armor = 3;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "legs";
+passThrough = 1;
+radius = 0.14;
+visual = "injury_legs";	
+};
+class HitNeck
+{
+armor = 1;
+explosionShielding = 0.5;
+material = -1;
+minimalHit = 0.01;
+name = "neck";
+passThrough = 0.8;
+radius = 0.1;	
+};
+class HitPelvis
+{
+armor = 6;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "pelvis";
+passThrough = 0.8;
+radius = 0.24;
+visual = "injury_body";	
+};
+class Incapacitated
+{
+armor = 1000;
+depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0;
+name = "body";
+passThrough = 1;
+radius = 0;
+visual = "";	
+};
+};	
+	};
+
+class O_V_Soldier_base_F : O_Soldier_base_F
+	{
+_generalMacro = "O_V_Soldier_base_F";	
+accuracy = 3;
+backpack = "B_ViperHarness_hex_M_F";	
+camouflage = 1;	
+displayName = "";	
+DLC = "Expansion";	
+editorSubcategory = "EdSubcat_Personnel_Viper";	
+genericNames = "ChineseMen";	
+hiddenSelections[] = {"camo"};	
+hiddenSelectionsTextures[] = {"\A3\Characters_F_Exp\OPFOR\Data\ViperOp_Suit_hex_co.paa"};	
+identityTypes[] = {"LanguageCHI_F","Head_Asian","G_CIVIL_male"};
+items[] = {"FirstAidKit"};
+linkedItems[] = {"H_HelmetO_ViperSP_hex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+magazines[] = {"30Rnd_65x39_caseless_green","10Rnd_50BW_Mag_F","16Rnd_9x21_Mag","Chemlight_red","Chemlight_red"};
+model = "\A3\Characters_F_Exp\OPFOR\o_viper.p3d";
+respawnItems[] = {"FirstAidKit"};
+respawnLinkedItems[] = {"H_HelmetO_ViperSP_hex_F","ItemGPS","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+respawnMagazines[] = {"30Rnd_65x39_caseless_green","10Rnd_50BW_Mag_F","16Rnd_9x21_Mag","Chemlight_red","Chemlight_red"};
+respawnWeapons[] = {"arifle_ARX_hex_ARCO_Pointer_Snds_F","hgun_Rook40_snds_F","Throw","Put"};
+uniformClass = "U_O_V_Soldier_Viper_hex_F";
+weapons[] = {"arifle_ARX_hex_ARCO_Pointer_Snds_F","hgun_Rook40_snds_F","Throw","Put"};
+
+class HitPoints
+{
+class HitAbdomen
+{
+armor = 1;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "spine1";
+passThrough = 0.8;
+radius = 0.16;
+visual = "injury_body";
+};
+class HitArms
+{
+armor = 3;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "arms";
+passThrough = 1;
+radius = 0.1;
+visual = "injury_hands";	
+};
+class HitBody
+{
+armor = 1000;
+depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+explosionShielding = 6;
+material = -1;
+minimalHit = 0.01;
+name = "body";
+passThrough = 1;
+radius = 0;
+visual = "injury_body";
+};
+class HitChest
+{
+armor = 1;
+depends = "0";
+explosionShielding = 6;
+material = -1;
+minimalHit = 0.01;
+name = "spine3";
+passThrough = 0.8;
+radius = 0.18;
+visual = "injury_body";	
+};
+class HitDiaphragm
+{
+armor = 1;
+depends = "0";
+explosionShielding = 6;
+material = -1;
+minimalHit = 0.01;
+name = "spine2";
+passThrough = 0.8;
+radius = 0.18;
+visual = "injury_body";	
+};
+class HitFace
+{
+armor = 1;
+explosionShielding = 0.1;
+material = -1;
+minimalHit = 0.01;
+name = "face_hub";
+passThrough = 0.8;
+radius = 0.08;	
+};
+class HitHands
+{
+armor = 3;
+depends = "HitArms";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "hands";
+passThrough = 1;
+radius = 0.1;
+visual = "injury_hands";	
+};
+class HitHead
+{
+armor = 1;
+depends = "HitFace max HitNeck";
+explosionShielding = 0.5;
+material = -1;
+minimalHit = 0.01;
+name = "head";
+passThrough = 0.8;
+radius = 0.2;	
+};
+class HitLegs
+{
+armor = 3;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "legs";
+passThrough = 1;
+radius = 0.14;
+visual = "injury_legs";	
+};
+class HitNeck
+{
+armor = 1;
+explosionShielding = 0.5;
+material = -1;
+minimalHit = 0.01;
+name = "neck";
+passThrough = 0.8;
+radius = 0.1;	
+};
+class HitPelvis
+{
+armor = 6;
+depends = "0";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0.01;
+name = "pelvis";
+passThrough = 0.8;
+radius = 0.24;
+visual = "injury_body";	
+};
+class Incapacitated
+{
+armor = 1000;
+depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+explosionShielding = 1;
+material = -1;
+minimalHit = 0;
+name = "body";
+passThrough = 1;
+radius = 0;
+visual = "";	
+};
+};
+	};
+};
+
+
+
+
+
 
 class CfgWeapons
 {
@@ -2840,24 +539,8 @@ class CfgWeapons
 
 	// Uniform Weight Adjustment - Calling Base
 	
-	class InventoryItem_Base_F;
-	class ItemCore;
-	class UniformItem: InventoryItem_Base_F
-	{
-		type=801;
-	};
-	class Uniform_Base: ItemCore
-	{
-		scope=0;
-		allowedSlots[]={901};
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="B_Soldier_F";
-			containerClass="Supply0";
-			mass=0;
-		};
-	};
+	class Uniform_Base;
+	class UniformItem;
 	
 	// Uniforms
 	
@@ -3261,7 +944,36 @@ class CfgWeapons
 			};
 		};	
 	};
-	
-	class H_HelmetO_ViperSP_ghex_F: H_HelmetO_ViperSP_hex_F
-	{};
+};
+
+class CfgGlasses
+{
+class G_AirPurifyingRespirator_01_base_F;	
+	class G_AirPurifyingRespirator_01_F : G_AirPurifyingRespirator_01_base_F
+	{
+	_generalMacro = "G_AirPurifyingRespirator_01_F";
+	ACE_Color[] = {0,0,0};
+	ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	ACE_Overlay = "";
+	ACE_OverlayCracked = "\z\ace\addons\goggles\textures\HUD\Cracked.paa";
+	ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+	ACE_Protection = 0;
+	ACE_Resistance = 0;
+	ACE_TintAmount = 0;
+	author = "Bohemia Interactive";
+	CBRN_overlayType = "CBRN_gear\data\hud\overlay_style_m50.paa";
+	CBRN_protectionLevel = "1 + 2";
+	displayName = "APR [NATO]";
+	DLC = "Enoch";
+	hiddenSelections[] = {"Camo"};
+	hiddenSelectionsTextures[] = {"a3\characters_f_enoch\facewear\data\airpurifyingrespirator_co.paa"};
+	identityTypes[] = {};
+	mass = 8;
+	model = "\a3\Characters_F_Enoch\Facewear\G_AirPurifyingRespirator_01_F.p3d";
+	name = "None";
+	picture = "\A3\Characters_F_Enoch\Facewear\Data\UI\icon_G_AirPurifyingRespirator_01_F_ca.paa";
+	scope = 2;
+	scopeArsenal = 2;
+	scopeCurator = 2;
+	};
 };

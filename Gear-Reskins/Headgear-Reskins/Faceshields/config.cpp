@@ -67,7 +67,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_red_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_red3_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_red_co.paa"
 		};
 	};
 	
@@ -87,7 +87,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_red_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_red3_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_red_co.paa"
 		};
 	};
 	
@@ -108,7 +108,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_red_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_red3_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_red_co.paa"
 		};
 	};
 	
@@ -129,7 +129,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_red_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_red3_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_red_co.paa"
 		};
 	};
 	
@@ -227,7 +227,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_whi_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_whi3_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_whi_co.paa"
 		};
 	};
 	
@@ -249,7 +249,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_whi_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_whi3_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_whi_co.paa"
 		};
 	};
 	
@@ -269,7 +269,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_whi_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_whi3_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_whi_co.paa"
 		};
 	};
 	
@@ -1178,7 +1178,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_sor_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_sor2_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_sor_co.paa"
 		};
 	};
 	
@@ -1199,7 +1199,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_sor_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_sor2_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_sor_co.paa"
 		};
 	};
 	
@@ -1221,7 +1221,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_sor_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_sor2_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_sor_co.paa"
 		};
 	};
 	
@@ -1242,7 +1242,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_sor_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_sor2_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_sor_co.paa"
 		};
 	};
 	
@@ -1263,7 +1263,7 @@ class cfgGlasses
 		hiddenSelectionsTextures[]=
 		{
 			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_face_shield_sor_co.paa",
-			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_sor2_co.paa"
+			"\Gear-Reskins\Headgear-Reskins\Faceshields\Data\f_shemagh_sor_co.paa"
 		};
 	};
 	

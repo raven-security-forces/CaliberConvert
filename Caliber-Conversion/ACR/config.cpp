@@ -35,351 +35,9 @@ class WeaponSlotsInfo;
 class MuzzleSlot;
 class PointerSlot;
 
-class CfgMagazines
-{	
-	class Default;
-	class CA_Magazine: Default {};
-
-	class 30Rnd_556x45_Stanag: CA_Magazine {};
-	class 30Rnd_556x45_ACR_tan_rty_F: 30Rnd_556x45_Stanag
-	{
-	DLC="";
-	displayName = "5.56 mm 30Rnd Reload Tracer (Yellow) Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\A3\weapons_f\data\ui\m_30stanag_caseless_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\a3\weapons_f\rifles\mx\data\xmx_base_co.paa"};
-	};
-	
-	class 30Rnd_556x45_ACR_blk_rty_F: 30Rnd_556x45_Stanag
-	{
-	DLC="";	
-	displayName = "5.56 mm 30Rnd Reload Tracer (Yellow) Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_black_mag_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa"};
-	};
-	
-	class 30Rnd_556x45_ACR_khk_rty_F: 30Rnd_556x45_Stanag
-	{
-	DLC="";		
-	displayName = "5.56 mm 30Rnd Reload Tracer (Yellow) Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_khaki_mag_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Base_khk_co.paa"};
-	};
-	
-	class 30Rnd_556x45_ACR_tan_rtg_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Green";		
-	DLC="";
-	displayName = "5.56 mm 30Rnd Reload Tracer (Green)";
-	displayNameShort = "5.56 mm";
-	picture = "\A3\weapons_f\data\ui\m_30stanag_caseless_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\a3\weapons_f\rifles\mx\data\xmx_base_co.paa"};
-	};
-	
-	class 30Rnd_556x45_ACR_blk_rtg_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Green";
-	DLC="";	
-	displayName = "5.56 mm 30Rnd Reload Tracer (Green) Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_black_mag_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa"};
-	};
-	
-	class 30Rnd_556x45_ACR_khk_rtg_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Green";
-	DLC="";		
-	displayName = "5.56 mm 30Rnd Reload Tracer (Green) Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_khaki_mag_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Base_khk_co.paa"};
-	};	
-	
-	class 30Rnd_556x45_ACR_tan_rtr_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Red";
-	DLC="";
-	displayName = "5.56 mm 30Rnd Reload Tracer (Red) Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\A3\weapons_f\data\ui\m_30stanag_caseless_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\a3\weapons_f\rifles\mx\data\xmx_base_co.paa"};
-	};
-	
-	class 30Rnd_556x45_ACR_blk_rtr_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Red";
-	DLC="";	
-	displayName = "5.56 mm 30Rnd Reload Tracer (Red) Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_black_mag_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa"};
-	};
-	
-	class 30Rnd_556x45_ACR_khk_rtr_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Red";
-	DLC="";		
-	displayName = "5.56 mm 30Rnd Reload Tracer (Red) Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_khaki_mag_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Base_khk_co.paa"};
-	};	
-
-	class 30Rnd_556x45_ACR_tan_ty_F: 30Rnd_556x45_Stanag
-	{
-	DLC="";
-	displayName = "5.56 mm 30Rnd Tracer (Yellow) Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\A3\weapons_f\data\ui\m_30stanag_caseless_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\a3\weapons_f\rifles\mx\data\xmx_base_co.paa"};
-	tracersEvery = 1;
-	};
-	
-	class 30Rnd_556x45_ACR_blk_ty_F: 30Rnd_556x45_Stanag
-	{
-	DLC="";	
-	displayName = "5.56 mm 30Rnd Tracer (Yellow) Mag";
-	displayNameShort = "5.56 mm Tracer";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_black_mag_Tracer_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa"};
-	tracersEvery = 1;
-	};
-	
-	class 30Rnd_556x45_ACR_khk_ty_F: 30Rnd_556x45_Stanag
-	{
-	DLC="";		
-	displayName = "5.56 mm 30Rnd Tracer (Yellow) Mag";
-	displayNameShort = "5.56 mm Tracer";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_khaki_mag_Tracer_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Base_khk_co.paa"};
-	tracersEvery = 1;
-	};	
-	
-	class 30Rnd_556x45_ACR_tan_tg_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Green";
-	DLC="";
-	displayName = "5.56 mm 30Rnd Tracer (Green) Mag";
-	displayNameShort = "5.56 mm Tracer";
-	picture = "\A3\weapons_f\data\ui\m_30stanag_caseless_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\a3\weapons_f\rifles\mx\data\xmx_base_co.paa"};
-	tracersEvery = 1;
-	};
-	
-	class 30Rnd_556x45_ACR_blk_tg_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Green";
-	DLC="";	
-	displayName = "5.56 mm 30Rnd Tracer (Green) Mag";
-	displayNameShort = "5.56 mm Tracer";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_black_mag_Tracer_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa"};
-	tracersEvery = 1;
-	};
-	
-	class 30Rnd_556x45_ACR_khk_tg_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Green";
-	DLC="";		
-	displayName = "5.56 mm 30Rnd Tracer (Green) Mag";
-	displayNameShort = "5.56 mm Tracer";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_khaki_mag_Tracer_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Base_khk_co.paa"};
-	tracersEvery = 1;
-	};		
-	
-	class 30Rnd_556x45_ACR_tan_tr_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Red";
-	DLC="";
-	displayName = "5.56 mm 30Rnd Tracer (Red) Mag";
-	displayNameShort = "5.56 mm Tracer";
-	picture = "\A3\weapons_f\data\ui\m_30stanag_caseless_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\a3\weapons_f\rifles\mx\data\xmx_base_co.paa"};
-	tracersEvery = 1;
-	};
-	
-	class 30Rnd_556x45_ACR_blk_tr_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Red";	
-	DLC="";	
-	displayName = "5.56 mm 30Rnd Tracer (Red) Mag";
-	displayNameShort = "5.56 mm Tracer";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_black_mag_Tracer_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa"};
-	tracersEvery = 1;
-	};
-	
-	class 30Rnd_556x45_ACR_khk_tr_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball_Tracer_Red";	
-	DLC="";		
-	displayName = "5.56 mm 30Rnd Tracer (Red) Mag";
-	displayNameShort = "5.56 mm Tracer";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_khaki_mag_Tracer_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Base_khk_co.paa"};
-	tracersEvery = 1;
-	};
-
-	class 30Rnd_556x45_ACR_tan_nt_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball";	
-	DLC="";		
-	displayName = "5.56 mm 30Rnd Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\A3\weapons_f\data\ui\m_30stanag_caseless_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\a3\weapons_f\rifles\mx\data\xmx_base_co.paa"};
-	tracersEvery = 0;
-	lastRoundsTracer = 0;
-	};	
-
-	class 30Rnd_556x45_ACR_blk_nt_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball";	
-	DLC="";		
-	displayName = "5.56 mm 30Rnd Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_black_mag_Tracer_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa"};
-	tracersEvery = 0;
-	lastRoundsTracer = 0;
-	};	
-
-	class 30Rnd_556x45_ACR_khk_nt_F: 30Rnd_556x45_Stanag
-	{
-	ammo = "B_556x45_Ball";	
-	DLC="";		
-	displayName = "5.56 mm 30Rnd Mag";
-	displayNameShort = "5.56 mm";
-	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_khaki_mag_Tracer_CA.paa";
-	descriptionShort = "Caliber: 5.56x45 mm<br />Rounds: 30<br />Used in: ACR";
-	model = "\A3\weapons_F\ammo\mag_univ.p3d";
-	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
-	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Base_khk_co.paa"};
-	tracersEvery = 0;
-	lastRoundsTracer = 0;
-	};	
-};
-
-class CfgMagazineWells
-{
-	class RSF_ACR
-	{
-		RSF_Magazines[] = 
-		{
-		"30Rnd_556x45_ACR_tan_rty_F",
-		"30Rnd_556x45_ACR_blk_rty_F",
-		"30Rnd_556x45_ACR_khk_rty_F",	
-		"30Rnd_556x45_ACR_tan_rtg_F",
-		"30Rnd_556x45_ACR_blk_rtg_F",
-		"30Rnd_556x45_ACR_khk_rtg_F",	
-		"30Rnd_556x45_ACR_tan_rtr_F",
-		"30Rnd_556x45_ACR_blk_rtr_F",
-		"30Rnd_556x45_ACR_khk_rtr_F",		
-		"30Rnd_556x45_ACR_tan_ty_F",
-		"30Rnd_556x45_ACR_blk_ty_F",
-		"30Rnd_556x45_ACR_khk_ty_F",		
-		"30Rnd_556x45_ACR_tan_tg_F",
-		"30Rnd_556x45_ACR_blk_tg_F",
-		"30Rnd_556x45_ACR_khk_tg_F",	
-		"30Rnd_556x45_ACR_tan_tr_F",
-		"30Rnd_556x45_ACR_blk_tr_F",
-		"30Rnd_556x45_ACR_khk_tr_F",	
-		"30Rnd_556x45_ACR_tan_nt_F",
-		"30Rnd_556x45_ACR_blk_nt_F",
-		"30Rnd_556x45_ACR_khk_nt_F",
-		};
-	};
-};
-
 class CfgWeapons
 {
   class arifle_MX_Base_F;
-
 
   class arifle_MX_F: arifle_MX_Base_F
   {
@@ -389,12 +47,14 @@ class CfgWeapons
 	linkProxy="\A3\data_f\proxies\weapon_slots\MAGAZINESLOT";
 	magazines[] =
 	{
-		"30Rnd_556x45_ACR_tan_rty_F",
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
 	};
-	magazineWell[] = 
-	{
-	"RSF_ACR",
-	};
+	magazineWell[] = {};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class MuzzleSlot: MuzzleSlot
@@ -447,7 +107,6 @@ class CfgWeapons
 				"acc_flashlight",
 				"rhsusf_acc_wmx",
 				"rhsusf_acc_wmx_bk",
-	
 				};
 			};
 			
@@ -459,13 +118,15 @@ class CfgWeapons
 	model = "\A3\Weapons_F\Rifles\MX\MX_GL_F.p3d";
     displayName="ACR Basic 3GL";
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_tan_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class MuzzleSlot: MuzzleSlot
@@ -531,13 +192,15 @@ class CfgWeapons
     displayName="ACR Enhanced";
 	handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F\Rifles\MX\data\Anim\mx.rtm"};
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_tan_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class MuzzleSlot: MuzzleSlot
@@ -602,13 +265,15 @@ class CfgWeapons
 	model = "\A3\Weapons_F\Rifles\MX\MXC_F.p3d";	
     displayName="ACR SBR";
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_tan_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};	
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};		
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class MuzzleSlot: MuzzleSlot
@@ -673,13 +338,15 @@ class CfgWeapons
     displayName="ACR DMR";
 	handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F\Rifles\MX\data\Anim\MX_dmr.rtm"};
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_tan_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};	
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class MuzzleSlot: MuzzleSlot
@@ -742,13 +409,15 @@ class CfgWeapons
 	{
     displayName="ACR Basic (Black)";
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_blk_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};	
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};
 	hiddenSelections[] = {"camo1","camo2"};	
 	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa","\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_short_Black_co.paa"};	
 	};
@@ -759,13 +428,15 @@ class CfgWeapons
 	model = "\A3\Weapons_F\Rifles\MX\MX_GL_F.p3d";	
     displayName="ACR Basic 3GL (Black)";
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_blk_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};	
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};	
 	hiddenSelections[] = {"camo1","camo2"};
 	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa","\A3\Weapons_F_EPB\Rifles\MX_Black\Data\GLX_Black_CO.paa"};
 	};
@@ -777,13 +448,15 @@ class CfgWeapons
     displayName="ACR Enhanced (Black)";
 	handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F\Rifles\MX\data\Anim\mx.rtm"};
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_blk_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};	
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};	
 	hiddenSelections[] = {"camo1"};
 	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_LMG_Black_co.paa"};
 	};
@@ -794,13 +467,15 @@ class CfgWeapons
 	model = "\A3\Weapons_F\Rifles\MX\MXC_F.p3d";	
     displayName="ACR SBR (Black)";
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_blk_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};	
 	hiddenSelections[] = {"camo1"};
 	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_short_Black_co.paa"};
 	};
@@ -812,29 +487,32 @@ class CfgWeapons
     displayName="ACR DMR (Black)";
 	handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F\Rifles\MX\data\Anim\MX_dmr.rtm"};
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_blk_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};	
 	hiddenSelections[] = {"camo1"};
 	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_long_Black_co.paa"};
 	};
-	
 	
 	class arifle_MX_khk_F: arifle_MX_F
 	{
     displayName="ACR Basic (Khaki)";
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_khk_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};	
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};	
 	hiddenSelections[] = {"camo1","camo2"};
 	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Base_khk_co.paa","\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Short_khk_co.paa"};
 	};
@@ -845,13 +523,15 @@ class CfgWeapons
 	model = "\A3\Weapons_F\Rifles\MX\MX_GL_F.p3d";	
     displayName="ACR Basic 3GL (Khaki)";
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_khk_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};	
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};	
+	magazineWell[] = {};	
 	hiddenSelections[] = {"camo1","camo2"};
 	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Base_khk_co.paa","\A3\Weapons_F_Exp\Rifles\MX\Data\glx_khk_co.paa"};	
 	};
@@ -863,13 +543,15 @@ class CfgWeapons
     displayName="ACR Enhanced (Khaki)";
 	handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F\Rifles\MX\data\Anim\mx.rtm"};
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_khk_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};	
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};	
 	hiddenSelections[] = {"camo1"};
 	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_LMG_khk_co.paa"};
 	};
@@ -880,13 +562,15 @@ class CfgWeapons
 	model = "\A3\Weapons_F\Rifles\MX\MXC_F.p3d";	
     displayName="ACR SBR (Khaki)";
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_khk_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};	
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};	
 	hiddenSelections[] = {"camo1"};
 	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Short_khk_co.paa"};
 	};
@@ -898,14 +582,99 @@ class CfgWeapons
     displayName="ACR DMR (Khaki)";
 	handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F\Rifles\MX\data\Anim\MX_dmr.rtm"};
 	magazines[] =
-		{
-			"30Rnd_556x45_ACR_khk_rty_F",
-		};
-	magazineWell[] = 
-		{
-		"RSF_ACR",
-		};	
+	{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer"
+	};
+	magazineWell[] = {};	
 	hiddenSelections[] = {"camo1"};	
 	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_long_khk_co.paa"};	
 	};
+};
+
+class CfgMagazines
+{		
+	class CA_Magazine;
+	
+	class 30Rnd_65x39_caseless_mag : CA_Magazine
+	{
+	ammo = "B_556x45_Ball";
+	author = "Bohemia Interactive";
+	count = 30;
+	descriptionShort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 30<br />Used in: ACR";
+	displayname = "5.56mm 30Rnd Mag";
+	displaynameshort = "5.56mm";
+	hiddenSelections[] = {"camo"};
+	hiddenSelectionsTextures[] = {"\a3\weapons_f\rifles\mx\data\xmx_base_co.paa"};
+	initSpeed = 774;
+	lastRoundsTracer = 0;
+	mass = 10;
+	maxLeadSpeed = 25;
+	maxThrowHoldTime = 2;
+	maxThrowIntensityCoef = 1.4;
+	minThrowIntensityCoef = 0.3;
+	model = "\A3\weapons_F\ammo\mag_univ.p3d";
+	modelSpecial = "a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
+	modelSpecialIsProxy = 1;
+	nameSound = "magazine";
+	picture = "\A3\weapons_f\data\ui\m_30stanag_caseless_CA.paa";
+	quickReload = 0;
+	reloadAction = "";
+	scope = 2;
+	selectionFireAnim = "zasleh";
+	simulation = "ProxyMagazines";
+	tracersEvery = 0;
+	type = 256;
+	useAction = 0;
+	useActionTitle = "";
+	value = 1;
+	weaponpoolavailable = 1;
+	weight = 0;	
+	};
+
+	class 30Rnd_65x39_caseless_mag_Tracer : 30Rnd_65x39_caseless_mag
+	{
+	descriptionShort = "Caliber: 5.56x45 mm STANAG Tracer<br />Rounds: 30<br />Used in: ACR";
+	displayname = "5.56mm 30Rnd Tracer Mag";	
+	ammo = "B_556x45_Ball_Tracer_Red";
+	lastRoundsTracer = 30;
+	picture = "\A3\weapons_f\data\ui\m_30stanag_caseless_red_CA.paa";
+	tracersEvery = 1;
+	};
+	
+	class 30Rnd_65x39_caseless_black_mag : 30Rnd_65x39_caseless_mag
+	{
+	descriptionShort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 30<br />Used in: ACR";
+	displayname = "5.56mm 30Rnd Mag";	
+	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa"};
+	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_black_mag_CA.paa";
+	};
+	
+	class 30Rnd_65x39_caseless_black_mag_Tracer : 30Rnd_65x39_caseless_mag_Tracer
+	{
+	descriptionShort = "Caliber: 5.56x45 mm STANAG Tracer<br />Rounds: 30<br />Used in: ACR";
+	displayname = "5.56mm 30Rnd Tracer Mag";	
+	hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa"};
+	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_black_mag_CA.paa";
+	};
+	
+	class 30Rnd_65x39_caseless_khaki_mag : 30Rnd_65x39_caseless_mag
+	{
+	descriptionShort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 30<br />Used in: ACR";
+	displayname = "5.56mm 30Rnd Mag";	
+	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Base_khk_co.paa"};
+	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_khaki_mag_CA.paa";
+	};
+	
+	class 30Rnd_65x39_caseless_khaki_mag_Tracer : 30Rnd_65x39_caseless_mag_Tracer
+	{
+	descriptionShort = "Caliber: 5.56x45 mm STANAG Tracer<br />Rounds: 30<br />Used in: ACR";
+	displayname = "5.56mm 30Rnd Tracer Mag";	
+	hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\MX\Data\XMX_Base_khk_co.paa"};
+	picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_khaki_mag_CA.paa";
+	};	
 };

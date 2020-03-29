@@ -5,10 +5,12 @@ class cfgPatches
 		units[]=
 		{
 			"RSF_Nwordpass",
+			"RSF_Toiletpaper",
 		};
 		weapons[]=
 		{
-			"RSF_Nwordpass",
+			"RSF_item_Nwordpass",
+			"RSF_item_Toiletpaper",
 		};
 		requiredAddons[]=
 		{
@@ -32,13 +34,22 @@ class cfgWeapons
 			mass=1;
 		};
 	};
-	class RSF_Nwordpass: PapersPlease_PermitBase
+	class RSF_Toiletpaper: PapersPlease_PermitBase
 	{
 		scope=2;
+		displayName="Toiletpaper Roll";
+		descriptionShort="A highly valuable commodity, usually found in Packs of 8";
+		picture="\Papers-Addons\icons\toiletpaper.paa";
+		model="\A3\Structures_F_Heli\Items\Food\Tableware_01_stackOfNapkins_F.p3d";
+	};
+	class RSF_Nwordpass: PapersPlease_PermitBase
+	{
+		scope=1;
 		displayName="N-Word Pass";
 		descriptionShort="Permits the carrier to say the N-Word";
 		picture="\Papers-Addons\icons\nwordpass.paa";
-	};
+	};	
+	
 };
 class cfgVehicles
 {
@@ -52,7 +63,20 @@ class cfgVehicles
 		author="Assaultboy";
 		model="\A3\Weapons_f\dummycap.p3d";
 	};
-	class RSF_Nwordpass: PapersPlease_DocumentsBase
+	class RSF_item_Toiletpaper: PapersPlease_DocumentsBase
+	{
+		scope=2;
+		displayName="Toiletpaper Roll";
+		class TransportWeapons
+		{
+			class RSF_Toiletpaper
+			{
+				weapon="RSF_Toiletpaper";
+				count=1;
+			};
+		};
+	};	
+	class RSF_item_Nwordpass: PapersPlease_DocumentsBase
 	{
 		scope=2;
 		displayName="N-Word Pass";

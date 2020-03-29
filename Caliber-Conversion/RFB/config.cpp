@@ -51,33 +51,12 @@ class CfgWeapons
 		descriptionShort = "Assault Rifle Gun<br />Caliber: 7.62x51 mm";
 		magazines[] =
 		{
-		"ACE_20Rnd_762x51_Mag_Tracer",
-		"ACE_20Rnd_762x51_Mag_Tracer_Dim",
-		"ACE_20Rnd_762x51_Mag_SD",
-		"ACE_10Rnd_762x51_M118LR_Mag",
-		"ACE_10Rnd_762x51_Mk316_Mod_0_Mag",
-		"ACE_10Rnd_762x51_Mk319_Mod_0_Mag",
-		"ACE_10Rnd_762x51_M993_AP_Mag",
-		"ACE_20Rnd_762x51_M118LR_Mag",
-		"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-		"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-		"ACE_20Rnd_762x51_M993_AP_Mag",
-		"20Rnd_762x51_Mag",
-		"10Rnd_Mk14_762x51_Mag",
-		"rhsusf_10Rnd_762x51_m118_special_Mag",
-		"rhsusf_10Rnd_762x51_m62_Mag",
-		"rhsusf_10Rnd_762x51_m993_Mag",
-		"rhsusf_20Rnd_762x51_m118_special_Mag",
-		"rhsusf_20Rnd_762x51_m62_Mag",
-		"rhsusf_20Rnd_762x51_m993_Mag",
-		"rhsusf_20Rnd_762x51_SR25_m118_special_Mag",
-		"rhsusf_20Rnd_762x51_SR25_m62_Mag",
-		"rhsusf_20Rnd_762x51_SR25_m993_Mag",
+		"20Rnd_556x45_UW_mag",
 		"UK3CB_BAF_762_20Rnd",
 		"UK3CB_BAF_762_20Rnd_Blank",
 		"UK3CB_BAF_762_20Rnd_T"
 		};
-        magazineWell[] = {"CBA_762x51_G3","M14_762x51"};
+		magazineWell[] = {CBA_762x51_M14};		
 		modes[]=
 		{
 			"Single",
@@ -308,4 +287,42 @@ class CfgWeapons
 			};
 		};
 	};
+};
+
+class CfgMagazines
+{
+	class 30Rnd_556x45_Stanag;
+	class 20Rnd_556x45_UW_mag : 30Rnd_556x45_Stanag
+	{
+	ammo = "B_762x51_Ball";
+	author = "Bohemia Interactive";
+	count = 20;
+	descriptionShort = "Caliber: 7.62x51 mm Dual Purpose<br />Rounds: 20<br />Used in: RFB";
+	displayName = "7.62 mm 20Rnd Mag";
+	displaynameshort = "";
+	initSpeed = 827;
+	lastRoundsTracer = 0;
+	mass = 12;
+	maxLeadSpeed = 25;
+	maxThrowHoldTime = 2;
+	maxThrowIntensityCoef = 1.4;
+	minThrowIntensityCoef = 0.3;
+	model = "\A3\weapons_F\ammo\mag_univ.p3d";
+	modelSpecial = "a3\Weapons_F_Mark\MagazineProxies\mag_762x51_mk14_20rnd";
+	modelSpecialIsProxy = 1;
+	nameSound = "magazine";
+	picture = "\A3\weapons_f\data\ui\m_20stanag_CA.paa";
+	quickReload = 0;
+	reloadAction = "";
+	scope = 2;
+	selectionFireAnim = "zasleh";
+	simulation = "ProxyMagazines";
+	tracersEvery = 0;
+	type = 256;
+	useAction = 0;
+	useActionTitle = "";
+	value = 1;
+	weaponpoolavailable = 1;
+	weight = 0;
+	};	
 };
