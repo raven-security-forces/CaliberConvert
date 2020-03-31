@@ -287,6 +287,25 @@ class CfgWeapons
 	"75rnd_762x39_AK12_Lush_Mag_Tracer_F",
 	};
 	magazineWell[] = {"AK_545x39","CBA_545x39_RPK"};
+	class WeaponSlotsInfo: WeaponSlotsInfo
+	{
+		class MuzzleSlot: MuzzleSlot
+		{
+			linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+			compatibleItems[]=
+			{
+			"rhs_acc_uuk",
+			"rhs_acc_ak5",
+			"rhs_acc_dtk",
+			"rhs_acc_dtk1",
+			"rhs_acc_dtk2",
+			"rhs_acc_dtk3",
+			"rhs_acc_dtk4short",
+			"rhs_acc_dtk1983",
+			"rhs_acc_tgpa",
+			};
+		};
+	};
 	};
 	
 	class arifle_RPK12_arid_F : arifle_RPK12_base_F
@@ -309,6 +328,25 @@ class CfgWeapons
 	"75rnd_762x39_AK12_Lush_Mag_Tracer_F",	
 	};
 	magazineWell[] = {"AK_545x39","CBA_545x39_RPK"};
+	class WeaponSlotsInfo: WeaponSlotsInfo
+	{
+		class MuzzleSlot: MuzzleSlot
+		{
+			linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+			compatibleItems[]=
+			{
+			"rhs_acc_uuk",
+			"rhs_acc_ak5",
+			"rhs_acc_dtk",
+			"rhs_acc_dtk1",
+			"rhs_acc_dtk2",
+			"rhs_acc_dtk3",
+			"rhs_acc_dtk4short",
+			"rhs_acc_dtk1983",
+			"rhs_acc_tgpa",
+			};
+		};
+	};
 	};
 	
 	class arifle_RPK12_lush_F : arifle_RPK12_base_F
@@ -331,6 +369,25 @@ class CfgWeapons
 	"75rnd_762x39_AK12_Arid_Mag_Tracer_F",
 	};
 	magazineWell[] = {"AK_545x39","CBA_545x39_RPK"};
+	class WeaponSlotsInfo: WeaponSlotsInfo
+	{
+		class MuzzleSlot: MuzzleSlot
+		{
+			linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+			compatibleItems[]=
+			{
+			"rhs_acc_uuk",
+			"rhs_acc_ak5",
+			"rhs_acc_dtk",
+			"rhs_acc_dtk1",
+			"rhs_acc_dtk2",
+			"rhs_acc_dtk3",
+			"rhs_acc_dtk4short",
+			"rhs_acc_dtk1983",
+			"rhs_acc_tgpa",
+			};
+		};
+	};
 	};	
 	
 	//---------------------------------------------AK-12 Conversion of existing "AK-15" Classes
