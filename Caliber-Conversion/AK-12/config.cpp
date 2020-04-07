@@ -29,6 +29,7 @@ class SlotInfo;
 class CowsSlot;
 class PointerSlot;
 class UnderBarrelSlot;
+class UGL_F;
 
 class CfgMagazines
 {	
@@ -407,6 +408,22 @@ class CfgWeapons
 		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
 		scope = 0;
+		compatibleItems[]=
+		{
+			"bipod_02_f_arid",	
+			"bipod_03_f_blk",	
+			"bipod_02_f_blk",	
+			"bipod_01_f_blk",	
+			"bipod_02_f_hex",	
+			"bipod_01_f_khk",	
+			"bipod_02_f_lush",	
+			"bipod_01_f_mtp",	
+			"bipod_03_f_oli",	
+			"bipod_01_f_snd",	
+			"bipod_02_f_tan",	
+			"rhsusf_acc_harris_bipod",	
+			"rhs_acc_harris_swivel",
+		};
 		};
 	};
 	};
@@ -662,7 +679,22 @@ class CfgWeapons
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
 		scope = 0;
 		};
-	};		
+	};
+	class EGLM : UGL_F
+	{
+	cameraDir = "OP_look";	
+	discreteDistance[] = {50,75,100,150,200,250,300,350,400};	
+	discreteDistanceCameraPoint[] = {"OP_eye_50","OP_eye_75","OP_eye_100","OP_eye_150","OP_eye_200","OP_eye_250","OP_eye_300","OP_eye_350","OP_eye_400"};
+	discreteDistanceInitIndex = 1;	
+	displayName = "GP-25";
+	magazineReloadSwitchPhase = 0.36;
+	reloadAction = "GestureReloadMXUGL";
+	reloadMagazineSound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\Rifle_AK12\AK12_UGL_reload",1,1,10};
+	useExternalOptic = 0;
+	useModelOptics = 0;
+	magazines[] = {"rhs_VOG25","rhs_VOG25p","rhs_vg40tb","rhs_vg40sz","rhs_vg40op_white","rhs_vg40op_green","rhs_vg40op_red","rhs_GRD40_white","rhs_GRD40_green","rhs_GRD40_red","rhs_VG40MD_White","rhs_VG40MD_Green","rhs_VG40MD_Red","rhs_GDM40"};
+	magazineWell[] = {"VOG_40mm","CBA_40mm_GP"};
+	};
 	};
 	
 	class arifle_AK12U_base_F : arifle_AK12_base_F
@@ -885,6 +917,22 @@ class CfgWeapons
 		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
 		scope = 0;
+		compatibleItems[]=
+		{
+			"bipod_02_f_arid",	
+			"bipod_03_f_blk",	
+			"bipod_02_f_blk",	
+			"bipod_01_f_blk",	
+			"bipod_02_f_hex",	
+			"bipod_01_f_khk",	
+			"bipod_02_f_lush",	
+			"bipod_01_f_mtp",	
+			"bipod_03_f_oli",	
+			"bipod_01_f_snd",	
+			"bipod_02_f_tan",	
+			"rhsusf_acc_harris_bipod",	
+			"rhs_acc_harris_swivel",
+		};
 		};
 	};	
 	};
@@ -1114,6 +1162,7 @@ class CfgWeapons
 		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
 		scope = 0;
+		compatibleItems[]={""};
 		};		
 	};	
 	};
@@ -2692,7 +2741,7 @@ class CfgWeapons
 	magazines[] = {"30Rnd_762x39_AK12_Lush_Mag_F","30Rnd_762x39_AK12_Lush_Mag_Tracer_F"};		
 	picture = "a3\Weapons_F_Enoch\Rifles\AK12\Data\UI\icon_arifle_AK12_GL_lush_F_CA.paa";
 	scope = 2;	
-		class WeaponSlotsInfo : WeaponSlotsInfo
+	class WeaponSlotsInfo : WeaponSlotsInfo
 	{	
 	allowedSlots[] = {901};	
 	mass = 103.6172;	
@@ -2903,5 +2952,4 @@ class CfgWeapons
 		};		
 	};
 	};
-	
 };
