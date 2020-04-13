@@ -206,14 +206,8 @@ class CfgWeapons
 	mass = 72.7525;	
 		class CowsSlot : CowsSlot
 		{
-		displayName = "Optics Slot";
-		iconPicture = "\a3\weapons_f\Data\ui\attachment_top";
-		iconPinpoint = "Bottom";
-		iconPosition[] = {0,0};
-		iconScale = 0;
 		linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-		scope = 0;
-			compatibleItems[]=
+		compatibleItems[]=
 			{
 			"rhs_acc_rakurspm",
 			"rhs_acc_1p87",
@@ -246,6 +240,7 @@ class CfgWeapons
 			"optic_arco",
 			"ffaa_optic_elcan",
 			"ffaa_optic_elcan_ard",
+			"ffaa_optic_enasa",
 			"ffaa_optic_holografico",
 			"rksl_optic_eot552",
 			"rksl_optic_eot552_c",
@@ -273,6 +268,9 @@ class CfgWeapons
 			"uk3cb_baf_specterlds",
 			"optic_hamr",
 			"optic_hamr_khk_f",
+			"ffaa_optic_mk4_v2",
+			"ffaa_optic_mk4_v1",
+			"ffaa_optic_lv",
 			"ace_optic_lrps_2d",
 			"ace_optic_lrps_pip",
 			"rhsusf_acc_elcan",
@@ -280,12 +278,18 @@ class CfgWeapons
 			"rhsusf_acc_acog",
 			"rhsusf_acc_acog2",
 			"rhsusf_acc_acog3",
+			"rhsusf_acc_acog_anpvs27",
 			"rhsusf_acc_m2a1",
 			"rhsusf_acc_eotech_552",
 			"rhsusf_acc_eotech_552_d",
 			"rhsusf_acc_eotech_552_wd",
 			"rhsusf_acc_compm4",
+			"rhsusf_acc_m8541",
+			"rhsusf_acc_m8541_mrds",
+			"rhsusf_acc_premier",
 			"rhsusf_acc_premier_mrds",
+			"rhsusf_acc_leupoldmk4_2",
+			"rhsusf_acc_leupoldmk4_2_d",
 			"rhsusf_acc_leupoldmk4_2_mrds",
 			"optic_holosight_arid_f",
 			"optic_holosight_lush_f",
@@ -324,6 +328,8 @@ class CfgWeapons
 			"rksl_optic_pmii_525",
 			"rksl_optic_pmii_525_des",
 			"rksl_optic_pmii_525_wdl",
+			"ffaa_optic_3x12x50",
+			"ffaa_optic_5x25x56",
 			"optic_erco_blk_f",
 			"optic_erco_khk_f",
 			"optic_erco_snd_f",
@@ -340,6 +346,7 @@ class CfgWeapons
 			"rhsusf_acc_t1_low",
 			"uk3cb_baf_suit",
 			"uk3cb_baf_susat",
+			"ffaa_optic_susat",
 			"rhsusf_acc_acog_rmr",
 			"rhsusf_acc_acog_d",
 			"rhsusf_acc_acog_wd",
@@ -370,13 +377,7 @@ class CfgWeapons
 		};
 		class PointerSlot : PointerSlot
 		{
-		displayName = "Pointer Slot";
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f\proxies\weapon_slots\side";
-		scope = 0;
 		compatibleItems[]=
 			{
 			"rhs_acc_2dpzenit_ris",
@@ -402,12 +403,7 @@ class CfgWeapons
 		};
 		class UnderBarrelSlot : UnderBarrelSlot
 		{
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
-		scope = 0;
 		compatibleItems[]=
 		{
 			"bipod_02_f_arid",	
@@ -476,13 +472,7 @@ class CfgWeapons
 	mass = 103.6172;	
 		class CowsSlot : CowsSlot
 		{
-		displayName = "Optics Slot";
-		iconPicture = "\a3\weapons_f\Data\ui\attachment_top";
-		iconPinpoint = "Bottom";
-		iconPosition[] = {0,0};
-		iconScale = 0;
-		linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-		scope = 0;
+			linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 			compatibleItems[]=
 			{
 			"rhs_acc_rakurspm",
@@ -516,6 +506,7 @@ class CfgWeapons
 			"optic_arco",
 			"ffaa_optic_elcan",
 			"ffaa_optic_elcan_ard",
+			"ffaa_optic_enasa",
 			"ffaa_optic_holografico",
 			"rksl_optic_eot552",
 			"rksl_optic_eot552_c",
@@ -543,6 +534,9 @@ class CfgWeapons
 			"uk3cb_baf_specterlds",
 			"optic_hamr",
 			"optic_hamr_khk_f",
+			"ffaa_optic_mk4_v2",
+			"ffaa_optic_mk4_v1",
+			"ffaa_optic_lv",
 			"ace_optic_lrps_2d",
 			"ace_optic_lrps_pip",
 			"rhsusf_acc_elcan",
@@ -550,12 +544,18 @@ class CfgWeapons
 			"rhsusf_acc_acog",
 			"rhsusf_acc_acog2",
 			"rhsusf_acc_acog3",
+			"rhsusf_acc_acog_anpvs27",
 			"rhsusf_acc_m2a1",
 			"rhsusf_acc_eotech_552",
 			"rhsusf_acc_eotech_552_d",
 			"rhsusf_acc_eotech_552_wd",
 			"rhsusf_acc_compm4",
+			"rhsusf_acc_m8541",
+			"rhsusf_acc_m8541_mrds",
+			"rhsusf_acc_premier",
 			"rhsusf_acc_premier_mrds",
+			"rhsusf_acc_leupoldmk4_2",
+			"rhsusf_acc_leupoldmk4_2_d",
 			"rhsusf_acc_leupoldmk4_2_mrds",
 			"optic_holosight_arid_f",
 			"optic_holosight_lush_f",
@@ -594,6 +594,8 @@ class CfgWeapons
 			"rksl_optic_pmii_525",
 			"rksl_optic_pmii_525_des",
 			"rksl_optic_pmii_525_wdl",
+			"ffaa_optic_3x12x50",
+			"ffaa_optic_5x25x56",
 			"optic_erco_blk_f",
 			"optic_erco_khk_f",
 			"optic_erco_snd_f",
@@ -610,6 +612,7 @@ class CfgWeapons
 			"rhsusf_acc_t1_low",
 			"uk3cb_baf_suit",
 			"uk3cb_baf_susat",
+			"ffaa_optic_susat",
 			"rhsusf_acc_acog_rmr",
 			"rhsusf_acc_acog_d",
 			"rhsusf_acc_acog_wd",
@@ -640,14 +643,8 @@ class CfgWeapons
 		};
 		class PointerSlot : PointerSlot
 		{
-		displayName = "Pointer Slot";
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
-		linkProxy = "\a3\data_f\proxies\weapon_slots\side";
-		scope = 0;
-		compatibleItems[]=
+			linkProxy = "\a3\data_f\proxies\weapon_slots\side";
+			compatibleItems[]=
 			{
 			"rhs_acc_2dpzenit_ris",
 			"rhsusf_acc_anpeq15side",
@@ -672,12 +669,8 @@ class CfgWeapons
 		};
 		class UnderBarrelSlot : UnderBarrelSlot
 		{
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
-		scope = 0;
+		compatibleItems[]={""};
 		};
 	};
 	class EGLM : UGL_F
@@ -715,13 +708,7 @@ class CfgWeapons
 	mass = 66.1387;	
 		class CowsSlot : CowsSlot
 		{
-		displayName = "Optics Slot";
-		iconPicture = "\a3\weapons_f\Data\ui\attachment_top";
-		iconPinpoint = "Bottom";
-		iconPosition[] = {0,0};
-		iconScale = 0;
-		linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-		scope = 0;
+			linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 			compatibleItems[]=
 			{
 			"rhs_acc_rakurspm",
@@ -755,6 +742,7 @@ class CfgWeapons
 			"optic_arco",
 			"ffaa_optic_elcan",
 			"ffaa_optic_elcan_ard",
+			"ffaa_optic_enasa",
 			"ffaa_optic_holografico",
 			"rksl_optic_eot552",
 			"rksl_optic_eot552_c",
@@ -782,6 +770,9 @@ class CfgWeapons
 			"uk3cb_baf_specterlds",
 			"optic_hamr",
 			"optic_hamr_khk_f",
+			"ffaa_optic_mk4_v2",
+			"ffaa_optic_mk4_v1",
+			"ffaa_optic_lv",
 			"ace_optic_lrps_2d",
 			"ace_optic_lrps_pip",
 			"rhsusf_acc_elcan",
@@ -789,12 +780,18 @@ class CfgWeapons
 			"rhsusf_acc_acog",
 			"rhsusf_acc_acog2",
 			"rhsusf_acc_acog3",
+			"rhsusf_acc_acog_anpvs27",
 			"rhsusf_acc_m2a1",
 			"rhsusf_acc_eotech_552",
 			"rhsusf_acc_eotech_552_d",
 			"rhsusf_acc_eotech_552_wd",
 			"rhsusf_acc_compm4",
+			"rhsusf_acc_m8541",
+			"rhsusf_acc_m8541_mrds",
+			"rhsusf_acc_premier",
 			"rhsusf_acc_premier_mrds",
+			"rhsusf_acc_leupoldmk4_2",
+			"rhsusf_acc_leupoldmk4_2_d",
 			"rhsusf_acc_leupoldmk4_2_mrds",
 			"optic_holosight_arid_f",
 			"optic_holosight_lush_f",
@@ -833,6 +830,8 @@ class CfgWeapons
 			"rksl_optic_pmii_525",
 			"rksl_optic_pmii_525_des",
 			"rksl_optic_pmii_525_wdl",
+			"ffaa_optic_3x12x50",
+			"ffaa_optic_5x25x56",
 			"optic_erco_blk_f",
 			"optic_erco_khk_f",
 			"optic_erco_snd_f",
@@ -849,6 +848,7 @@ class CfgWeapons
 			"rhsusf_acc_t1_low",
 			"uk3cb_baf_suit",
 			"uk3cb_baf_susat",
+			"ffaa_optic_susat",
 			"rhsusf_acc_acog_rmr",
 			"rhsusf_acc_acog_d",
 			"rhsusf_acc_acog_wd",
@@ -879,14 +879,8 @@ class CfgWeapons
 		};
 		class PointerSlot : PointerSlot
 		{
-		displayName = "Pointer Slot";
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
-		linkProxy = "\a3\data_f\proxies\weapon_slots\side";
-		scope = 0;
-		compatibleItems[]=
+			linkProxy = "\a3\data_f\proxies\weapon_slots\side";
+			compatibleItems[]=
 			{
 			"rhs_acc_2dpzenit_ris",
 			"rhsusf_acc_anpeq15side",
@@ -911,14 +905,9 @@ class CfgWeapons
 		};
 		class UnderBarrelSlot : UnderBarrelSlot
 		{
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
-		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
-		scope = 0;
-		compatibleItems[]=
-		{
+			linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
+			compatibleItems[]=
+			{
 			"bipod_02_f_arid",	
 			"bipod_03_f_blk",	
 			"bipod_02_f_blk",	
@@ -960,16 +949,10 @@ class CfgWeapons
 	mass = 99.2080;
 		class CowsSlot : CowsSlot
 		{
-		displayName = "Optics Slot";
-		iconPicture = "\a3\weapons_f\Data\ui\attachment_top";
-		iconPinpoint = "Bottom";
-		iconPosition[] = {0,0};
-		iconScale = 0;
-		linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-		scope = 0;
+			linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 			compatibleItems[]=
 			{
-			"rhs_acc_rakurspm",
+						"rhs_acc_rakurspm",
 			"rhs_acc_1p87",
 			"ffaa_optic_acog",
 			"rhsusf_acc_anpas13gv1",
@@ -1000,6 +983,7 @@ class CfgWeapons
 			"optic_arco",
 			"ffaa_optic_elcan",
 			"ffaa_optic_elcan_ard",
+			"ffaa_optic_enasa",
 			"ffaa_optic_holografico",
 			"rksl_optic_eot552",
 			"rksl_optic_eot552_c",
@@ -1027,6 +1011,9 @@ class CfgWeapons
 			"uk3cb_baf_specterlds",
 			"optic_hamr",
 			"optic_hamr_khk_f",
+			"ffaa_optic_mk4_v2",
+			"ffaa_optic_mk4_v1",
+			"ffaa_optic_lv",
 			"ace_optic_lrps_2d",
 			"ace_optic_lrps_pip",
 			"rhsusf_acc_elcan",
@@ -1034,12 +1021,18 @@ class CfgWeapons
 			"rhsusf_acc_acog",
 			"rhsusf_acc_acog2",
 			"rhsusf_acc_acog3",
+			"rhsusf_acc_acog_anpvs27",
 			"rhsusf_acc_m2a1",
 			"rhsusf_acc_eotech_552",
 			"rhsusf_acc_eotech_552_d",
 			"rhsusf_acc_eotech_552_wd",
 			"rhsusf_acc_compm4",
+			"rhsusf_acc_m8541",
+			"rhsusf_acc_m8541_mrds",
+			"rhsusf_acc_premier",
 			"rhsusf_acc_premier_mrds",
+			"rhsusf_acc_leupoldmk4_2",
+			"rhsusf_acc_leupoldmk4_2_d",
 			"rhsusf_acc_leupoldmk4_2_mrds",
 			"optic_holosight_arid_f",
 			"optic_holosight_lush_f",
@@ -1078,6 +1071,8 @@ class CfgWeapons
 			"rksl_optic_pmii_525",
 			"rksl_optic_pmii_525_des",
 			"rksl_optic_pmii_525_wdl",
+			"ffaa_optic_3x12x50",
+			"ffaa_optic_5x25x56",
 			"optic_erco_blk_f",
 			"optic_erco_khk_f",
 			"optic_erco_snd_f",
@@ -1094,6 +1089,7 @@ class CfgWeapons
 			"rhsusf_acc_t1_low",
 			"uk3cb_baf_suit",
 			"uk3cb_baf_susat",
+			"ffaa_optic_susat",
 			"rhsusf_acc_acog_rmr",
 			"rhsusf_acc_acog_d",
 			"rhsusf_acc_acog_wd",
@@ -1124,14 +1120,8 @@ class CfgWeapons
 		};
 		class PointerSlot : PointerSlot
 		{
-		displayName = "Pointer Slot";
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
-		linkProxy = "\a3\data_f\proxies\weapon_slots\side";
-		scope = 0;
-		compatibleItems[]=
+			linkProxy = "\a3\data_f\proxies\weapon_slots\side";
+			compatibleItems[]=
 			{
 			"rhs_acc_2dpzenit_ris",
 			"rhsusf_acc_anpeq15side",
@@ -1156,12 +1146,7 @@ class CfgWeapons
 		};
 		class UnderBarrelSlot : UnderBarrelSlot
 		{
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
-		scope = 0;
 		compatibleItems[]={""};
 		};		
 	};	
@@ -1635,16 +1620,10 @@ class CfgWeapons
 	mass = 72.7525;	
 		class CowsSlot : CowsSlot
 		{
-		displayName = "Optics Slot";
-		iconPicture = "\a3\weapons_f\Data\ui\attachment_top";
-		iconPinpoint = "Bottom";
-		iconPosition[] = {0,0};
-		iconScale = 0;
-		linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-		scope = 0;
+			linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 			compatibleItems[]=
 			{
-			"rhs_acc_rakurspm",
+						"rhs_acc_rakurspm",
 			"rhs_acc_1p87",
 			"ffaa_optic_acog",
 			"rhsusf_acc_anpas13gv1",
@@ -1675,6 +1654,7 @@ class CfgWeapons
 			"optic_arco",
 			"ffaa_optic_elcan",
 			"ffaa_optic_elcan_ard",
+			"ffaa_optic_enasa",
 			"ffaa_optic_holografico",
 			"rksl_optic_eot552",
 			"rksl_optic_eot552_c",
@@ -1702,6 +1682,9 @@ class CfgWeapons
 			"uk3cb_baf_specterlds",
 			"optic_hamr",
 			"optic_hamr_khk_f",
+			"ffaa_optic_mk4_v2",
+			"ffaa_optic_mk4_v1",
+			"ffaa_optic_lv",
 			"ace_optic_lrps_2d",
 			"ace_optic_lrps_pip",
 			"rhsusf_acc_elcan",
@@ -1709,12 +1692,18 @@ class CfgWeapons
 			"rhsusf_acc_acog",
 			"rhsusf_acc_acog2",
 			"rhsusf_acc_acog3",
+			"rhsusf_acc_acog_anpvs27",
 			"rhsusf_acc_m2a1",
 			"rhsusf_acc_eotech_552",
 			"rhsusf_acc_eotech_552_d",
 			"rhsusf_acc_eotech_552_wd",
 			"rhsusf_acc_compm4",
+			"rhsusf_acc_m8541",
+			"rhsusf_acc_m8541_mrds",
+			"rhsusf_acc_premier",
 			"rhsusf_acc_premier_mrds",
+			"rhsusf_acc_leupoldmk4_2",
+			"rhsusf_acc_leupoldmk4_2_d",
 			"rhsusf_acc_leupoldmk4_2_mrds",
 			"optic_holosight_arid_f",
 			"optic_holosight_lush_f",
@@ -1753,6 +1742,8 @@ class CfgWeapons
 			"rksl_optic_pmii_525",
 			"rksl_optic_pmii_525_des",
 			"rksl_optic_pmii_525_wdl",
+			"ffaa_optic_3x12x50",
+			"ffaa_optic_5x25x56",
 			"optic_erco_blk_f",
 			"optic_erco_khk_f",
 			"optic_erco_snd_f",
@@ -1769,6 +1760,7 @@ class CfgWeapons
 			"rhsusf_acc_t1_low",
 			"uk3cb_baf_suit",
 			"uk3cb_baf_susat",
+			"ffaa_optic_susat",
 			"rhsusf_acc_acog_rmr",
 			"rhsusf_acc_acog_d",
 			"rhsusf_acc_acog_wd",
@@ -1799,14 +1791,8 @@ class CfgWeapons
 		};
 		class PointerSlot : PointerSlot
 		{
-		displayName = "Pointer Slot";
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
-		linkProxy = "\a3\data_f\proxies\weapon_slots\side";
-		scope = 0;
-		compatibleItems[]=
+			linkProxy = "\a3\data_f\proxies\weapon_slots\side";
+			compatibleItems[]=
 			{
 			"rhs_acc_2dpzenit_ris",
 			"rhsusf_acc_anpeq15side",
@@ -1831,12 +1817,7 @@ class CfgWeapons
 		};
 		class UnderBarrelSlot : UnderBarrelSlot
 		{
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
-		scope = 0;
 		};		
 	};
 	};
@@ -1858,16 +1839,10 @@ class CfgWeapons
 	mass = 72.7525;	
 		class CowsSlot : CowsSlot
 		{
-		displayName = "Optics Slot";
-		iconPicture = "\a3\weapons_f\Data\ui\attachment_top";
-		iconPinpoint = "Bottom";
-		iconPosition[] = {0,0};
-		iconScale = 0;
-		linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-		scope = 0;
+			linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 			compatibleItems[]=
 			{
-			"rhs_acc_rakurspm",
+						"rhs_acc_rakurspm",
 			"rhs_acc_1p87",
 			"ffaa_optic_acog",
 			"rhsusf_acc_anpas13gv1",
@@ -1898,6 +1873,7 @@ class CfgWeapons
 			"optic_arco",
 			"ffaa_optic_elcan",
 			"ffaa_optic_elcan_ard",
+			"ffaa_optic_enasa",
 			"ffaa_optic_holografico",
 			"rksl_optic_eot552",
 			"rksl_optic_eot552_c",
@@ -1925,6 +1901,9 @@ class CfgWeapons
 			"uk3cb_baf_specterlds",
 			"optic_hamr",
 			"optic_hamr_khk_f",
+			"ffaa_optic_mk4_v2",
+			"ffaa_optic_mk4_v1",
+			"ffaa_optic_lv",
 			"ace_optic_lrps_2d",
 			"ace_optic_lrps_pip",
 			"rhsusf_acc_elcan",
@@ -1932,12 +1911,18 @@ class CfgWeapons
 			"rhsusf_acc_acog",
 			"rhsusf_acc_acog2",
 			"rhsusf_acc_acog3",
+			"rhsusf_acc_acog_anpvs27",
 			"rhsusf_acc_m2a1",
 			"rhsusf_acc_eotech_552",
 			"rhsusf_acc_eotech_552_d",
 			"rhsusf_acc_eotech_552_wd",
 			"rhsusf_acc_compm4",
+			"rhsusf_acc_m8541",
+			"rhsusf_acc_m8541_mrds",
+			"rhsusf_acc_premier",
 			"rhsusf_acc_premier_mrds",
+			"rhsusf_acc_leupoldmk4_2",
+			"rhsusf_acc_leupoldmk4_2_d",
 			"rhsusf_acc_leupoldmk4_2_mrds",
 			"optic_holosight_arid_f",
 			"optic_holosight_lush_f",
@@ -1976,6 +1961,8 @@ class CfgWeapons
 			"rksl_optic_pmii_525",
 			"rksl_optic_pmii_525_des",
 			"rksl_optic_pmii_525_wdl",
+			"ffaa_optic_3x12x50",
+			"ffaa_optic_5x25x56",
 			"optic_erco_blk_f",
 			"optic_erco_khk_f",
 			"optic_erco_snd_f",
@@ -1992,6 +1979,7 @@ class CfgWeapons
 			"rhsusf_acc_t1_low",
 			"uk3cb_baf_suit",
 			"uk3cb_baf_susat",
+			"ffaa_optic_susat",
 			"rhsusf_acc_acog_rmr",
 			"rhsusf_acc_acog_d",
 			"rhsusf_acc_acog_wd",
@@ -2022,14 +2010,8 @@ class CfgWeapons
 		};
 		class PointerSlot : PointerSlot
 		{
-		displayName = "Pointer Slot";
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
-		linkProxy = "\a3\data_f\proxies\weapon_slots\side";
-		scope = 0;
-		compatibleItems[]=
+			linkProxy = "\a3\data_f\proxies\weapon_slots\side";
+			compatibleItems[]=
 			{
 			"rhs_acc_2dpzenit_ris",
 			"rhsusf_acc_anpeq15side",
@@ -2054,12 +2036,7 @@ class CfgWeapons
 		};
 		class UnderBarrelSlot : UnderBarrelSlot
 		{
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
-		scope = 0;
 		};		
 	};
 	};
@@ -2081,16 +2058,10 @@ class CfgWeapons
 	mass = 72.7525;	
 		class CowsSlot : CowsSlot
 		{
-		displayName = "Optics Slot";
-		iconPicture = "\a3\weapons_f\Data\ui\attachment_top";
-		iconPinpoint = "Bottom";
-		iconPosition[] = {0,0};
-		iconScale = 0;
-		linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-		scope = 0;
+			linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 			compatibleItems[]=
 			{
-			"rhs_acc_rakurspm",
+						"rhs_acc_rakurspm",
 			"rhs_acc_1p87",
 			"ffaa_optic_acog",
 			"rhsusf_acc_anpas13gv1",
@@ -2121,6 +2092,7 @@ class CfgWeapons
 			"optic_arco",
 			"ffaa_optic_elcan",
 			"ffaa_optic_elcan_ard",
+			"ffaa_optic_enasa",
 			"ffaa_optic_holografico",
 			"rksl_optic_eot552",
 			"rksl_optic_eot552_c",
@@ -2148,6 +2120,9 @@ class CfgWeapons
 			"uk3cb_baf_specterlds",
 			"optic_hamr",
 			"optic_hamr_khk_f",
+			"ffaa_optic_mk4_v2",
+			"ffaa_optic_mk4_v1",
+			"ffaa_optic_lv",
 			"ace_optic_lrps_2d",
 			"ace_optic_lrps_pip",
 			"rhsusf_acc_elcan",
@@ -2155,12 +2130,18 @@ class CfgWeapons
 			"rhsusf_acc_acog",
 			"rhsusf_acc_acog2",
 			"rhsusf_acc_acog3",
+			"rhsusf_acc_acog_anpvs27",
 			"rhsusf_acc_m2a1",
 			"rhsusf_acc_eotech_552",
 			"rhsusf_acc_eotech_552_d",
 			"rhsusf_acc_eotech_552_wd",
 			"rhsusf_acc_compm4",
+			"rhsusf_acc_m8541",
+			"rhsusf_acc_m8541_mrds",
+			"rhsusf_acc_premier",
 			"rhsusf_acc_premier_mrds",
+			"rhsusf_acc_leupoldmk4_2",
+			"rhsusf_acc_leupoldmk4_2_d",
 			"rhsusf_acc_leupoldmk4_2_mrds",
 			"optic_holosight_arid_f",
 			"optic_holosight_lush_f",
@@ -2199,6 +2180,8 @@ class CfgWeapons
 			"rksl_optic_pmii_525",
 			"rksl_optic_pmii_525_des",
 			"rksl_optic_pmii_525_wdl",
+			"ffaa_optic_3x12x50",
+			"ffaa_optic_5x25x56",
 			"optic_erco_blk_f",
 			"optic_erco_khk_f",
 			"optic_erco_snd_f",
@@ -2215,6 +2198,7 @@ class CfgWeapons
 			"rhsusf_acc_t1_low",
 			"uk3cb_baf_suit",
 			"uk3cb_baf_susat",
+			"ffaa_optic_susat",
 			"rhsusf_acc_acog_rmr",
 			"rhsusf_acc_acog_d",
 			"rhsusf_acc_acog_wd",
@@ -2245,13 +2229,7 @@ class CfgWeapons
 		};
 		class PointerSlot : PointerSlot
 		{
-		displayName = "Pointer Slot";
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f\proxies\weapon_slots\side";
-		scope = 0;
 		compatibleItems[]=
 			{
 			"rhs_acc_2dpzenit_ris",
@@ -2277,12 +2255,7 @@ class CfgWeapons
 		};
 		class UnderBarrelSlot : UnderBarrelSlot
 		{
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
-		scope = 0;
 		};		
 	};
 	};
@@ -2301,16 +2274,10 @@ class CfgWeapons
 	mass = 103.6172;	
 		class CowsSlot : CowsSlot
 		{
-		displayName = "Optics Slot";
-		iconPicture = "\a3\weapons_f\Data\ui\attachment_top";
-		iconPinpoint = "Bottom";
-		iconPosition[] = {0,0};
-		iconScale = 0;
-		linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-		scope = 0;
+			linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 			compatibleItems[]=
 			{
-			"rhs_acc_rakurspm",
+						"rhs_acc_rakurspm",
 			"rhs_acc_1p87",
 			"ffaa_optic_acog",
 			"rhsusf_acc_anpas13gv1",
@@ -2341,6 +2308,7 @@ class CfgWeapons
 			"optic_arco",
 			"ffaa_optic_elcan",
 			"ffaa_optic_elcan_ard",
+			"ffaa_optic_enasa",
 			"ffaa_optic_holografico",
 			"rksl_optic_eot552",
 			"rksl_optic_eot552_c",
@@ -2368,6 +2336,9 @@ class CfgWeapons
 			"uk3cb_baf_specterlds",
 			"optic_hamr",
 			"optic_hamr_khk_f",
+			"ffaa_optic_mk4_v2",
+			"ffaa_optic_mk4_v1",
+			"ffaa_optic_lv",
 			"ace_optic_lrps_2d",
 			"ace_optic_lrps_pip",
 			"rhsusf_acc_elcan",
@@ -2375,12 +2346,18 @@ class CfgWeapons
 			"rhsusf_acc_acog",
 			"rhsusf_acc_acog2",
 			"rhsusf_acc_acog3",
+			"rhsusf_acc_acog_anpvs27",
 			"rhsusf_acc_m2a1",
 			"rhsusf_acc_eotech_552",
 			"rhsusf_acc_eotech_552_d",
 			"rhsusf_acc_eotech_552_wd",
 			"rhsusf_acc_compm4",
+			"rhsusf_acc_m8541",
+			"rhsusf_acc_m8541_mrds",
+			"rhsusf_acc_premier",
 			"rhsusf_acc_premier_mrds",
+			"rhsusf_acc_leupoldmk4_2",
+			"rhsusf_acc_leupoldmk4_2_d",
 			"rhsusf_acc_leupoldmk4_2_mrds",
 			"optic_holosight_arid_f",
 			"optic_holosight_lush_f",
@@ -2419,6 +2396,8 @@ class CfgWeapons
 			"rksl_optic_pmii_525",
 			"rksl_optic_pmii_525_des",
 			"rksl_optic_pmii_525_wdl",
+			"ffaa_optic_3x12x50",
+			"ffaa_optic_5x25x56",
 			"optic_erco_blk_f",
 			"optic_erco_khk_f",
 			"optic_erco_snd_f",
@@ -2435,6 +2414,7 @@ class CfgWeapons
 			"rhsusf_acc_t1_low",
 			"uk3cb_baf_suit",
 			"uk3cb_baf_susat",
+			"ffaa_optic_susat",
 			"rhsusf_acc_acog_rmr",
 			"rhsusf_acc_acog_d",
 			"rhsusf_acc_acog_wd",
@@ -2465,14 +2445,8 @@ class CfgWeapons
 		};
 		class PointerSlot : PointerSlot
 		{
-		displayName = "Pointer Slot";
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
-		linkProxy = "\a3\data_f\proxies\weapon_slots\side";
-		scope = 0;
-		compatibleItems[]=
+			linkProxy = "\a3\data_f\proxies\weapon_slots\side";
+			compatibleItems[]=
 			{
 			"rhs_acc_2dpzenit_ris",
 			"rhsusf_acc_anpeq15side",
@@ -2497,12 +2471,7 @@ class CfgWeapons
 		};
 		class UnderBarrelSlot : UnderBarrelSlot
 		{
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
-		scope = 0;
 		};		
 	};
 	};
@@ -2524,16 +2493,10 @@ class CfgWeapons
 	mass = 103.6172;	
 		class CowsSlot : CowsSlot
 		{
-		displayName = "Optics Slot";
-		iconPicture = "\a3\weapons_f\Data\ui\attachment_top";
-		iconPinpoint = "Bottom";
-		iconPosition[] = {0,0};
-		iconScale = 0;
-		linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-		scope = 0;
+			linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 			compatibleItems[]=
 			{
-			"rhs_acc_rakurspm",
+						"rhs_acc_rakurspm",
 			"rhs_acc_1p87",
 			"ffaa_optic_acog",
 			"rhsusf_acc_anpas13gv1",
@@ -2564,6 +2527,7 @@ class CfgWeapons
 			"optic_arco",
 			"ffaa_optic_elcan",
 			"ffaa_optic_elcan_ard",
+			"ffaa_optic_enasa",
 			"ffaa_optic_holografico",
 			"rksl_optic_eot552",
 			"rksl_optic_eot552_c",
@@ -2591,6 +2555,9 @@ class CfgWeapons
 			"uk3cb_baf_specterlds",
 			"optic_hamr",
 			"optic_hamr_khk_f",
+			"ffaa_optic_mk4_v2",
+			"ffaa_optic_mk4_v1",
+			"ffaa_optic_lv",
 			"ace_optic_lrps_2d",
 			"ace_optic_lrps_pip",
 			"rhsusf_acc_elcan",
@@ -2598,12 +2565,18 @@ class CfgWeapons
 			"rhsusf_acc_acog",
 			"rhsusf_acc_acog2",
 			"rhsusf_acc_acog3",
+			"rhsusf_acc_acog_anpvs27",
 			"rhsusf_acc_m2a1",
 			"rhsusf_acc_eotech_552",
 			"rhsusf_acc_eotech_552_d",
 			"rhsusf_acc_eotech_552_wd",
 			"rhsusf_acc_compm4",
+			"rhsusf_acc_m8541",
+			"rhsusf_acc_m8541_mrds",
+			"rhsusf_acc_premier",
 			"rhsusf_acc_premier_mrds",
+			"rhsusf_acc_leupoldmk4_2",
+			"rhsusf_acc_leupoldmk4_2_d",
 			"rhsusf_acc_leupoldmk4_2_mrds",
 			"optic_holosight_arid_f",
 			"optic_holosight_lush_f",
@@ -2642,6 +2615,8 @@ class CfgWeapons
 			"rksl_optic_pmii_525",
 			"rksl_optic_pmii_525_des",
 			"rksl_optic_pmii_525_wdl",
+			"ffaa_optic_3x12x50",
+			"ffaa_optic_5x25x56",
 			"optic_erco_blk_f",
 			"optic_erco_khk_f",
 			"optic_erco_snd_f",
@@ -2658,6 +2633,7 @@ class CfgWeapons
 			"rhsusf_acc_t1_low",
 			"uk3cb_baf_suit",
 			"uk3cb_baf_susat",
+			"ffaa_optic_susat",
 			"rhsusf_acc_acog_rmr",
 			"rhsusf_acc_acog_d",
 			"rhsusf_acc_acog_wd",
@@ -2688,14 +2664,8 @@ class CfgWeapons
 		};
 		class PointerSlot : PointerSlot
 		{
-		displayName = "Pointer Slot";
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
-		linkProxy = "\a3\data_f\proxies\weapon_slots\side";
-		scope = 0;
-		compatibleItems[]=
+			linkProxy = "\a3\data_f\proxies\weapon_slots\side";
+			compatibleItems[]=
 			{
 			"rhs_acc_2dpzenit_ris",
 			"rhsusf_acc_anpeq15side",
@@ -2720,12 +2690,7 @@ class CfgWeapons
 		};
 		class UnderBarrelSlot : UnderBarrelSlot
 		{
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
-		scope = 0;
 		};		
 	};
 	};
@@ -2747,16 +2712,10 @@ class CfgWeapons
 	mass = 103.6172;	
 		class CowsSlot : CowsSlot
 		{
-		displayName = "Optics Slot";
-		iconPicture = "\a3\weapons_f\Data\ui\attachment_top";
-		iconPinpoint = "Bottom";
-		iconPosition[] = {0,0};
-		iconScale = 0;
-		linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-		scope = 0;
+			linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
 			compatibleItems[]=
 			{
-			"rhs_acc_rakurspm",
+					"rhs_acc_rakurspm",
 			"rhs_acc_1p87",
 			"ffaa_optic_acog",
 			"rhsusf_acc_anpas13gv1",
@@ -2787,6 +2746,7 @@ class CfgWeapons
 			"optic_arco",
 			"ffaa_optic_elcan",
 			"ffaa_optic_elcan_ard",
+			"ffaa_optic_enasa",
 			"ffaa_optic_holografico",
 			"rksl_optic_eot552",
 			"rksl_optic_eot552_c",
@@ -2814,6 +2774,9 @@ class CfgWeapons
 			"uk3cb_baf_specterlds",
 			"optic_hamr",
 			"optic_hamr_khk_f",
+			"ffaa_optic_mk4_v2",
+			"ffaa_optic_mk4_v1",
+			"ffaa_optic_lv",
 			"ace_optic_lrps_2d",
 			"ace_optic_lrps_pip",
 			"rhsusf_acc_elcan",
@@ -2821,12 +2784,18 @@ class CfgWeapons
 			"rhsusf_acc_acog",
 			"rhsusf_acc_acog2",
 			"rhsusf_acc_acog3",
+			"rhsusf_acc_acog_anpvs27",
 			"rhsusf_acc_m2a1",
 			"rhsusf_acc_eotech_552",
 			"rhsusf_acc_eotech_552_d",
 			"rhsusf_acc_eotech_552_wd",
 			"rhsusf_acc_compm4",
+			"rhsusf_acc_m8541",
+			"rhsusf_acc_m8541_mrds",
+			"rhsusf_acc_premier",
 			"rhsusf_acc_premier_mrds",
+			"rhsusf_acc_leupoldmk4_2",
+			"rhsusf_acc_leupoldmk4_2_d",
 			"rhsusf_acc_leupoldmk4_2_mrds",
 			"optic_holosight_arid_f",
 			"optic_holosight_lush_f",
@@ -2865,6 +2834,8 @@ class CfgWeapons
 			"rksl_optic_pmii_525",
 			"rksl_optic_pmii_525_des",
 			"rksl_optic_pmii_525_wdl",
+			"ffaa_optic_3x12x50",
+			"ffaa_optic_5x25x56",
 			"optic_erco_blk_f",
 			"optic_erco_khk_f",
 			"optic_erco_snd_f",
@@ -2881,6 +2852,7 @@ class CfgWeapons
 			"rhsusf_acc_t1_low",
 			"uk3cb_baf_suit",
 			"uk3cb_baf_susat",
+			"ffaa_optic_susat",
 			"rhsusf_acc_acog_rmr",
 			"rhsusf_acc_acog_d",
 			"rhsusf_acc_acog_wd",
@@ -2911,13 +2883,7 @@ class CfgWeapons
 		};
 		class PointerSlot : PointerSlot
 		{
-		displayName = "Pointer Slot";
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f\proxies\weapon_slots\side";
-		scope = 0;
 		compatibleItems[]=
 			{
 			"rhs_acc_2dpzenit_ris",
@@ -2943,12 +2909,7 @@ class CfgWeapons
 		};
 		class UnderBarrelSlot : UnderBarrelSlot
 		{
-		iconPicture = "\A3\Weapons_F\Data\clear_empty.paa";
-		iconPinPoint = "Left";
-		iconPosition[] = {0,0};
-		iconScale = 1;
 		linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
-		scope = 0;
 		};		
 	};
 	};
