@@ -2,124 +2,62 @@ class CfgPatches
 {
     class RSF_QBU88_Conversion
     {
-        name = "RSF QBU-88 Conversion Mod";
-        author = "Nero";
-        url = "";
-        version="0.0.1";
-        versionStr="0.0.1";
-        requiredAddons[] = 
-		{
-		"A3_Weapons_F",
-		"A3_Anims_F_Config_Sdr",
-		"A3_Data_F",
-		"A3_Ui_F",
-		"ace_ballistics",
-		"ace_common",
-		"ace_smallarms",
-		"ace_realisticnames",
-		"cba_jr"
-		};
-        units[] = {};
-        weapons[] = {};
+    name = "RSF QBU-88 Conversion Mod";
+    author = "Nero";
+    url = "";
+    version="0.0.1";
+    versionStr="0.0.1";
+    requiredAddons[] = 
+	{
+	"A3_Weapons_F_Exp",
+	"ace_ballistics",
+	"ace_common",
+	"ace_smallarms",
+	"ace_realisticnames",
+	"cba_jr"
+	};
+    units[] = {};
+    weapons[] = {};
     };
 };
 
-#include "csatpacconfig.cpp"
+#include "faction_config_cmr.cpp"
 
 class WeaponSlotsInfo;
-class MuzzleSlot;
-class SlotInfo;
-class CowsSlot;
 class PointerSlot;
-
+class asdg_MuzzleSlot_58;
+class asdg_OpticRail1913;
 class CfgWeapons
 {
-
-class DMR_07_base_F;
-
+	class Rifle_Long_Base_F;
+	class DMR_07_base_F : Rifle_Long_Base_F
+	{
+	descriptionShort = "Marksman Rifle<br />Caliber: 5.8x42 mm";
+	displayName = "QBU-88";
+	magazines[] = {"20Rnd_650x39_Cased_Mag_F","20Rnd_650x39_Cased_Mag_Tracer_F"};
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{	
+		allowedSlots[] = {901};		
+		mass = 90.38;	
+			class CowsSlot : asdg_OpticRail1913 {};
+			class MuzzleSlot : asdg_MuzzleSlot_58 {};
+			class PointerSlot {};
+		};
+	};
+	
 	class srifle_DMR_07_blk_F: DMR_07_base_F
     {
         displayName="QBU-88 (Black)";
-		descriptionShort = "Marksman Rifle<br />Caliber: 5.8x42 mm";
-		magazines[] =
-		{
-		"20Rnd_650x39_Cased_Mag_F",
-		"20Rnd_650x39_Cased_Mag_Tracer_F",
-		};
-		ACE_barrelTwist = 229;
-		ACE_barrelLength = 640;
-		ACE_twistDirection = 1;
-		mass = 90.3895;
-
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			class MuzzleSlot: MuzzleSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[]=
-				{
-				"muzzle_snds_58_blk_f",
-				"muzzle_snds_58_hex_f",
-				"muzzle_snds_58_ghex_f"
-				};
-			};
-		};
-		
-		class PointerSlot: PointerSlot //Doesn't have a rail so none
-			{
-				compatibleItems[] =
-				{
-				""
-				};
-			};
     };
 
 	class srifle_DMR_07_hex_F: DMR_07_base_F
     {
         displayName="QBU-88 (Hex)";
-		descriptionShort = "Marksman Rifle<br />Caliber: 5.8x42 mm";
-		magazines[] =
-		{
-		"20Rnd_650x39_Cased_Mag_F",
-		"20Rnd_650x39_Cased_Mag_Tracer_F",
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			class MuzzleSlot: MuzzleSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[]=
-				{
-				"muzzle_snds_58_blk_f",
-				"muzzle_snds_58_hex_f",
-				"muzzle_snds_58_ghex_f"
-				};
-			};
-		};
     };
 
-		class srifle_DMR_07_ghex_F: DMR_07_base_F
+	class srifle_DMR_07_ghex_F: DMR_07_base_F
     {
         displayName="QBU-88 (Green Hex)";
-		descriptionShort = "Marksman Rifle<br />Caliber: 5.8x42 mm";
-		magazines[] =
-		{
-		"20Rnd_650x39_Cased_Mag_F",
-		"20Rnd_650x39_Cased_Mag_Tracer_F",
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			class MuzzleSlot: MuzzleSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[]=
-				{
-				"muzzle_snds_58_blk_f",
-				"muzzle_snds_58_hex_f",
-				"muzzle_snds_58_ghex_f"
-				};
-			};
-		};
     };
 };
 

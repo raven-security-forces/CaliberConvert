@@ -1,8 +1,8 @@
 class CfgPatches
 {
-	class Uniform_Armour_Balance
+	class Gear_Rebalance
 	{
-		name="RSF UAB";
+		name="RSF Gear Rebalance Mod";
 		units[]=
 		{
 		};
@@ -19,11 +19,7 @@ class CfgPatches
 		"A3_Characters_F_TacOps",
 		"A3_Characters_F_Enoch",
 		};
-		author="NeroTheHero111";
-		authors[]=
-		{
-			"NeroTheHero111"
-		};
+		author="Nero";
 		url="";
 		version="0.0.1";
 		versionStr="0.0.1";
@@ -34,7 +30,6 @@ class CfgVehicles
 {
 
 class SoldierEB;
-class Hitpoints;
 
 class O_Soldier_base_F : SoldierEB
 	{
@@ -528,398 +523,766 @@ visual = "";
 	};
 };
 
-
-
-
-
-
 class CfgWeapons
 {
 	
 
-	// Uniform Weight Adjustment - Calling Base
+	// Uniform Weight and Load Adjustment - Calling Base
 	
 	class Uniform_Base;
 	class UniformItem;
 	
-	// Uniforms
-	
-	class U_O_T_Soldier_F: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_U_O_T_Soldier_F0";
-		picture="\A3\characters_f_exp\data\ui\icon_U_OT_Soldier_F_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F_Exp\OPFOR\Data\clothing_tna_CO.paa"
-		};
-		DLC="Expansion";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_T_Soldier_F";
-			containerClass="Supply40";
-			mass=40;
-		};
-	};
-	
-	class U_O_CombatUniform_ocamo: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_Iran_Fatigues_hex";
-		picture="\A3\characters_f\data\ui\icon_U_OI_CombatUniform_ocamo_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_opfor_co.paa"
-		};
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_Soldier_F";
-			containerClass="Supply40";
-			mass=40;
-		};
-	};
-	
-	class U_O_CombatUniform_oucamo: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_Iran_fatigues_urban";
-		picture="\A3\characters_f\data\ui\icon_U_OI_CombatUniform_oucamo_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\OPFOR\Data\clothing_oucamo_co.paa"
-		};
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_soldierU_F";
-			containerClass="Supply40";
-			mass=40;
-		};
-	};
-	
-	class U_O_FullGhillie_ard: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_O_Full_Ghillie_Arid_F0";
-		picture="\A3\characters_f_mark\data\ui\icon_U_O_FullGhillie_ard_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_opfor_co.paa"
-		};
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_ghillie_ard_F";
-			containerClass="Supply60";
-			mass=80;
-		};
-	};
-	
-	class U_O_T_FullGhillie_tna_F: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_U_O_FullGhillie_ghex_F0";
-		picture="\A3\characters_f_exp\data\ui\icon_U_O_FullGhillie_tna_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_opfor_co.paa"
-		};
-		DLC="Expansion";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_T_ghillie_tna_F";
-			containerClass="Supply60";
-			mass=80;
-		};
-	};
-	
-	class U_O_FullGhillie_lsh: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_O_Full_Ghillie_Lush_F0";
-		picture="\A3\characters_f_mark\data\ui\icon_U_O_FullGhillie_lsh_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_opfor_co.paa"
-		};
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_ghillie_lsh_F";
-			containerClass="Supply60";
-			mass=80;
-		};
-	};
-	
-	class U_O_FullGhillie_sard: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_O_Full_Ghillie_SemiArid_F0";
-		picture="\A3\characters_f_mark\data\ui\icon_U_O_FullGhillie_sard_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_opfor_co.paa"
-		};
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_ghillie_sard_F";
-			containerClass="Supply60";
-			mass=80;
-		};
-	};
-	
-	class U_O_T_Sniper_F: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_U_O_T_Sniper_F0";
-		picture="\A3\characters_f_exp\data\ui\icon_U_OT_sniper_F_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F_Exp\OPFOR\Data\clothing_tna_CO.paa"
-		};
-		DLC="Expansion";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_T_Sniper_F";
-			containerClass="Supply40";
-			mass=60;
-		};
-	};
-	
-	class U_O_GhillieSuit: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_Ghillie_suit_Iran";
-		picture="\A3\characters_f\data\ui\icon_U_ghillie_oucamo_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_opfor_co.paa"
-		};
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_sniper_F";
-			containerClass="Supply60";
-			mass=60;
-		};
-	};
-	
-	class U_O_T_Officer_F: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_U_O_T_Officer_F0";
-		picture="\A3\characters_f_exp\data\ui\icon_U_OT_officer_F_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F_Exp\OPFOR\Data\officer_tna_CO.paa"
-		};
-		DLC="Expansion";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_T_Officer_F";
-			containerClass="Supply40";
-			mass=40;
-		};
-	};
-	
-	class U_O_PilotCoveralls: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_Pilot_coveralls_Iran";
-		picture="\A3\characters_f\data\ui\icon_U_OI_PilotCoveralls_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_civilian_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\Common\Data\pilot_suit_iran_co.paa"
-		};
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_helipilot_F";
-			containerClass="Supply60";
-			mass=80;
-		};
-	};
+	//// Uniforms - OPFOR ////					////					////
 
-	class U_O_officer_noInsignia_hex_F: Uniform_Base
+	// Fatigues (Green Hex) [CSAT]
+	class U_O_T_Soldier_F : Uniform_Base
 	{
 		class ItemInfo: UniformItem
 		{
-			mass=40;
-		};
-	};
-	
-	class U_O_OfficerUniform_ocamo: Uniform_Base
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_officer_uniform";
-		picture="\A3\characters_f\data\ui\icon_U_OI_Officer_ocamo_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_opfor_co.paa"
-		};
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="O_officer_F";
 			containerClass="Supply40";
 			mass=40;
 		};
 	};
 	
-	class U_O_SpecopsUniform_ocamo: Uniform_Base
+	// Fatigues (Hex) [CSAT]
+	class U_O_CombatUniform_ocamo : Uniform_Base
 	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_Recon_fatigues_hex";
-		picture="\A3\characters_f\data\ui\icon_U_OI_CombatUniform_ocamo_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_opfor_co.paa"
-		};
 		class ItemInfo: UniformItem
 		{
-			uniformModel="-";
-			uniformClass="O_crew_F";
+			containerClass="Supply40";
+			mass=40;
+		};
+	};	
+	
+	// Fatigues (Urban) [CSAT]	
+	class U_O_CombatUniform_oucamo : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};
+	};		
+	
+	// Full Ghillie (Arid) [CSAT]
+	class U_O_FullGhillie_ard : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply60";
+			mass=80;
+		};
+	};
+	
+	// Full Ghillie (Jungle) [CSAT]
+	class U_O_T_FullGhillie_tna_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply60";
+			mass=80;
+		};
+	};
+	
+	// Full Ghillie (Lush) [CSAT]
+	class U_O_FullGhillie_lsh : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply60";
+			mass=80;
+		};
+	};
+	
+	// Full Ghillie (Semi-Arid) [CSAT]
+	class U_O_FullGhillie_sard : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply60";
+			mass=80;
+		};
+	};
+	
+	// Ghillie Suit (Green Hex) [CSAT]
+	class U_O_T_Sniper_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply60";
+			mass=60;
+		};
+	};
+	
+	// Ghillie Suit [CSAT]
+	class U_O_GhillieSuit : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply60";
+			mass=60;
+		};
+	};
+	
+	// Light Fatigues (Hex)
+	class U_O_officer_noInsignia_hex_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass = "Supply40";
+			mass=40;
+		};
+	};
+	
+	// Officer Fatigues (Green Hex) [CSAT]
+	class U_O_T_Officer_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
 			containerClass="Supply40";
 			mass=40;
 		};
 	};
 	
-	class U_O_V_Soldier_Viper_F: Uniform_Base
+	// Officer Fatigues (Hex)
+	class U_O_OfficerUniform_ocamo : Uniform_Base
 	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_U_O_Soldier_Viper_ghex_F0";
-		picture="\A3\characters_f_exp\OPFOR\data\ui\icon_U_O_Soldier_Viper_ghex_F_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F_Exp\OPFOR\Data\ViperOp_Suit_hexgreen_co.paa"
-		};
-		DLC="Expansion";
 		class ItemInfo: UniformItem
 		{
-			uniformModel="-";
-			uniformClass="O_V_Soldier_TL_ghex_F";
-			containerClass="Supply20";
+			containerClass="Supply40";
 			mass=40;
 		};
 	};
 	
-	class U_O_V_Soldier_Viper_hex_F: Uniform_Base
+	// Pilot Coveralls [CSAT]
+	class U_O_PilotCoveralls : Uniform_Base
 	{
-		author="$STR_A3_Bohemia_Interactive";
-		scope=2;
-		displayName="$STR_A3_U_O_Soldier_Viper_hex_F0";
-		picture="\A3\characters_f_exp\OPFOR\data\ui\icon_U_O_Soldier_Viper_hex_F_ca.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F_Exp\OPFOR\Data\ViperOp_Suit_hex_co.paa"
-		};
-		DLC="Expansion";
 		class ItemInfo: UniformItem
 		{
-			uniformModel="-";
-			uniformClass="O_V_Soldier_TL_hex_F";
-			containerClass="Supply20";
+			containerClass="Supply60";
+			mass=80;
+		};
+	};
+	
+	// Recon Fatigues (Hex)
+	class U_O_SpecopsUniform_ocamo : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
 			mass=40;
+		};
+	};
+	
+	// Special Purpose Suit (Green Hex)
+	class U_O_V_Soldier_Viper_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};
+	};
+	
+	// Special Purpose Suit (Hex)	
+	class U_O_V_Soldier_Viper_hex_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
 		};	
 	};
-
-	// Special Purpose Helmet
 	
+	// Wetsuit [CSAT]
+	class U_O_Wetsuit : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply80";
+			mass=80;
+		};		
+	};
+	
+	//// Uniforms - BLUFOR ////					////					////						
+	
+	// CBRN Suit (MTP) [NATO]
+	class U_B_CBRN_Suit_01_MTP_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};
+	
+	// CBRN Suit (Tropic) [NATO]
+	class U_B_CBRN_Suit_01_Tropic_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};
+	
+	// CBRN Suit (Woodland) [NATO]
+	class U_B_CBRN_Suit_01_Wdl_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Gendarmerie Commander Uniform
+	class U_B_GEN_Commander_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};	
+	
+	// Guerilla Apparel
+	class U_BG_Guerrilla_6_1 : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};	
+	
+	// Guerilla Garment
+	class U_BG_Guerilla1_1 : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};	
+	
+	// Guerilla Garment
+	class U_BG_Guerilla1_2_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};	
+	
+	// Guerilla Outfit (Pattern)
+	class U_BG_Guerilla2_2 : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};	
+	
+	// Guerilla Outfit (Plain, Dark)	
+	class U_BG_Guerilla2_1 : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};	
+	
+	// Guerilla Outfit (Plain, Light)	
+	class U_BG_Guerilla2_3 : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};		
+	
+	
+	// Guerilla Smocks
+	class U_BG_Guerilla3_1 : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};
+	
+	// Heli Pilot Coveralls [NATO]
+	class U_B_HeliPilotCoveralls : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};
+	
+	// Survival Fatigues
+	class U_B_survival_uniform : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};	
+	
+	// Wetsuit [NATO]
+	class U_B_Wetsuit : Uniform_Base 
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply80";
+			mass=80;
+		};		
+	};	
+	
+	//// Uniforms - INDFOR ////					////					////
+	
+	// Bandit Clothes (Checkered)
+	class U_I_C_Soldier_Bandit_4_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};
+	
+	// Bandit Clothes (Polo Shirt)	
+	class U_I_C_Soldier_Bandit_1_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};
+	
+	// Bandit Clothes (Skull)	
+	class U_I_C_Soldier_Bandit_2_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};
+
+	// Bandit Clothes (Tank Top)	
+	class U_I_C_Soldier_Bandit_5_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};
+	
+	// Bandit Clothes (Tee)
+	class U_I_C_Soldier_Bandit_3_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};	
+	
+	// CBRN Suit [AAF]
+	class U_I_CBRN_Suit_01_AAF_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+
+	// CBRN Suit [LDF]
+	class U_I_E_CBRN_Suit_01_EAF_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+	
+	// Combat Fatigues (Sweater) [LDF]
+	class U_I_E_Uniform_01_sweater_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};	
+	
+	// Heli Pilot Coveralls [AAF]
+	class U_I_HeliPilotCoveralls : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};		
+		
+	// Heli Pilot Coveralls [LDF]
+	class U_I_E_Uniform_01_coveralls_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};			
+	
+	// Wetsuit [AAF]
+	class U_I_Wetsuit : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply80";
+			mass=80;
+		};		
+	};	
+	
+	//// Uniforms - Civilians ////					////					////
+
+	// CBRN Suit (Blue)
+	class U_C_CBRN_Suit_01_Blue_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// CBRN Suit (White)
+	class U_C_CBRN_Suit_01_White_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+
+	// Commoner Clothes (Blue)
+	class U_C_Poloshirt_blue : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Commoner Clothes (Burgundy)	
+	class U_C_Poloshirt_burgundy : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+	
+	// Commoner Clothes (Red-White)	
+	class U_C_Poloshirt_redwhite : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+	
+	// Commoner Clothes (Salmon)	
+	class U_C_Poloshirt_salmon : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Commoner Clothes (Striped)	
+	class U_C_Poloshirt_stripped : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+
+	// Commoner Clothes (Tricolor)	
+	class U_C_Poloshirt_tricolour : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+	
+	// Driver Coverall (Black)
+	class U_C_Driver_1_black : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Driver Coverall (Blue)	
+	class U_C_Driver_1_blue : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Driver Coverall (Bluking)	
+	class U_C_Driver_2 : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Driver Coverall (Fuel)	
+	class U_C_Driver_1 : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Driver Coverall (Green)	
+	class U_C_Driver_1_green : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Driver Coverall (Orange)	
+	class U_C_Driver_1_orange : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+
+	// Driver Coverall (Red)	
+	class U_C_Driver_1_red : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Driver Coverall (Redstone)	
+	class U_C_Driver_3 : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Driver Coverall (Vrana)	
+	class U_C_Driver_4 : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Driver Coverall (White)	
+	class U_C_Driver_1_white : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+
+	// Driver Coverall (Yellow)	
+	class U_C_Driver_1_yellow : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Farmer Outfit
+	class U_C_Uniform_Farmer_01_F : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Journalist Clothes
+	class U_C_Journalist : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	// Looter Clothes (Leather Jacket)
+	class U_C_E_LooterJacket_01_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply40";
+			mass=40;
+		};		
+	};	
+	
+	// Marshal Clothes
+	class U_Marshal : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+	
+	// Rangemaster Suit
+	class U_Rangemaster : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+	
+	// Scientist Clothes
+	class U_C_Scientist : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+
+	// Scientist Outfit (Formal, Blue)
+	class U_C_Uniform_Scientist_01_formal_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+	
+	// Scientist Outfit (Formal, White)	
+	class U_C_Uniform_Scientist_01_F : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+	
+	// Scientist Outfit (Informal, Black)		
+	class U_C_Uniform_Scientist_02_F : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};		
+	
+	// Scientist Outfit (Informal, Red)
+	class U_C_Uniform_Scientist_02_formal_F : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+	
+	// Sport Clothes (Beach)		
+	class U_C_man_sport_1_F : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+	
+	// Sport Clothes (Blue)		
+	class U_C_man_sport_3_F : Uniform_Base	
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+	
+	// Sport Clothes (Orange)	
+	class U_C_man_sport_2_F : Uniform_Base
+	{
+		class ItemInfo: UniformItem
+		{
+			containerClass="Supply30";
+			mass=30;
+		};		
+	};	
+
+	//// Headgear - OPFOR ////
+	
+	// Special Purpose Helmet
 	class HeadgearItem;
 	
 	class H_HelmetB;
@@ -943,37 +1306,5 @@ class CfgWeapons
 				};
 			};
 		};	
-	};
-};
-
-class CfgGlasses
-{
-class G_AirPurifyingRespirator_01_base_F;	
-	class G_AirPurifyingRespirator_01_F : G_AirPurifyingRespirator_01_base_F
-	{
-	_generalMacro = "G_AirPurifyingRespirator_01_F";
-	ACE_Color[] = {0,0,0};
-	ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
-	ACE_Overlay = "";
-	ACE_OverlayCracked = "\z\ace\addons\goggles\textures\HUD\Cracked.paa";
-	ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
-	ACE_Protection = 0;
-	ACE_Resistance = 0;
-	ACE_TintAmount = 0;
-	author = "Bohemia Interactive";
-	CBRN_overlayType = "CBRN_gear\data\hud\overlay_style_m50.paa";
-	CBRN_protectionLevel = "1 + 2";
-	displayName = "APR [NATO]";
-	DLC = "Enoch";
-	hiddenSelections[] = {"Camo"};
-	hiddenSelectionsTextures[] = {"a3\characters_f_enoch\facewear\data\airpurifyingrespirator_co.paa"};
-	identityTypes[] = {};
-	mass = 8;
-	model = "\a3\Characters_F_Enoch\Facewear\G_AirPurifyingRespirator_01_F.p3d";
-	name = "None";
-	picture = "\A3\Characters_F_Enoch\Facewear\Data\UI\icon_G_AirPurifyingRespirator_01_F_ca.paa";
-	scope = 2;
-	scopeArsenal = 2;
-	scopeCurator = 2;
 	};
 };

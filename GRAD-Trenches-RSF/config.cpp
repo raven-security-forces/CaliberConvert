@@ -54,5 +54,11 @@ class CfgWorldsTextures
         surfaceTextureBasePath = "rhspkl\addons\rhspkl_art\data\ground\";
         suffix = "co.paa";
 		camouflageObjects[] = {};		
-    };	
+	};
+	
+	class fallujah {
+        surfaceTextureBasePath = "shez\fallujah\data\";
+        suffix = "detail_co.paa";
+		camouflageObjects[] = {};		
+    };	        
 };
