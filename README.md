@@ -1,59 +1,53 @@
 The RSF Configurations mod is licensed under the APL-SA License:
 https://www.bohemia.net/community/licenses/arma-public-license-share-alike
 
-# RSF Configuration Files
-Custom configs for Raven Security Forces
+# RSF CFG
+RSF CFG is a bundle of various Game Modifications custom-made to improve Gameplay for the RSF Arma 3 Unit.
 
-## CaliberConvert
-A collection of alternative configurations for the Arma 3 unit Raven Security Forces
+## AdvUrbanRappelAceCompat
+Short name long rope. Fixes Urban Rappelling issues since the ACE CSW update. Other Versions are available in my Workshop.
 
-### What it does
-Makes changes to various weapons in terms of weight and caliber to fall in line with RSF standards. 
+## Caliber-Conversion
+My masterpiece, replacing Calibers of all Vanilla Weapons where applicable with their real-life counterpart.
 
-## Current Weapons
- 	KH-2002
-	MG5
-	MSBS-5.56B
-	QBU-88
-	RFB
-	Stoner 99
+The ACR (“MX”) now fires 5.56x45.
+There now is an AK-12. The AK-12 ingame fires 7.62x39, which is actually fired by the AK-15, while the real-life AK-12 fires 5.45x39. You get both.
+The KH-2002 (“Katiba”) now fires 5.56x45 and features a 3 Round Burst.
+The MG5 ( “Navid”) now fires 7.62x51.
+The MSBS Grot B (“Promet”) now fires 5.56x45 and features a 3 Round Burst.
+The QBU-88 (“CMR-76”) now fires 5.8x42mm
+The RFB (“SDAR”) now fires 7.62x51.
+The Stoner-99 (“Mk 200”) now fires 5.56x45
+SVDK Magpul ("Cyrus") had it's name changed to better reflect it's real-life counterpart.
 
-## cTab Fix
-### What it does
-Adds the Bamse cTab fix from Steam to the configuration files.
+All Rifles have had their Mass adjusted accordingly and are compatible with Vanilla Units, Missions and all common Weapon Mods in regards to attachments, with a few minor exceptions. (See 1.0 Patchnotes)
 
-## Weapon Reskins
-### What it does
-Adds a few Reskins of existing Weapons. Will most likely expanded to include more Weapons and other gear
+## Gear-Rebalance
+With great firepower, comes standardization of Uniforms.
 
-## Faucon Bleu
-### What it does
-Adds a new Faction: Faucon Bleu, a Serbian-French themed Paramilitary and Security Force.
+CSAT is now no longer the best Faction, although it will remain so in my heart.
+All Vanilla Uniforms (and the Special Purpose Helmet) have had their Load, Mass, Ballistic Protection and Explosive Resistance adjusted and Balanced among Factions.
+Vanilla Loadouts have been take into consideration, so there shouldn’t be any clashes.
+Let me know if there are.
 
-## FirefightModules
-### What it does
-Adds a new 'Firefight Core' and 'Firefight Position' module to the editor to easily set up spawnable fights.
+## GRAD-Trenches-RSF
+A simple Compatibility Mod that allows us to use GRAD Trenches on previously unsupported Terrains. Remind me to make a Pull Request.
 
-### How it works
-Drop a FF Core module somewhere on the map, sync it to a unit, object, or whatever to create an addaction on that synced object(s) to open a skirmish display. Drop one or more FF Location modules in urban-ish areas and sync those to the FF Core module.
+## RSF-Cutscene
+Shows a custom, RSF-themed Main Menu backgound Mission.
 
-You can set custom location names in the location module options, otherwise will default to the nearest named locations name. The UI provides some options as far as opponents, how much opposition there will be, and how big the area enemy spawns will be. Some garrisoned groups will leave their garrison when you get too close, and patrols will actively seek you out if spotted. A simple task will be created, once the area is controlled by you (i.e. few to no enemies remaining) the task will be completed. 
-
-You can clear the active skirmish from within the skirmish UI.
-
-Shop/money modules have been entirely removed at this time.
-
-## Have a bug to report?
+# Have a bug to report?
 Submit an [issue by clicking on this link](https://github.com/SpartanD39/CaliberConvert/issues/new)
-#### What we need:
+
+## What we need:
 Copy/screencap of error message, you can use a service like [Lightshot](https://prnt.sc/) to upload images and get a link to it.
 Replication steps (if any beyond just starting the game)
 
-## Have a feature request?
+# Have a feature request?
 Submit an [issue by clicking on this link](https://github.com/SpartanD39/CaliberConvert/issues/new)
-#### What we need:
+## What we need:
 Description of what you're looking for.
 Examples of what you're looking for already implemented (if available)
 
-## Want to contribute?
+# Want to contribute?
 [Fork the repository](https://help.github.com/en/articles/fork-a-repo), make your changes, test them in-game, and then submit a [pull request](https://help.github.com/en/articles/creating-a-pull-request) to have the changes merged into the main repo. 
