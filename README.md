@@ -1,5 +1,5 @@
-The RSF Configurations mod is licensed under the APL-SA License:
-https://www.bohemia.net/community/licenses/arma-public-license-share-alike
+The RSF Configurations mod is licensed under the GNU General Public (Version 2) License:
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 # RSF CFG
 RSF CFG is a bundle of various Game Modifications custom-made to improve Gameplay for the RSF Arma 3 Unit.
