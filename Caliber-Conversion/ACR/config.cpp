@@ -38,7 +38,7 @@ class CfgWeapons
 	caseless[] = {"",0,0,0};	
 	descriptionShort = "Assault rifle <br/>Caliber: 5.56x45 mm NATO";
 	magazines[] = {"30Rnd_65x39_caseless_mag"};
-	magazineWell[] = {"MX_65x39","MX_65x39_Large","CBA_65x39_MX","CBA_65x39_MX_XL"};
+	magazineWell[] = {"RSF_556x45_ACR"};
 	};
   
   // ACR Basic
@@ -349,25 +349,20 @@ class CfgMagazines
 	};	
 };
 
-	// Removing ACE 6.5 Magazines from Magazine Wells
-	// Removing 100 Rnd 6.5 Magazines to prevent Duplicates
+	// Adding custom 5.56 Magwell to use
 
 class CfgMagazineWells
 {
-	class CBA_65x39_MX_XL
+	class RSF_556x45_ACR
 	{
-	BI_mags[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_khaki_mag","30Rnd_65x39_caseless_khaki_mag_Tracer","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag_Tracer"};
-	};
-	
-	class MX_65x39
-	{
-	ace_ballistics[] = {};
-	BI_Magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_khaki_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_khaki_mag_Tracer","30Rnd_65x39_caseless_black_mag_Tracer"};
-	};
-	
-	class MX_65x39_Large
-	{
-	ace_ballistics[] = {};		
-	BI_Magazines[] = {"30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_khaki_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_khaki_mag_Tracer","30Rnd_65x39_caseless_black_mag_Tracer"};
+	BI_mags[] = 
+		{
+		"30Rnd_65x39_caseless_mag",
+		"30Rnd_65x39_caseless_mag_Tracer",
+		"30Rnd_65x39_caseless_khaki_mag",
+		"30Rnd_65x39_caseless_khaki_mag_Tracer",
+		"30Rnd_65x39_caseless_black_mag",
+		"30Rnd_65x39_caseless_black_mag_Tracer",
+		};
 	};
 };

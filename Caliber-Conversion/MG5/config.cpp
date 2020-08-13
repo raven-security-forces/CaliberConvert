@@ -36,7 +36,7 @@ class CfgWeapons
 	descriptionShort = "Medium Machine Gun<br />Caliber: 7.62x51 mm";
 	displayName = "MG5";
 	magazines[] = {"150Rnd_93x64_Mag"};
-	magazineWell[] = {"CBA_93x64_LINKS","CBA_762x51_LINKS"};	
+	magazineWell[] = {"RSF_93x64_LINKS","CBA_762x51_LINKS"};	
 		class WeaponSlotsInfo : WeaponSlotsInfo
 		{	
 			class CowsSlot : asdg_OpticRail1913 {};
@@ -120,7 +120,7 @@ class CfgMagazines
 
 class CfgMagazineWells
 {
-	class CBA_93x64_LINKS
+	class RSF_93x64_LINKS
 	{
 	BI_mags[] = {"150Rnd_93x64_Mag","150Rnd_93x64_Mag_2","150Rnd_93x64_Mag_Tracer"};	
 	};

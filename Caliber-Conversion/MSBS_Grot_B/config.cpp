@@ -40,7 +40,7 @@ class CfgWeapons
 	descriptionShort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 	displayName = "MSBS Grot B";
 	magazines[] = {"30Rnd_65x39_caseless_msbs_mag"};
-	magazineWell[] = {"MX_65x39_MSBS","CBA_556x45_STANAG","CBA_556x45_STANAG_2D_XL","STANAG_556x45","STANAG_556x45_Large"};
+	magazineWell[] = {"CBA_556x45_STANAG","CBA_556x45_STANAG_2D_XL","STANAG_556x45","STANAG_556x45_Large"};
 	modes[] = {"Single","Burst3","FullAuto","single_medium_optics1","single_medium_optics2","fullauto_medium"};
 	soundBurst = 0;
 		class WeaponSlotsInfo: WeaponSlotsInfo

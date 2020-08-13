@@ -34,7 +34,8 @@ class CfgWeapons
 	{
 	descriptionShort = "Marksman Rifle<br />Caliber: 5.8x42 mm";
 	displayName = "QBU-88";
-	magazines[] = {"20Rnd_650x39_Cased_Mag_F","20Rnd_650x39_Cased_Mag_Tracer_F"};
+	magazines[] = {"20Rnd_650x39_Cased_Mag_F"};
+	magazineWell[] = {"RSF_58x42_QBU"};
 		class WeaponSlotsInfo : WeaponSlotsInfo
 		{	
 		allowedSlots[] = {901};		
@@ -70,7 +71,7 @@ class CfgMagazines
 	ammo="B_580x42_Ball_F";
 	author = "Bohemia Interactive";
 	count = 10;
-	descriptionShort = "Caliber: 5.8x42 mm<br />Rounds: 10<br />Used in: QBZ-95-1, QBZ-95-1 GL, QBU-88";
+	descriptionShort = "Caliber: 5.8x42 mm<br />Rounds: 10<br />Used in: QBU-88";
 	displayName = "5.8 mm 10Rnd Mag";
 	displayNameShort = "";
 	initSpeed = 950;
@@ -103,5 +104,13 @@ class CfgMagazines
 	displayName = "5.8 mm 10Rnd Tracer (Green) Mag";
 	tracersEvery=1;
 	lastRoundsTracer=10;
+	};
+};
+
+class CfgMagazineWells
+{	
+	class RSF_58x42_QBU
+	{
+	BI_mags[] = {"20Rnd_650x39_Cased_Mag_F","20Rnd_650x39_Cased_Mag_Tracer_F"};	
 	};
 };

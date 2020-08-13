@@ -38,7 +38,7 @@ class CfgWeapons
 	descriptionShort = "Assault Rifle<br />Caliber: 5.56x45 mm";
     displayName="KH-2002";
 	magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer"};
-	magazineWell[] = {"Katiba_65x39","CBA_556x45_STANAG"};
+	magazineWell[] = {"RSF_556x45_KH2002","CBA_556x45_STANAG"};
 	modes[] = {"Single","Burst","FullAuto","single_medium_optics1","single_far_optics2","fullauto_medium","ACE_Burst_far"};
 		class WeaponSlotsInfo : WeaponSlotsInfo
 		{	
@@ -287,11 +287,11 @@ class CfgMagazines
 
 };
 
-// Remove 6.5 ACE Ammo from Magwells
+// New Magwell with now 5.56 Magazines
 
 class CfgMagazineWells
 {
-	class Katiba_65x39
+	class RSF_556x45_KH2002
 	{
 	ace_ballistics[] = {};
 	BI_Magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer"};

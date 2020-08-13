@@ -406,4 +406,179 @@ class CfgVehicles {
 	
 	respawnMagazines[] = {"30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","30Rnd_65x39_caseless_black_mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
 	};		
+	
+	// Ammo crates
+	
+	// Base Class
+	class NATO_Box_Base;
+		
+	class Box_NATO_Ammo_F : NATO_Box_Base
+	{
+		class TransportMagazines 
+		{
+			class _xx_100Rnd_65x39_caseless_mag
+			{
+			count = 10;
+			magazine = "30Rnd_65x39_caseless_mag_Tracer";
+			};	
+			class _xx_30Rnd_65x39_caseless_mag
+			{
+			count = 34;
+			magazine = "30Rnd_65x39_caseless_mag";
+			};
+			class _xx_ACE_20Rnd_65_Creedmor_mag
+			{
+			count = 0;
+			magazine = "ACE_20Rnd_65_Creedmor_mag";
+			};		
+			class _xx_ACE_20Rnd_65x47_Scenar_mag
+			{
+			count = 0;
+			magazine = "ACE_20Rnd_65x47_Scenar_mag";
+			};				
+			class _xx_ACE_30Rnd_65_Creedmor_mag
+			{
+			count = 0;
+			magazine = "ACE_30Rnd_65_Creedmor_mag";
+			};				
+			class _xx_ACE_30Rnd_65x47_Scenar_mag
+			{
+			count = 0;
+			magazine = "ACE_30Rnd_65x47_Scenar_mag";
+			};		
+		};	
+	};	
+		
+	class Box_NATO_Wps_F : NATO_Box_Base
+	{
+		class TransportMagazines 
+		{
+			class _xx_100Rnd_65x39_caseless_mag
+			{
+			count = 4;
+			magazine = "30Rnd_65x39_caseless_mag_Tracer";
+			};	
+			class _xx_30Rnd_65x39_caseless_mag
+			{
+			count = 11;
+			magazine = "30Rnd_65x39_caseless_mag";
+			};
+			class _xx_ACE_20Rnd_65_Creedmor_mag
+			{
+			count = 0;
+			magazine = "ACE_20Rnd_65_Creedmor_mag";
+			};		
+			class _xx_ACE_20Rnd_65x47_Scenar_mag
+			{
+			count = 0;
+			magazine = "ACE_20Rnd_65x47_Scenar_mag";
+			};				
+			class _xx_ACE_30Rnd_65_Creedmor_mag
+			{
+			count = 0;
+			magazine = "ACE_30Rnd_65_Creedmor_mag";
+			};				
+			class _xx_ACE_30Rnd_65x47_Scenar_mag
+			{
+			count = 0;
+			magazine = "ACE_30Rnd_65x47_Scenar_mag";
+			};		
+		};	
+	};	
+
+	class Box_NATO_WpsSpecial_F : NATO_Box_Base
+	{
+		class TransportMagazines 
+		{
+			class _xx_ACE_100Rnd_65x39_caseless_mag_Tracer_Dim
+			{
+			count = 0;
+			magazine = "ACE_100Rnd_65x39_caseless_mag_Tracer_Dim";	
+			};
+			class _xx_ACE_30Rnd_65x39_caseless_mag_Tracer_Dim
+			{
+			count = 17;
+			magazine = "30Rnd_65x39_caseless_mag_Tracer";	
+			};		
+			class _xx_ACE_200Rnd_65x39_cased_Box_Tracer_Dim
+			{
+			count = 4;
+			magazine = "200Rnd_65x39_cased_Box_Tracer";	
+			};				
+		};			
+	};	
+
+	class C_supplyCrate_F : NATO_Box_Base
+	{
+		class TransportMagazines 
+		{
+			class _xx_100Rnd_65x39_caseless_mag
+			{
+			count = 10;
+			magazine = "30Rnd_65x39_caseless_mag_Tracer";
+			};	
+			class _xx_30Rnd_65x39_caseless_mag
+			{
+			count = 34;
+			magazine = "30Rnd_65x39_caseless_mag";
+			};	
+			class _xx_ACE_20Rnd_65_Creedmor_mag
+			{
+			count = 0;
+			magazine = "ACE_20Rnd_65_Creedmor_mag";
+			};		
+			class _xx_ACE_20Rnd_65x47_Scenar_mag
+			{
+			count = 0;
+			magazine = "ACE_20Rnd_65x47_Scenar_mag";
+			};				
+			class _xx_ACE_30Rnd_65_Creedmor_mag
+			{
+			count = 0;
+			magazine = "ACE_30Rnd_65_Creedmor_mag";
+			};				
+			class _xx_ACE_30Rnd_65x47_Scenar_mag
+			{
+			count = 0;
+			magazine = "ACE_30Rnd_65x47_Scenar_mag";
+			};					
+		};
+	};	
+	
+	class B_supplyCrate_F : NATO_Box_Base
+	{
+		class TransportMagazines 
+		{
+			class _xx_100Rnd_65x39_caseless_mag
+			{
+			count = 10;
+			magazine = "30Rnd_65x39_caseless_mag_Tracer";
+			};	
+			class _xx_30Rnd_65x39_caseless_mag
+			{
+			count = 34;
+			magazine = "30Rnd_65x39_caseless_mag";
+			};	
+			class _xx_ACE_20Rnd_65_Creedmor_mag
+			{
+			count = 0;
+			magazine = "ACE_20Rnd_65_Creedmor_mag";
+			};		
+			class _xx_ACE_20Rnd_65x47_Scenar_mag
+			{
+			count = 0;
+			magazine = "ACE_20Rnd_65x47_Scenar_mag";
+			};				
+			class _xx_ACE_30Rnd_65_Creedmor_mag
+			{
+			count = 0;
+			magazine = "ACE_30Rnd_65_Creedmor_mag";
+			};				
+			class _xx_ACE_30Rnd_65x47_Scenar_mag
+			{
+			count = 0;
+			magazine = "ACE_30Rnd_65x47_Scenar_mag";
+			};					
+		};		
+	};	
 };

@@ -36,7 +36,7 @@ class CfgWeapons
         displayName="Stoner 99 LMG (Tan)";
 		descriptionShort = "Light Machine Gun<br />Caliber: 5.56x45 mm";
 		magazines[] = {"200Rnd_65x39_cased_Box"};
-		magazineWell[] = {"Mk200_65x39","CBA_65x39_Mk200","CBA_556x45_MINIMI","M249_556x45"};
+		magazineWell[] = {"Mk200_65x39","CBA_556x45_MINIMI","M249_556x45"};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 		allowedSlots[] = {901};	
