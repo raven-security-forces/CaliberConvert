@@ -1,8 +1,8 @@
 class CfgPatches
 {
-    class RSF_P99_Conversion
+    class RSF_9x19_Conversion
     {
-    name = "RSF P99 Conversion Mod";
+    name = "RSF 9x19 Conversion Mod";
     author = "Nero";
     url = "";
     version="0.0.1";
