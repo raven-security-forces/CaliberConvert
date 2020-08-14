@@ -21,6 +21,16 @@ class CfgPatches
     };
 };
 
+class CfgWeapons
+{
+	class Pistol_Base_F;
+	
+	class hgun_Pistol_heavy_02_F : Pistol_Base_F
+	{
+	magazineWell[] = {"RSF_9x21_Chiappa"};
+	};
+};
+
 class CfgMagazines
 {
 	class 11Rnd_45ACP_Mag;
@@ -32,4 +42,12 @@ class CfgMagazines
 	displayName = "9x21 6Rnd Cylinder";	
 	initSpeed = 430;
 	};	
+};
+
+class CfgMagazineWells
+{
+	class RSF_9x21_Chiappa
+	{
+	BI_mags[] = {"6Rnd_45ACP_Cylinder"};	
+	};
 };

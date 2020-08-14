@@ -139,7 +139,7 @@ class CfgMagazines
 	// P99
 	class 16Rnd_9x21_Mag : 30Rnd_9x21_Mag
 	{
-	mass = 5.8129;
+	mass = 5.669;
 	count = 15;	
 	descriptionShort = "Caliber: 9x19 mm<br />Rounds: 15<br />Used in: P99";
 	displayName = "9x19 mm 15Rnd Mag";
@@ -170,7 +170,7 @@ class CfgMagazines
 	// MP-433 Custom mags
 	class 18Rnd_9x19_Mag : 16Rnd_9x21_Mag
 	{
-	mass = 6.97548;
+	mass = 6.357;
 	count = 18;
 	descriptionShort = "Caliber: 9x19 mm<br />Rounds: 18<br />Used in: MP-443";
 	displayName = "9x19 mm 18Rnd Mag";
@@ -242,7 +242,7 @@ class CfgMagazines
 	count = 12;
 	descriptionShort = "Caliber: 9x18 mm<br />Rounds: 12<br />Used in: PMM";
 	displayName = "9x18 mm 12Rnd Mag";	
-	mass = 4.8;
+	mass = 4.352;
 	};
 };
 

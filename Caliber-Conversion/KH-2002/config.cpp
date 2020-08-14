@@ -38,7 +38,7 @@ class CfgWeapons
 	descriptionShort = "Assault Rifle<br />Caliber: 5.56x45 mm";
     displayName="KH-2002";
 	magazines[] = {"30Rnd_65x39_caseless_green","30Rnd_65x39_caseless_green_mag_Tracer"};
-	magazineWell[] = {"RSF_556x45_KH2002","CBA_556x45_STANAG"};
+	magazineWell[] = {"RSF_556x45_KH2002","CBA_556x45_STANAG","STANAG_556x45"};
 	modes[] = {"Single","Burst","FullAuto","single_medium_optics1","single_far_optics2","fullauto_medium","ACE_Burst_far"};
 		class WeaponSlotsInfo : WeaponSlotsInfo
 		{	
@@ -89,6 +89,7 @@ class CfgWeapons
 	sound[] = {"",10,1};
 	soundBegin[] = {"sound",1};
 	soundBeginWater[] = {"sound",1};
+	soundBurst = 0;	
 	soundClosure[] = {"sound",1};
 	soundContinuous = 0;
 	soundEnd[] = {"sound",1};
