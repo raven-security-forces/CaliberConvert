@@ -39,16 +39,26 @@ class CfgMissions
 
 class CfgMusic 
 {
-
 	class Funny_How_You_Sometimes_Find_Things
 	{
-		name = "Funny How You Sometimes Find Things";
+		name = "The Stolen Orchestra - Funny How You Sometimes Find Things";
 		sound[] = {
 				"RSF-Cutscene\music\The_Stolen_Orchestra_-_Funny_How_You_Sometimes_Find_Things2.ogg", 1.000000, 1.000000
 		};
 		duration = 361;
 		musicClass = "Calm";
 	};
+
+	class Reverie_for_Another_Sphere
+	{
+		name = "Taishi - Reverie for Another Sphere";
+		sound[] = {
+				"RSF-Cutscene\music\Taishi_-_Reverie_for_Another_Sphere2.ogg", 1.000000, 1.000000
+		};
+		duration = 737;
+		musicClass = "Action";
+	};	
+	
 };
 
 class CfgAddons 
