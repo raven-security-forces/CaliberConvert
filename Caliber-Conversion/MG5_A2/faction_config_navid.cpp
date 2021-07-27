@@ -7,7 +7,7 @@ class cfgVehicles
 	class Weapon_Base_F;
 	class Weapon_MMG_01_hex_F: Weapon_Base_F
 	{
-		displayName = "MG5 (Hex)";
+		displayName = "MG5 A2 (Hex)";
 		class TransportWeapons
 		{
 			class _xx_MMG_01_hex_F
@@ -20,7 +20,7 @@ class cfgVehicles
 	
 	class Weapon_MMG_01_tan_F: Weapon_Base_F
 	{
-		displayName = "MG5 (Tan)";
+		displayName = "MG5 A2 (Tan)";
 		class TransportWeapons
 		{
 			class _xx_MMG_01_tan_F

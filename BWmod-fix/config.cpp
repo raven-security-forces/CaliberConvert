@@ -1,16 +1,22 @@
 class CfgPatches 
 	{
-    class CarlsBWfix 
+    class BWmod_fix 
 	{
-		name = "CarlsBWfixmodAIO";
+		name = "BWmod-Fix by Carl";
 		requiredVersion = 0.1;
-		requiredAddons[] = {"bwa3_g28","bwa3_g29","bwa3_mg5"};
+		requiredAddons[] = 
+		{
+		"bwa3_g28",
+		"bwa3_g29",
+		"bwa3_mg5",
+		"bwa3_comp_ace",
+		};
 		weapons[] =
 		{
-			"Carls_BWA_MG5",
-			"Carls_BWA3_MG5_tan",
-			"Carls_BWA_G28",
-			"Carls_BWA_G29",
+			"BWA3_MG5",
+			"BWA3_MG5_tan",
+			"BWA3_G28",
+			"BWA3_G29",
 		};
 		author = "Carl";
 		units[] = {};
@@ -29,38 +35,24 @@ class BWA3_PointerSlot_Underbarrel;
 class BWA3_UnderbarrelSlot;
 class CfgWeapons
 {
-	class Rifle_Base_F;
-	class Rifle_Long_Base_F: Rifle_Base_F
-	{
-		class WeaponSlotsInfo;
-		class GunParticles;
-	};
-	class UGL_F;
-	class BWA3_G28: Rifle_Long_Base_F
-	{
-		class WeaponSlotsInfo;
-		class GunParticles;
-	};
-
 ////////
 ///MG5//
 ////////
-	class BWA3_MG5;
-	class Carls_BWA_MG5: BWA3_MG5
+	class Rifle_Long_Base_F;
+	class BWA3_MG5: Rifle_Long_Base_F
 	{
-		author="CarlandBWATeam";
-		baseWeapon="BWA3_MG5fix";
-		scope=2;
+		author="BW-Mod & Carl";
+		baseWeapon="BWA3_MG5_Fix";
 		class WeaponSlotsInfo {
             allowedSlots[] = {};
-            mass = 174;
+			// 11.20kg
+            mass = 246.9177;
             class MuzzleSlot: BWA3_MuzzleSlot_762 {
             iconPosition[] = {0.1,0.38};
             };
             class CowsSlot: BWA3_CowsSlot {};
             class PointerSlot: BWA3_PointerSlot {};
         };
-		displayName="MG5 (reconfigured)";
 		magazines[]=
 		{
 			"BWA3_50Rnd_762x51_softmagfix",
@@ -69,59 +61,21 @@ class CfgWeapons
 			"BWA3_120Rnd_762x51_softfix_Tracer",
 		};
 	};
-    class Carls_BWA3_MG5_tan: Carls_BWA_MG5 {
-        author = "CarlandBWATeam";
-        baseWeapon = "BWA3_MG5fix_tan";
-        displayName = "MG5 Tan (reconfigured)";
-        picture = "\bwa3_mg5\ui\bwa3_mg5_tan_x_ca.paa";
-        hiddenSelectionsTextures[] = {"\bwa3_mg5\data\bwa3_mg5_tan_co.paa"};
-		magazines[]=
-		{
-			"BWA3_50Rnd_762x51_softmagfix",
-			"BWA3_120Rnd_762x51_softmagfix",
-			"BWA3_50Rnd_762x51_softmagfix_tracer",
-			"BWA3_120Rnd_762x51_softfix_Tracer",
-		};
-    };
+	class BWA3_MG5_tan : BWA3_MG5
+	{
+	author="BW-Mod & Carl";
+	baseWeapon = "BWA3_MG5_tan_Fix";
+	};
+	
 ////////
 ///G28//
 ////////
-	class Carls_BWA_G28: BWA3_G28
+
+	class BWA3_G28 : Rifle_Long_Base_F
 	{
-		author="CarlandBWATeam";
-		baseWeapon="BWA3_G28fix";
-		scope=2;
-		displayName="G28 (reconfigured)";
-		descriptionShort="G28 fix";
-		model="\bwa3_g28\bwa3_g28.p3d";
-		picture="\bwa3_g28\ui\bwa3_g28_x_ca.paa";
-		uiPicture="\A3\weapons_f\data\ui\icon_regular_CA.paa";
-		hiddenSelections[]=
-		{
-			"mat_g28",
-			"frontgrip",
-			"magazine_opaque",
-			"magazine_tranparent"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\bwa3_g28\data\bwa3_g28_co.paa",
-			"\bwa3_g28\data\bwa3_hk_frontgrip_g28_co.paa",
-			"\bwa3_g28\data\bwa3_g28_magazine_co.paa",
-			"\bwa3_g28\data\bwa3_g28_magazine_ca.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"\bwa3_g28\data\bwa3_g28.rvmat",
-			"\bwa3_g28\data\bwa3_hk_frontgrip_g28.rvmat",
-			"\bwa3_g28\data\bwa3_g28_magazine.rvmat",
-			"\bwa3_g28\data\bwa3_g28_magazine.rvmat"
-		};
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\bwa3_g28\data\bwa3_g28_handanim.rtm"
-		};
+		author="BW-Mod & Carl";
+		baseWeapon="BWA3_G28_Fix";
+		displayName="G28 E2";
 		magazines[]=
 		{
 			"BWA3_20Rnd_762x51_G28fix",
@@ -131,10 +85,10 @@ class CfgWeapons
 			"BWA3_20Rnd_762x51_G28fix_AP",
 			"BWA3_20Rnd_762x51_G28fix_LR",
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
-			mass=121;
-			//changed to 5.49kg
+			// 5.8kg
+			mass=127.78681;
 			class CowsSlot: BWA3_CowsSlot_Longer
 			{
 				iconPosition[]={0.55000001,0.38};
@@ -179,8 +133,8 @@ class CfgWeapons
 				};
 			};
 			reloadTime=0.15000001;
-			dispersion=0.000349999998;
-			//changed to 1.2moa
+			dispersion=0.000290888;
+			//changed to 1 moa
 			minRange=2;
 			minRangeProbab=0.30000001;
 			midRange=350;
@@ -188,65 +142,31 @@ class CfgWeapons
 			maxRange=500;
 			maxRangeProbab=0.050000001;
 		};
-		class single_close_optics1: Single
-		{
-			requiredOpticType=1;
-			showToPlayer=0;
-			minRange=2;
-			minRangeProbab=0.050000001;
-			midRange=300;
-			midRangeProbab=0.80000001;
-			maxRange=500;
-			maxRangeProbab=0.0099999998;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=300;
-		};
-		class single_medium_optics1: single_close_optics1
-		{
-			minRange=300;
-			minRangeProbab=0.050000001;
-			midRange=500;
-			midRangeProbab=0.69999999;
-			maxRange=700;
-			maxRangeProbab=0.050000001;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=500;
-		};
-		class single_far_optics1: single_medium_optics1
-		{
-			requiredOpticType=2;
-			minRange=300;
-			minRangeProbab=0.050000001;
-			midRange=600;
-			midRangeProbab=0.40000001;
-			maxRange=900;
-			maxRangeProbab=0.050000001;
-			aiRateOfFire=4;
-			aiRateOfFireDistance=600;
-		};
 	};
 	
 ////////
 ///G29//
 ////////
-	class BWA3_G29;	
-	class Carls_BWA_G29: BWA3_G29
+	class BWA3_G29 : Rifle_Long_Base_F
 	{
-		author="CarlandBWATeam";
-		baseWeapon="BWA3_G29fix";
-		scope=2;
-		displayName="G29 (reconfigured)";
-		descriptionShort="G29 fix";
+		author="BW-Mod & Carl";
+		baseWeapon="BWA3_G29_Fix";
+		displayName="G29";
 		magazines[] = 
 		{
 		"BWA3_10Rnd_86x70_G29",
 		"BWA3_10Rnd_86x70_G29_Tracer",
-		
+		};
+		class WeaponSlotsInfo
+		{
+		// 7.57kg
+		mass=166.2285;	
 		};
 		class Single: Mode_SemiAuto {
             reloadTime = 1.5;
             dispersion = 0.00013;
-			//moa changed to 0.4
+			// moa changed to 0.4
+			// Carl I can't find any Data on it's actual MOA. The only thing I found is some Forum guy referencing his RS9 (Civ designation) firing 0.9 MOA. Given they are replacing the G22 (German L115) with it I guess it has to be about as accurate so fair enough.
             minRange = 2;
             minRangeProbab = 0.3;
             midRange = 350;
@@ -355,7 +275,7 @@ class CfgMagazines {
     class BWA3_50Rnd_762x51_softmagfix: BWA3_120Rnd_762x51_soft {
         author = "BWA3/Carl";
         scope = 2;
-        displayName = "50Rnd 7.62 NATO Softmag (mixed)";
+        displayName = "50Rnd 7.62 NATO Softmag (Mixed)";
         displayNameShort = "$STR_BWA3_MG5MagNameShort";
         descriptionShort = "$STR_BWA3_MG5MagDescription";
         model = "\bwa3_mg5\bwa3_ammo_box_mg5.p3d";
@@ -374,13 +294,13 @@ class CfgMagazines {
 		mass = 86;
 		count = 120;
         picture = "\bwa3_mg3\ui\bwa3_mg3_mag_x_ca.paa";
-        displayName = "120Rnd 7.62 NATO Softmag (mixed)";
+        displayName = "120Rnd 7.62 NATO Softmag (Mixed)";
 	};
 	//tracers//
 	class BWA3_120Rnd_762x51_Tracer_soft;
 	class BWA3_50Rnd_762x51_softmagfix_Tracer: BWA3_120Rnd_762x51_Tracer_soft {
         author = "BWA3/Carl";
-		displayName = "50Rnd 7.62 NATO Softmag (tracer)";		
+		displayName = "50Rnd 7.62 NATO Softmag (Tracer)";		
         count = 50;
         mass = 41;	
 		tracersEvery = 1;
@@ -390,7 +310,7 @@ class CfgMagazines {
 		mass = 86;
 		count = 120;
         picture = "\bwa3_mg3\ui\bwa3_mg3_mag_x_ca.paa";
-		displayName = "120Rnd 7.62 NATO Softmag (tracer)";	
+		displayName = "120Rnd 7.62 NATO Softmag (Tracer)";	
         displayNameShort = "$STR_BWA3_MG5MagTracerNameShort";
         descriptionShort = "$STR_BWA3_MG5MagTracerDescription";
         tracersEvery = 1;
@@ -423,4 +343,3 @@ class CfgMagazineWells
 		};
 	};
 };
-
