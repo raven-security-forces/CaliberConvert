@@ -9,7 +9,7 @@ class CfgPatches
 		};
 		requiredVersion=0.1;
 		requiredAddons[]={"rhsusf_c_weapons"};
-		author[]={"Carl"};
+		author = "Carl";
 	};
 };
 class cfgWeapons
